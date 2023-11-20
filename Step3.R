@@ -1,4 +1,4 @@
-load("Results/INDIA/Result2.RData")
+load("Results/Result2.RData")
 Network <- SS[c(1,7)]
 rm(list=setdiff(ls(), "Network"))
 Network$pattern <- tolower(Network$pattern)
@@ -81,4 +81,4 @@ node_colors <- color_palette[rank(centrality_scores)]
 set.seed(56)
 plot(Terms, vertex.label.color = "black", vertex.label.cex = 0.8, vertex.color = node_colors, vertex.size = 15, edge.width = 0.5, edge.color = "lightgray", layout = layout_with_drl, main = "")
 
-save.image("Results/INDIA/Result3.RData")
+save.image("Results/Result3.RData")
