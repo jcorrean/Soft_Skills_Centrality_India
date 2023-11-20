@@ -1,4 +1,4 @@
-load("Results/INDIA/Result3.RData")
+load("Results/Result3.RData")
 library(igraph)
 set.seed(56)
 png("F1.png", width = 15, height = 7, units = 'in', res = 300)
@@ -70,4 +70,4 @@ plotweb(IM3, method = "normal",
         labsize = 2)
 dev.off()
 
-save.image("Results/INDIA/Result4.RData")
+save.image("Results/Result4.RData")
