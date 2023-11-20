@@ -1,4 +1,4 @@
-load("Results/INDIA/Result1.RData")
+load("Results/Result1.RData")
 library(quanteda)
 s1 <- data.frame(kwic(Programs, pattern = phrase("critical thinking")))
 s2 <- data.frame(kwic(Programs, pattern = phrase("problem solving")))
@@ -52,5 +52,5 @@ s48 <- data.frame(kwic(Programs, pattern = "inspir*"))
 df_list <- mget(paste0("s", 1:48))
 SS <- do.call(rbind, df_list)
 rm(list=setdiff(ls(), "SS"))
-save.image("Results/INDIA/Result2.RData")
+save.image("Results/Result2.RData")
 
