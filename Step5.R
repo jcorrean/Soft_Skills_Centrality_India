@@ -1,4 +1,4 @@
-load("Results/INDIA/Result1.RData")
+load("Results/Result2.RData")
 rm(list=setdiff(ls(), "textos"))
 library(dplyr)
 Bachelor <- textos %>% filter(., Program=="Bachelor") %>% 
