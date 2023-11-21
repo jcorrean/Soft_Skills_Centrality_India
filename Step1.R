@@ -16,7 +16,7 @@ textos <- mutate(textos,
                                  "Doctorate"))))
 
 library(quanteda)
-Textos <- corpus(textos)
+Textos <- corpus(textos$text)
 docvars(Textos, "Program") <- textos$Program
 
 Programs <- tokens(Textos, 
