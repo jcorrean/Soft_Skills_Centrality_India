@@ -1,13 +1,9 @@
-load("Results/Result2.RData")
+load("Results/Result1.RData")
 rm(list=setdiff(ls(), "textos"))
+textos
 library(dplyr)
-Bachelor <- textos %>% filter(., Program=="Bachelor") %>% 
-  select(., docname, keyword)
-MasterPrograms <- TODAS2 %>% filter(., Program=="Master") %>% 
-  select(., docname, keyword)
-DoctoratePrograms <- TODAS2 %>% filter(., Program == "Doctorate") %>% 
-  select(., docname, keyword)
-General <- TODAS2 %>% select(., docname, keyword)
+Bachelor <- textos %>% filter(., Program=="Bachelor") 
+Postgraduate <- textos %>% filter(., Program!="Bachelor")
 
 library(igraph)
 BNS <- graph.data.frame(SpecPrograms, directed = FALSE)
