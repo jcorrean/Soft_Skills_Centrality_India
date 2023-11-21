@@ -17,6 +17,7 @@ textos <- mutate(textos,
 
 library(quanteda)
 Textos <- corpus(textos)
+docvars(Textos, "Program") <- textos$Program
 
 Programs <- tokens(Textos, 
                      remove_numbers = TRUE, 
