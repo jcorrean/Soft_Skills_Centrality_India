@@ -1,9 +1,15 @@
 load("Results/Result1.RData")
-rm(list=setdiff(ls(), "textos"))
+load("Results/Result2.RData")
+rm(list=setdiff(ls(), c("textos","SS")))
 textos
+
+SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "doc_id", all.x = TRUE)
+
 library(dplyr)
-Bachelor <- textos %>% filter(., Program=="Bachelor") 
-Postgraduate <- textos %>% filter(., Program!="Bachelor")
+Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") 
+Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor")
+
+
 
 library(igraph)
 BNS <- graph.data.frame(SpecPrograms, directed = FALSE)
