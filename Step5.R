@@ -41,6 +41,14 @@ rm(list=setdiff(ls(), c("Bach","postg")))
 
 Programs <- rbind(Bach, postg)
 
+dat <- Programs
+library(datawizard)
+dat <- dat %>% mutate(., degree.rescaled = ifelse(Degree == 0, 0.00, rescale(dat$Degree, to = c(0,1))))
+dat <- dat %>% mutate(., closeness.rescaled = ifelse(Closeness == 0, 0.00, rescale(dat$Closeness, to = c(0,1))))
+dat <- dat %>% mutate(., betweennes.rescaled = ifelse(Betweennes == 0, 0.00, rescale(dat$Betweennes, to = c(0,1))))
+dat <- dat %>% mutate(., eigenvector.rescaled = ifelse(Eigen.vector == 0, 0.00, rescale(dat$Eigen.vector, to = c(0,1))))
+
+
 library(tidyverse)
 Program <- Programs %>% 
   pivot_longer(c(`Degree`, `Closeness`, `Betweennes`, `Eigen.vector`), names_to = "Centrality", values_to = "cases")
@@ -82,6 +90,9 @@ ggplot(Programs, aes(x = Eigen.vector, y = Program, fill = Program)) +
   ylab("Academic Program")
 
 
+Program <- dat %>% 
+  pivot_longer(c(`degree.rescaled`, `closeness.rescaled`, `betweennes.rescaled`, `eigenvector.rescaled`), names_to = "Centrality", values_to = "cases")
+
 ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Program, fill = Program)) +
   geom_density_ridges(
     jittered_points = TRUE, scale = .95, rel_min_height = .01,
@@ -96,7 +107,7 @@ ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Pr
   coord_cartesian(clip = "off") +
   guides(fill = guide_legend(
     override.aes = list(
-      fill = c("#D55E00A0", "#0072B2A0"),
+      fill = c("orange", "darkgreen"),
       color = NA, point_color = NA)
   )
   ) +
