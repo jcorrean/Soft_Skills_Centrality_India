@@ -40,3 +40,4 @@ postg$SS <- rownames(postg)
 postg <- postg[order(postg$SS), ]
 postg <- postg[390:434,]
 postg$Program <- "postgraduate"
+rm(list=setdiff(ls(), c("Bach","postg")))
