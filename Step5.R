@@ -6,29 +6,37 @@ textos
 SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "doc_id", all.x = TRUE)
 
 library(dplyr)
-Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") 
-Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor")
+Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(docname, pattern))
+Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(docname, pattern))
 
 
 
 library(igraph)
-BNS <- graph.data.frame(SpecPrograms, directed = FALSE)
-BNM <- graph.data.frame(MasterPrograms, directed = FALSE)
-BND <- graph.data.frame(DoctoratePrograms, directed = FALSE)
-BNA <- graph.data.frame(General, directed = FALSE)
+bachelor <- graph.data.frame(Bachelor, directed = FALSE)
+postgraduate <- graph.data.frame(Postgraduate, directed = FALSE)
 
-hist(degree_distribution(BNS))
-hist(degree_distribution(BNM))
-hist(degree_distribution(BND))
-hist(degree_distribution(BNA))
+hist(degree_distribution(bachelor))
+hist(degree_distribution(postgraduate))
 
-Spec <- data.frame(Degree = igraph::degree(BNS),
-                   Closeness = igraph::closeness(BNS),
-                   Betweennes = igraph::betweenness(BNS),
-                   Eigen = igraph::eigen_centrality(BNS))
-Spec <- Spec[ -c(5:25) ]
-rownames(Spec)
-Spec$SS <- rownames(Spec)
-Spec <- Spec[order(Spec$SS), ]
-Spec <- Spec[101:140,]
-Spec$Level <- "Specialization"
+Bach <- data.frame(Degree = igraph::degree(bachelor),
+                   Closeness = igraph::closeness(bachelor),
+                   Betweennes = igraph::betweenness(bachelor),
+                   Eigen = igraph::eigen_centrality(bachelor))
+Bach <- Bach[ -c(5:25) ]
+rownames(Bach)
+Bach$SS <- rownames(Bach)
+Bach <- Bach[order(Bach$SS), ]
+Bach <- Bach[101:144,]
+Bach$Program <- "Bachelor"
+
+
+postg <- data.frame(Degree = igraph::degree(postgraduate),
+                    Closeness = igraph::closeness(postgraduate),
+                    Betweennes = igraph::betweenness(postgraduate),
+                    Eigen = igraph::eigen_centrality(postgraduate))
+postg <- postg[ -c(5:25) ]
+rownames(postg)
+postg$SS <- rownames(postg)
+postg <- postg[order(postg$SS), ]
+postg <- postg[390:434,]
+postg$Program <- "postgraduate"
