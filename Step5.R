@@ -1,13 +1,14 @@
 load("Results/Result1.RData")
 load("Results/Result2.RData")
+textos$docname <- paste0("text", 1:633)
 rm(list=setdiff(ls(), c("textos","SS")))
 
 
-SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "doc_id", all.x = TRUE)
+SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "docname", all.x = TRUE)
 
 library(dplyr)
-Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(docname, pattern))
-Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(docname, pattern))
+Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(pattern, doc_id))
+Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(pattern, doc_id))
 
 
 
@@ -52,7 +53,7 @@ Program <- rescaled %>%
 
 
 library(ggplot2)
-ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
+ggplot(rescaled, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
   theme_bw() +
@@ -70,7 +71,7 @@ ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   ylab("Eigenvector Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
+ggplot(rescaled, aes(x=reorder(SS, Closeness), y=Closeness)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
   theme_bw() +
@@ -88,7 +89,7 @@ ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
   ylab("Closeness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
+ggplot(rescaled, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
   theme_bw() +
@@ -106,7 +107,7 @@ ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   ylab("Betweenness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
+ggplot(rescaled, aes(x=reorder(SS, Degree), y=Degree)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
   theme_bw() +
@@ -135,11 +136,32 @@ ggplot(Programs, aes(x = Closeness, y = Program, fill = Program)) +
         axis.text.y=element_text(size=20, colour="black"),
         axis.title.x=element_text(face="italic", colour="black", size=20),
         axis.title.y=element_text(face="italic", colour="black", size=20)) +
-  xlab("Eigenvector Centrality") + 
+  xlab("Closeness Centrality") + 
   ylab("Academic Program")
 
+ggplot(Programs, aes(x = Degree, y = Program, fill = Program)) +
+  geom_density_ridges(alpha = 0.3) +
+  scale_fill_manual(values = c("orange", "darkgreen")) +  # Set colors
+  theme_ridges() + 
+  theme(legend.position = "none",
+        axis.text.x=element_text(size=20, colour="black"),
+        axis.text.y=element_text(size=20, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=20),
+        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+  xlab("Degree Centrality") + 
+  ylab("Academic Program")
 
-
+ggplot(Programs, aes(x = Betweennes, y = Program, fill = Program)) +
+  geom_density_ridges(alpha = 0.3) +
+  scale_fill_manual(values = c("orange", "darkgreen")) +  # Set colors
+  theme_ridges() + 
+  theme(legend.position = "none",
+        axis.text.x=element_text(size=20, colour="black"),
+        axis.text.y=element_text(size=20, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=20),
+        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+  xlab("Betweenness Centrality") + 
+  ylab("Academic Program")
 
 ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Program, fill = Program)) +
   geom_density_ridges(
