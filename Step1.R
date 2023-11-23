@@ -11,9 +11,7 @@ library(dplyr)
 textos <- mutate(textos, 
                  Program = ifelse(
                    grepl("Bachel", text), "Bachelor",
-                   ifelse(grepl("Master", text), "Master", 
-                          ifelse(grepl("MBA", text), "Master", 
-                                 "Doctorate"))))
+                   "Postgraduate"))
 
 library(quanteda)
 Textos <- corpus(textos$text)
