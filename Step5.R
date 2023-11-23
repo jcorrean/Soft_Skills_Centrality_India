@@ -40,17 +40,13 @@ postg$Program <- "Postgraduate"
 rm(list=setdiff(ls(), c("Bach","postg")))
 
 Programs <- rbind(Bach, postg)
-
-dat <- Programs
-library(datawizard)
-dat <- dat %>% mutate(., degree.rescaled = ifelse(Degree == 0, 0.00, rescale(dat$Degree, to = c(0,1))))
-dat <- dat %>% mutate(., closeness.rescaled = ifelse(Closeness == 0, 0.00, rescale(dat$Closeness, to = c(0,1))))
-dat <- dat %>% mutate(., betweennes.rescaled = ifelse(Betweennes == 0, 0.00, rescale(dat$Betweennes, to = c(0,1))))
-dat <- dat %>% mutate(., eigenvector.rescaled = ifelse(Eigen.vector == 0, 0.00, rescale(dat$Eigen.vector, to = c(0,1))))
-
+scaled_programs <- scale(Programs[c(1:4)])
+rescaled <- data.frame(apply(scaled_programs, 2, function(x) (x - min(x)) / (max(x) - min(x))))
+rescaled$SS <- Programs$SS
+rescaled$Program <- Programs$Program
 
 library(tidyverse)
-Program <- Programs %>% 
+Program <- rescaled %>% 
   pivot_longer(c(`Degree`, `Closeness`, `Betweennes`, `Eigen.vector`), names_to = "Centrality", values_to = "cases")
 
 
@@ -74,10 +70,63 @@ ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   ylab("Eigenvector Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
+ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
+  geom_point(size=5, aes(colour=Program), alpha=0.6) +
+  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=60, hjust=1),
+        panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
+        panel.grid.minor.y = element_blank(),
+        panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
+  coord_flip() +
+  theme(legend.position="top",
+        axis.text.x=element_text(size=15, colour="black"),
+        axis.text.y=element_text(size=15, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=20),
+        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+  xlab("Soft Skills") +
+  ylab("Closeness Centrality") +
+  theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
+
+ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
+  geom_point(size=5, aes(colour=Program), alpha=0.6) +
+  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=60, hjust=1),
+        panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
+        panel.grid.minor.y = element_blank(),
+        panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
+  coord_flip() +
+  theme(legend.position="top",
+        axis.text.x=element_text(size=15, colour="black"),
+        axis.text.y=element_text(size=15, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=20),
+        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+  xlab("Soft Skills") +
+  ylab("Betweenness Centrality") +
+  theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
+
+ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
+  geom_point(size=5, aes(colour=Program), alpha=0.6) +
+  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=60, hjust=1),
+        panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
+        panel.grid.minor.y = element_blank(),
+        panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
+  coord_flip() +
+  theme(legend.position="top",
+        axis.text.x=element_text(size=15, colour="black"),
+        axis.text.y=element_text(size=15, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=20),
+        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+  xlab("Soft Skills") +
+  ylab("Degree Centrality") +
+  theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
 
 library(ggridges)
-ggplot(Programs, aes(x = Eigen.vector, y = Program, fill = Program)) +
+ggplot(Programs, aes(x = Closeness, y = Program, fill = Program)) +
   geom_density_ridges(alpha = 0.3) +
   scale_fill_manual(values = c("orange", "darkgreen")) +  # Set colors
   theme_ridges() + 
@@ -90,8 +139,7 @@ ggplot(Programs, aes(x = Eigen.vector, y = Program, fill = Program)) +
   ylab("Academic Program")
 
 
-Program <- dat %>% 
-  pivot_longer(c(`degree.rescaled`, `closeness.rescaled`, `betweennes.rescaled`, `eigenvector.rescaled`), names_to = "Centrality", values_to = "cases")
+
 
 ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Program, fill = Program)) +
   geom_density_ridges(
@@ -100,16 +148,6 @@ ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Pr
     position = position_points_jitter(height = 0)
   ) +
   scale_y_discrete(expand = c(0, 0)) +
-  scale_x_continuous(expand = c(0, 0), name = "height [cm]") +
+  scale_x_continuous(expand = c(0, 0), name = "Centrality (rescaled 0-1)") +
   scale_fill_manual(values = c("orange", "darkgreen"), labels = c("bachelor", "postgraduate")) +
-  scale_color_manual(values = c("#D55E00", "#0072B2"), guide = "none") +
-  scale_discrete_manual("point_color", values = c("#D55E00", "#0072B2"), guide = "none") +
-  coord_cartesian(clip = "off") +
-  guides(fill = guide_legend(
-    override.aes = list(
-      fill = c("orange", "darkgreen"),
-      color = NA, point_color = NA)
-  )
-  ) +
-  ggtitle("Soft Skills Centrality distributions") +
-  theme_ridges(center = TRUE)
+  coord_cartesian(clip = "off") + theme_minimal()
