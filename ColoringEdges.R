@@ -13,7 +13,7 @@ mapping <- bipartite_mapping(bn)
 V(bn)$type <- mapping$type
 
 # Set vertex attributes
-V(bn)$attribute <- Data$ProgramType
+V(bn)$attribute <- data$ProgramType
 V(bn)$color <- ifelse(V(bn)$type, "red", "green")
 V(bn)$shape <- ifelse(V(bn)$type, "circle", "square")
 V(bn)$label.cex <- ifelse(V(bn)$type, 0.5, 1)
