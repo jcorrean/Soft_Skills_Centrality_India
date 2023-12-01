@@ -14,6 +14,9 @@ Programs <- read_csv("Programs.csv")
 colnames(Programs)[3] <- "doc_id"
 textos <- merge(textos, Programs, by = "doc_id")
 rm(Programs)
+library(dplyr)
+textos <- mutate(gradebook, department = ifelse(grepl("MATH", section), "Math Department",
+                                      ifelse(grepl("ENG", section), "English Department", "Other")))
 library(quanteda)
 Textos <- corpus(textos$text)
 docvars(Textos, "Program") <- textos$Program
