@@ -15,8 +15,16 @@ colnames(Programs)[3] <- "doc_id"
 textos <- merge(textos, Programs, by = "doc_id")
 rm(Programs)
 library(dplyr)
-textos <- mutate(gradebook, department = ifelse(grepl("MATH", section), "Math Department",
-                                      ifelse(grepl("ENG", section), "English Department", "Other")))
+textos <- mutate(textos, Program = ifelse(grepl("Bachelor", Program_Name), "Bachelor",
+                                   ifelse(grepl("Master", Program_Name), "Master",
+                                   ifelse(grepl("Doctor", Program_Name), "PhD",
+                                   ifelse(grepl("Ph.D.", Program_Name), "PhD", "Other")))))
+textos <- subset(textos, Program != "Other")
+
+table(textos$Program)
+table(textos$Type_of_Institute)
+
+
 library(quanteda)
 Textos <- corpus(textos$text)
 docvars(Textos, "Program") <- textos$Program
