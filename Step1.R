@@ -9,10 +9,11 @@ textos$doc_id <- gsub("[^0-9_-]", "", textos$doc_id)
 # classification 
 # Now, let's identify these programs
 # according to their level (i.e., bachelor, masters, doctorate)
-colnames(textos)[1] <- "Doc_No."
 library(readr)
 Programs <- read_csv("Programs.csv")
-
+colnames(Programs)[3] <- "doc_id"
+textos <- merge(textos, Programs, by = "doc_id")
+rm(Programs)
 library(quanteda)
 Textos <- corpus(textos$text)
 docvars(Textos, "Program") <- textos$Program
