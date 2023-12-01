@@ -1,6 +1,6 @@
 load("Results/Result1.RData")
 load("Results/Result2.RData")
-textos$docname <- paste0("text", 1:633)
+textos$docname <- paste0("text", 1:686)
 rm(list=setdiff(ls(), c("textos","SS")))
 
 
@@ -8,7 +8,8 @@ SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "docname", all.x = TRUE
 
 library(dplyr)
 Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(pattern, doc_id))
-Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(pattern, doc_id))
+Master <- SoftSkills %>% filter(., Program=="Master") %>% select(., c(pattern, doc_id))
+PhD <- SoftSkills %>% filter(., Program=="PhD") %>% select(., c(pattern, doc_id))
 
 
 
