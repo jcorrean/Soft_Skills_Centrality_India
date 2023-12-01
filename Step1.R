@@ -7,11 +7,11 @@ textos$doc_id <- gsub("[^0-9_-]", "", textos$doc_id)
 # classify the type of program (e.g., Master or doctorate)
 # for each program. We need to check the correct 
 # classification 
-library(dplyr)
-textos <- mutate(textos, 
-                 Program = ifelse(
-                   grepl("Bachel", text), "Bachelor",
-                   "Postgraduate"))
+# Now, let's identify these programs
+# according to their level (i.e., bachelor, masters, doctorate)
+colnames(textos)[1] <- "Doc_No."
+library(readr)
+Programs <- read_csv("Programs.csv")
 
 library(quanteda)
 Textos <- corpus(textos$text)
