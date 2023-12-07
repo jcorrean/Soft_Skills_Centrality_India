@@ -38,4 +38,3 @@ Programs <- tokens(Textos,
   tokens_remove(stopwords("english"))
 
 save.image("Results/Result1.RData")
-
