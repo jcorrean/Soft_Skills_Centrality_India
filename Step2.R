@@ -53,4 +53,3 @@ df_list <- mget(paste0("s", 1:48))
 SS <- do.call(rbind, df_list)
 rm(list=setdiff(ls(), "SS"))
 save.image("Results/Result2.RData")
-
