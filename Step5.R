@@ -67,9 +67,9 @@ Program <- rescaled %>%
 
 
 library(ggplot2)
-ggplot(rescaled, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
+ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -85,9 +85,9 @@ ggplot(rescaled, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   ylab("Eigenvector Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(rescaled, aes(x=reorder(SS, Closeness), y=Closeness)) +
+ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -103,9 +103,9 @@ ggplot(rescaled, aes(x=reorder(SS, Closeness), y=Closeness)) +
   ylab("Closeness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(rescaled, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
+ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -121,9 +121,9 @@ ggplot(rescaled, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   ylab("Betweenness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(rescaled, aes(x=reorder(SS, Degree), y=Degree)) +
+ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen")) +  # Set colors
+  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -143,7 +143,7 @@ ggplot(rescaled, aes(x=reorder(SS, Degree), y=Degree)) +
 library(ggridges)
 ggplot(Programs, aes(x = Closeness, y = Program, fill = Program)) +
   geom_density_ridges(alpha = 0.3) +
-  scale_fill_manual(values = c("orange", "darkgreen")) +  # Set colors
+  scale_fill_manual(values = c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_ridges() + 
   theme(legend.position = "none",
         axis.text.x=element_text(size=20, colour="black"),
@@ -155,7 +155,7 @@ ggplot(Programs, aes(x = Closeness, y = Program, fill = Program)) +
 
 ggplot(Programs, aes(x = Degree, y = Program, fill = Program)) +
   geom_density_ridges(alpha = 0.3) +
-  scale_fill_manual(values = c("orange", "darkgreen")) +  # Set colors
+  scale_fill_manual(values = c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_ridges() + 
   theme(legend.position = "none",
         axis.text.x=element_text(size=20, colour="black"),
@@ -167,7 +167,7 @@ ggplot(Programs, aes(x = Degree, y = Program, fill = Program)) +
 
 ggplot(Programs, aes(x = Betweennes, y = Program, fill = Program)) +
   geom_density_ridges(alpha = 0.3) +
-  scale_fill_manual(values = c("orange", "darkgreen")) +  # Set colors
+  scale_fill_manual(values = c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_ridges() + 
   theme(legend.position = "none",
         axis.text.x=element_text(size=20, colour="black"),
@@ -185,5 +185,5 @@ ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Pr
   ) +
   scale_y_discrete(expand = c(0, 0)) +
   scale_x_continuous(expand = c(0, 0), name = "Centrality (rescaled 0-1)") +
-  scale_fill_manual(values = c("orange", "darkgreen"), labels = c("bachelor", "postgraduate")) +
+  scale_fill_manual(values = c("orange", "darkgreen", "lightblue"), labels = c("bachelor", "postgraduate")) +
   coord_cartesian(clip = "off") + theme_minimal()
