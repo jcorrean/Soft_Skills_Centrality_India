@@ -15,7 +15,8 @@ PhD <- SoftSkills %>% filter(., Program=="PhD") %>% select(., c(pattern, doc_id)
 
 library(igraph)
 bachelor <- graph.data.frame(Bachelor, directed = FALSE)
-postgraduate <- graph.data.frame(Postgraduate, directed = FALSE)
+master <- graph.data.frame(Master, directed = FALSE)
+doctor <- graph.data.frame(PhD, directed = FALSE)
 
 Bach <- data.frame(Degree = igraph::degree(bachelor),
                    Closeness = igraph::closeness(bachelor),
@@ -29,13 +30,13 @@ Bach <- Bach[230:273,]
 Bach$Program <- "Bachelor"
 
 
-postg <- data.frame(Degree = igraph::degree(postgraduate),
-                    Closeness = igraph::closeness(postgraduate),
-                    Betweennes = igraph::betweenness(postgraduate),
-                    Eigen = igraph::eigen_centrality(postgraduate))
-postg <- postg[ -c(5:25) ]
-rownames(postg)
-postg$SS <- rownames(postg)
+Master <- data.frame(Degree = igraph::degree(master),
+                    Closeness = igraph::closeness(master),
+                    Betweennes = igraph::betweenness(master),
+                    Eigen = igraph::eigen_centrality(master))
+Master <- Master[ -c(5:25) ]
+rownames(Master)
+Master$SS <- rownames(Master)
 postg <- postg[order(postg$SS), ]
 postg <- postg[390:434,]
 postg$Program <- "Postgraduate"
