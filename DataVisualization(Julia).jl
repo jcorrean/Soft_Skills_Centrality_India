@@ -9,6 +9,7 @@ loaded_data = load("/home/jcc/Documents/GitHub/Soft_Skills_Centrality_India/Resu
 # Access the DataFrame or other variables from the loaded data
 df = loaded_data["Programs"]
 
+Pkg.add("Plots")
 using Plots
 
 # Assuming you have a DataFrame named Programs with columns SS, Eigen.vector, and Program
