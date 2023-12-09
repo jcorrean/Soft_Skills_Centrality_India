@@ -25,7 +25,7 @@ Bach <- Bach[ -c(5:25) ]
 rownames(Bach)
 Bach$SS <- rownames(Bach)
 Bach <- Bach[order(Bach$SS), ]
-Bach <- Bach[101:144,]
+Bach <- Bach[230:273,]
 Bach$Program <- "Bachelor"
 
 
