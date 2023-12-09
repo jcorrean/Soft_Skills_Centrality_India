@@ -1,18 +1,12 @@
 using Pkg
 Pkg.add("DataFrames")
 Pkg.add("CSV")
+Pkg.add("Plots")
 
-using DataFrames
-using CSV
+using DataFrames, CSV, Plots
 
 # Replace "your_data.csv" with the actual path to your CSV file
 df = CSV.File("Programs.csv") |> DataFrame
-
-# Add the Plots package
-Pkg.add("Plots")
-using Plots
-
-# Assuming you have a DataFrame named Programs with columns SS, Eigen.vector, and Program
 
 # Set colors
 colors = ["orange", "darkgreen", "lightblue"]
@@ -29,13 +23,13 @@ plot(
         xlabel="Soft Skills",
         ylabel="Eigenvector Centrality",
         legend=:top,
-        legendfont=font(15),
+        legendfont=font(12),  # Adjust the font size as needed
         grid=true,
         xrotation=60,
-        xtickfont=font(15),
-        ytickfont=font(15),
-        xguidefont=font(20, :black, :italic),
-        yguidefont=font(20, :black, :italic),
+        xtickfont=font(12),  # Adjust the font size as needed
+        ytickfont=font(12),  # Adjust the font size as needed
+        xguidefont=font(12, :black, :italic),  # Adjust the font size and style as needed
+        yguidefont=font(12, :black, :italic),  # Adjust the font size and style as needed
     ),
     seriestype = :scatter,
     size=(800, 600),
