@@ -1,17 +1,12 @@
 using Pkg
-Pkg.add("RData")
+Pkg.add("DataFrames")
+Pkg.add("CSV")
 
-using RData
+using DataFrames
+using CSV
 
-# Replace "your_data.RData" with the actual path to your .RData file
-loaded_data = load("/home/jcc/Documents/GitHub/Soft_Skills_Centrality_India/Results/Result5.RData")
-
-# Access the DataFrame or other variables from the loaded data
-df = loaded_data["Programs"]
-
-df
-df[1:5, :]
-
+# Replace "your_data.csv" with the actual path to your CSV file
+df = CSV.File("Programs.csv") |> DataFrame
 
 # Add the Plots package
 Pkg.add("Plots")
