@@ -9,6 +9,9 @@ loaded_data = load("/home/jcc/Documents/GitHub/Soft_Skills_Centrality_India/Resu
 # Access the DataFrame or other variables from the loaded data
 df = loaded_data["Programs"]
 
+df
+
+# Add the Plots package
 Pkg.add("Plots")
 using Plots
 
@@ -20,9 +23,9 @@ colors = ["orange", "darkgreen", "lightblue"]
 # Create the plot
 plot(
     scatter(
-        Programs[!,:SS],
-        Programs[!,:Eigen.vector],
-        group=Programs[!,:Program],
+        df[!,:SS],  # Use df instead of Programs
+        df[!,:Eigen.vector],  # Use df instead of Programs
+        group=df[!,:Program],  # Use df instead of Programs
         color=colors,
         markersize=5,
         alpha=0.6,
@@ -40,4 +43,3 @@ plot(
     seriestype = :scatter,
     size=(800, 600),
 )
-
