@@ -37,12 +37,24 @@ Master <- data.frame(Degree = igraph::degree(master),
 Master <- Master[ -c(5:25) ]
 rownames(Master)
 Master$SS <- rownames(Master)
-postg <- postg[order(postg$SS), ]
-postg <- postg[390:434,]
-postg$Program <- "Postgraduate"
-rm(list=setdiff(ls(), c("Bach","postg")))
+Master <- Master[order(Master$SS), ]
+Master <- Master[269:312,]
+Master$Program <- "Master"
 
-Programs <- rbind(Bach, postg)
+Doctorate <- data.frame(Degree = igraph::degree(doctor),
+                     Closeness = igraph::closeness(doctor),
+                     Betweennes = igraph::betweenness(doctor),
+                     Eigen = igraph::eigen_centrality(doctor))
+Doctorate <- Doctorate[ -c(5:25) ]
+rownames(Doctorate)
+Doctorate$SS <- rownames(Doctorate)
+Doctorate <- Doctorate[order(Doctorate$SS), ]
+Doctorate <- Doctorate[28:60,]
+Doctorate$Program <- "PhD"
+
+
+rm(list=setdiff(ls(), c("Bach","Master", "Doctorate")))
+Programs <- rbind(Bach, Master, Doctorate)
 scaled_programs <- scale(Programs[c(1:4)])
 rescaled <- data.frame(apply(scaled_programs, 2, function(x) (x - min(x)) / (max(x) - min(x))))
 rescaled$SS <- Programs$SS
