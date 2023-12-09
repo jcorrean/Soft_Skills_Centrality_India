@@ -10,6 +10,8 @@ loaded_data = load("/home/jcc/Documents/GitHub/Soft_Skills_Centrality_India/Resu
 df = loaded_data["Programs"]
 
 df
+df[1:5, :]
+
 
 # Add the Plots package
 Pkg.add("Plots")
