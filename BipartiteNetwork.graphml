@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <key id="v_type" for="node" attr.name="type" attr.type="boolean"/>
+  <key id="v_color" for="node" attr.name="color" attr.type="string"/>
+  <key id="v_labelcolor" for="node" attr.name="labelcolor" attr.type="string"/>
+  <key id="e_ProgramType" for="edge" attr.name="ProgramType" attr.type="string"/>
+  <key id="e_color" for="edge" attr.name="color" attr.type="string"/>
+  <key id="e_width" for="edge" attr.name="width" attr.type="double"/>
+  <key id="e_linetype" for="edge" attr.name="linetype" attr.type="double"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_name">Ethical Thinking</data>
+      <data key="v_type">false</data>
+      <data key="v_color">#046A38</data>
+      <data key="v_labelcolor">#046A38</data>
+    </node>
+    <node id="n1">
+      <data key="v_name">Problem Solving</data>
+      <data key="v_type">false</data>
+      <data key="v_color">#046A38</data>
+      <data key="v_labelcolor">#046A38</data>
+    </node>
+    <node id="n2">
+      <data key="v_name">Critical Thinking</data>
+      <data key="v_type">false</data>
+      <data key="v_color">#046A38</data>
+      <data key="v_labelcolor">#046A38</data>
+    </node>
+    <node id="n3">
+      <data key="v_name">Leadership</data>
+      <data key="v_type">false</data>
+      <data key="v_color">#046A38</data>
+      <data key="v_labelcolor">#046A38</data>
+    </node>
+    <node id="n4">
+      <data key="v_name">Negotiation</data>
+      <data key="v_type">false</data>
+      <data key="v_color">#046A38</data>
+      <data key="v_labelcolor">#046A38</data>
+    </node>
+    <node id="n5">
+      <data key="v_name">Decision Making</data>
+      <data key="v_type">false</data>
+      <data key="v_color">#046A38</data>
+      <data key="v_labelcolor">#046A38</data>
+    </node>
+    <node id="n6">
+      <data key="v_name">Bachelor in Cybersecurity</data>
+      <data key="v_type">true</data>
+      <data key="v_color">#FF671F</data>
+      <data key="v_labelcolor">#FF671F</data>
+    </node>
+    <node id="n7">
+      <data key="v_name">Bachelor in Business Direction</data>
+      <data key="v_type">true</data>
+      <data key="v_color">#FF671F</data>
+      <data key="v_labelcolor">#FF671F</data>
+    </node>
+    <node id="n8">
+      <data key="v_name">Doctorate in Physics</data>
+      <data key="v_type">true</data>
+      <data key="v_color">#FF671F</data>
+      <data key="v_labelcolor">#FF671F</data>
+    </node>
+    <node id="n9">
+      <data key="v_name">Master in Finance</data>
+      <data key="v_type">true</data>
+      <data key="v_color">#FF671F</data>
+      <data key="v_labelcolor">#FF671F</data>
+    </node>
+    <node id="n10">
+      <data key="v_name">Doctorate in Engineering</data>
+      <data key="v_type">true</data>
+      <data key="v_color">#FF671F</data>
+      <data key="v_labelcolor">#FF671F</data>
+    </node>
+    <node id="n11">
+      <data key="v_name">Master in Data Science</data>
+      <data key="v_type">true</data>
+      <data key="v_color">#FF671F</data>
+      <data key="v_labelcolor">#FF671F</data>
+    </node>
+    <edge source="n0" target="n6">
+      <data key="e_ProgramType">Undergraduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">1</data>
+    </edge>
+    <edge source="n1" target="n6">
+      <data key="e_ProgramType">Undergraduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">1</data>
+    </edge>
+    <edge source="n2" target="n6">
+      <data key="e_ProgramType">Undergraduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">1</data>
+    </edge>
+    <edge source="n3" target="n7">
+      <data key="e_ProgramType">Undergraduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">1</data>
+    </edge>
+    <edge source="n4" target="n7">
+      <data key="e_ProgramType">Undergraduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">1</data>
+    </edge>
+    <edge source="n2" target="n8">
+      <data key="e_ProgramType">Graduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">2</data>
+    </edge>
+    <edge source="n5" target="n9">
+      <data key="e_ProgramType">Graduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">2</data>
+    </edge>
+    <edge source="n2" target="n10">
+      <data key="e_ProgramType">Graduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">2</data>
+    </edge>
+    <edge source="n5" target="n10">
+      <data key="e_ProgramType">Graduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">2</data>
+    </edge>
+    <edge source="n1" target="n11">
+      <data key="e_ProgramType">Graduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">2</data>
+    </edge>
+    <edge source="n2" target="n11">
+      <data key="e_ProgramType">Graduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">2</data>
+    </edge>
+    <edge source="n2" target="n7">
+      <data key="e_ProgramType">Undergraduate</data>
+      <data key="e_color">lightblue</data>
+      <data key="e_width">1.9</data>
+      <data key="e_linetype">1</data>
+    </edge>
+  </graph>
+</graphml>
