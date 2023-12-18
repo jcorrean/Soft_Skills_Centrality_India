@@ -30,7 +30,7 @@ pairs.panels(Programs,
              pch = 15,
              cex = 1,
              cex.axis = 1.8,
-             cex.labels = 2.5,
+             cex.labels = 1.5,
              lwd = 2,
              rug = TRUE,
              stars = TRUE
