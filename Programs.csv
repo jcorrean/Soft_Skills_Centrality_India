@@ -1,122 +1,718 @@
-"","Degree","Closeness","Betweennes","Eigen.vector","SS","Program"
-"acknowledge",2,0.00125786163522013,0.00311240417438399,8.74807346876041e-05,"acknowledge","Bachelor"
-"analyze",849,0.00158982511923688,237.97784876611,0.211297184486071,"analyze","Bachelor"
-"appreciate",175,0.00140646976090014,17.906127004158,0.0276940928770434,"appreciate","Bachelor"
-"argue",7,0.00129366106080207,0.000989277501525289,0.00152625456945806,"argue","Bachelor"
-"bridge",110,0.0013986013986014,11.8109791970133,0.038660710494758,"bridge","Bachelor"
-"change",473,0.00171526586620926,336.142915372949,0.0799179761773851,"change","Bachelor"
-"commit",63,0.00146842878120411,10.5239486650036,0.00806252374220234,"commit","Bachelor"
-"communica*",2701,0.00233100233100233,7014.09196786843,0.614130739726777,"communica*","Bachelor"
-"compete",7,0.00129366106080207,0.0329219426760765,0.000435316659878264,"compete","Bachelor"
-"conflict",109,0.00139470013947001,4.83188889509149,0.0231734119583302,"conflict","Bachelor"
-"control",2913,0.0016366612111293,1839.75062190243,0.87255398300958,"control","Bachelor"
-"convinc*",7,0.00129366106080207,0.0665329360110193,0.000825915047573472,"convinc*","Bachelor"
-"cooperat*",76,0.0013986013986014,274.749795677291,0.0125323858134971,"cooperat*","Bachelor"
-"creat*",1595,0.00202839756592292,3317.77384634949,0.354119945176911,"creat*","Bachelor"
-"critical thinking",58,0.00142247510668563,23.0350315789129,0.00590955781664128,"critical thinking","Bachelor"
-"deci*",963,0.00166944908180301,430.284938835768,0.192961711367435,"deci*","Bachelor"
-"empathy",15,0.00132802124833997,0.682643863431202,0.00146446851795039,"empathy","Bachelor"
-"ethics",541,0.00178890876565295,669.279319296937,0.0743378678885342,"ethics","Bachelor"
-"evaluat*",2186,0.0016750418760469,1263.87296944071,0.504137300990531,"evaluat*","Bachelor"
-"flexibility",39,0.0013986013986014,29.0833843959812,0.00538738561415172,"flexibility","Bachelor"
-"generate",139,0.00143884892086331,8.51931741005796,0.0338407247882687,"generate","Bachelor"
-"guide",304,0.0014903129657228,28.1914244240382,0.0707876521662009,"guide","Bachelor"
-"identify",746,0.0016366612111293,216.90957403164,0.18744819720935,"identify","Bachelor"
-"innovat*",391,0.00177619893428064,1463.76468583539,0.0498009964404415,"innovat*","Bachelor"
-"inspir*",45,0.00136798905608755,4.50903223766443,0.00491821631339056,"inspir*","Bachelor"
-"interact",33,0.00135685210312076,7.46649706304593,0.00556312246220574,"interact","Bachelor"
-"lead*",668,0.00200400801603206,1786.14412345295,0.0995195119868511,"lead*","Bachelor"
-"manage*",4479,0.00248138957816377,13966.5484988993,1,"manage*","Bachelor"
-"manifest",5,0.00127388535031847,0.00102148364685996,0.00046855522483206,"manifest","Bachelor"
-"motivat*",219,0.00146842878120411,13.8400048552394,0.0428277452042779,"motivat*","Bachelor"
-"patience",5,0.00127388535031847,0.0312640470566639,0.000403513145229686,"patience","Bachelor"
-"persua*",27,0.00131752305665349,0.0576375395786488,0.00862742724155791,"persua*","Bachelor"
-"planning",835,0.00160513643659711,321.781077359414,0.221646837733054,"planning","Bachelor"
-"problem solving",362,0.00154559505409583,402.215218943512,0.075532625485923,"problem solving","Bachelor"
-"reflect",34,0.00133511348464619,0.670684947538105,0.00642625674935786,"reflect","Bachelor"
-"respect",148,0.00146412884333821,284.213866389852,0.0285441902943683,"respect","Bachelor"
-"responsible",104,0.00149476831091181,104.354041092624,0.0120453151376902,"responsible","Bachelor"
-"share",54,0.00139470013947001,10.7733664369903,0.0067759305846725,"share","Bachelor"
-"solve",477,0.00159489633173844,167.97543446087,0.108899470216102,"solve","Bachelor"
-"strengthen",18,0.00132450331125828,0.487787604213831,0.00130049601597941,"strengthen","Bachelor"
-"teamwork",44,0.00139082058414465,9.95307532479024,0.00636199580689253,"teamwork","Bachelor"
-"thrust",43,0.00134589502018843,9.3475856444725,0.00774103537363576,"thrust","Bachelor"
-"understand",2795,0.00182815356489945,2134.87939505177,0.64549260196196,"understand","Bachelor"
-"undertake",50,0.00139470013947001,9.46360179429747,0.00463221227222181,"undertake","Bachelor"
-"acknowledge1",1,0.00107991360691145,0,3.73924113515264e-06,"acknowledge","Master"
-"analyze1",761,0.00137362637362637,487.203332073501,0.032009574826152,"analyze","Master"
-"appreciate1",162,0.00124069478908189,4.73416812371247,0.00993881823535102,"appreciate","Master"
-"argue1",1,0.00105485232067511,0,1.06618774590243e-06,"argue","Master"
-"bridge1",104,0.00124378109452736,29.1531296428204,0.00188885194940183,"bridge","Master"
-"change1",904,0.00148367952522255,887.969921021261,0.0579704064185078,"change","Master"
-"commit1",30,0.00116822429906542,0.599471236286081,0.000635619909001456,"commit","Master"
-"communica*1",3286,0.0018450184501845,5551.7075709848,0.133813237977386,"communica*","Master"
-"compete1",9,0.00113636363636364,0.00243394301935625,0.000667875648087525,"compete","Master"
-"conflict1",267,0.00123456790123457,3.94748695449525,0.0176515093081842,"conflict","Master"
-"control1",2566,0.00157232704402516,1603.0515926637,0.102610775471145,"control","Master"
-"convinc*1",56,0.00113122171945701,0.0772423185378675,0.00607611055675393,"convinc*","Master"
-"cooperat*1",104,0.00125944584382872,7.47514525379318,0.00387092276080246,"cooperat*","Master"
-"creat*1",1938,0.00171232876712329,1911.76600386155,0.121146640920075,"creat*","Master"
-"critical thinking1",98,0.00127226463104326,33.3191525536578,0.00291144357239632,"critical thinking","Master"
-"deci*1",2854,0.00160771704180064,1672.45950123489,0.204249338928508,"deci*","Master"
-"empathy1",9,0.00113636363636364,0.108756888881038,0.000652178807202614,"empathy","Master"
-"ethics1",614,0.00148367952522255,1160.64827738388,0.0345923346219728,"ethics","Master"
-"evaluat*1",3551,0.00167785234899329,2425.41955540985,0.19033982780418,"evaluat*","Master"
-"flexibility1",44,0.00119617224880383,16.8171596843615,0.00183436132499628,"flexibility","Master"
-"generate1",67,0.00123456790123457,10.4541202080979,0.00253855803599808,"generate","Master"
-"guide1",540,0.00140449438202247,117.095372146924,0.0262488688192143,"guide","Master"
-"identify1",670,0.00135869565217391,95.2269956492203,0.0346558796892606,"identify","Master"
-"innovat*1",842,0.00152439024390244,1736.19583132219,0.0573789780682612,"innovat*","Master"
-"inspir*1",41,0.00119331742243437,7.87695047674755,0.00156322375631224,"inspir*","Master"
-"interact1",34,0.00117647058823529,2.26184487681882,0.000991388413754595,"interact","Master"
-"lead*1",1195,0.00170068027210884,1711.92273886979,0.0760616978136348,"lead*","Master"
-"manage*1",13581,0.00223214285714286,24408.9423026559,1,"manage*","Master"
-"manifest1",6,0.00107991360691145,0.0168719482782718,3.69745055293454e-05,"manifest","Master"
-"motivat*1",422,0.00136239782016349,154.278408143387,0.0279201073125763,"motivat*","Master"
-"patience1",2,0.00108695652173913,0.000545376014623718,1.92922289281534e-05,"patience","Master"
-"persua*1",44,0.00116550116550117,0.035788793063568,0.00268474934313636,"persua*","Master"
-"planning1",2442,0.0016025641025641,1924.47636489402,0.165356222751073,"planning","Master"
-"problem solving1",275,0.00136612021857923,46.86368460446,0.011499453689643,"problem solving","Master"
-"reflect1",30,0.00115473441108545,1.24707531594488,0.00178086185423013,"reflect","Master"
-"respect1",105,0.00127226463104326,4.78502588361947,0.00453880629797353,"respect","Master"
-"responsible1",99,0.0012853470437018,76.1414940351437,0.00390977623961116,"responsible","Master"
-"share1",176,0.0012531328320802,8.45909731596814,0.0142880529097684,"share","Master"
-"solve1",435,0.00133333333333333,187.067618627193,0.0174577284217377,"solve","Master"
-"strengthen1",26,0.00117096018735363,3.03269159680903,0.0010030193081826,"strengthen","Master"
-"teamwork1",36,0.00117096018735363,2.00357164367024,0.00253838020602407,"teamwork","Master"
-"thrust1",25,0.00116009280742459,2.58638236751109,0.000621191949684559,"thrust","Master"
-"understand1",2815,0.00149253731343284,1573.69573025935,0.143085949655604,"understand","Master"
-"undertake1",80,0.00124069478908189,53.8735917567364,0.0039838892322523,"undertake","Master"
-"bridge2",2,0.00628930817610063,0.00944300686682953,0.0115774848989828,"bridge","PhD"
-"change2",46,0.00662251655629139,15.6978515872395,0.199426981514088,"change","PhD"
-"commit2",1,0.00540540540540541,0,0.00154162424690778,"commit","PhD"
-"communica*2",111,0.00854700854700855,224.925873757317,0.227563222511416,"communica*","PhD"
-"control2",68,0.00662251655629139,10.6712156089724,0.577587083143337,"control","PhD"
-"convinc*2",1,0.0053475935828877,0,0.00123846161672685,"convinc*","PhD"
-"cooperat*2",4,0.00662251655629139,0.20653998556621,0.0211795414680472,"cooperat*","PhD"
-"creat*2",26,0.00719424460431655,93.2140926273969,0.0566633655175492,"creat*","PhD"
-"critical thinking2",2,0.00523560209424084,0.313753970618463,0.000567174115878626,"critical thinking","PhD"
-"deci*2",37,0.00775193798449612,38.3013598317863,0.132851183209656,"deci*","PhD"
-"ethics2",28,0.00719424460431655,36.4597533598861,0.0501608378624537,"ethics","PhD"
-"evaluat*2",81,0.00813008130081301,131.755766811871,0.165552297638594,"evaluat*","PhD"
-"flexibility2",3,0.00540540540540541,58.8712486307543,0.000146525806667041,"flexibility","PhD"
-"generate2",3,0.0062111801242236,3.4308083691295,0.00958920639401956,"generate","PhD"
-"guide2",12,0.00680272108843537,4.43073467267329,0.0164254362721916,"guide","PhD"
-"identify2",3,0.00645161290322581,1.03185690261065,0.0100962482581382,"identify","PhD"
-"innovat*2",14,0.0075187969924812,46.9156772421532,0.0508104701048025,"innovat*","PhD"
-"inspir*2",4,0.00628930817610063,2.12975432892769,0.0192738200726272,"inspir*","PhD"
-"interact2",2,0.0062111801242236,0.158110642540935,0.00967107095815545,"interact","PhD"
-"lead*2",27,0.00813008130081301,60.7443126077313,0.0918410039996565,"lead*","PhD"
-"manage*2",147,0.00917431192660551,594.417255317929,0.748806438404243,"manage*","PhD"
-"motivat*2",6,0.0065359477124183,1.57784587734396,0.0318273169284749,"motivat*","PhD"
-"planning2",32,0.0065359477124183,7.28629045020523,0.251417109867855,"planning","PhD"
-"problem solving2",6,0.00578034682080925,0.180589534748742,0.00773393233054203,"problem solving","PhD"
-"reflect2",1,0.00613496932515337,0,0.00955572858213677,"reflect","PhD"
-"respect2",5,0.0065359477124183,0.847000426174288,0.0126600595353161,"respect","PhD"
-"responsible2",4,0.00598802395209581,0.697271371989138,0.00397208528495412,"responsible","PhD"
-"share2",2,0.0062111801242236,0.0347148123371985,0.0103009733718636,"share","PhD"
-"solve2",1,0.00465116279069767,0,8.11814541768211e-05,"solve","PhD"
-"strengthen2",1,0.00512820512820513,0,0.000526460056865882,"strengthen","PhD"
-"thrust2",9,0.0065359477124183,2.83258853430217,0.0229256317192616,"thrust","PhD"
-"understand2",22,0.00740740740740741,17.8582897309288,0.0379117883448904,"understand","PhD"
-"undertake2",1,0.00512820512820513,0,0.000334169840109015,"undertake","PhD"
+Institute_Name,Type_of_Institute,Doc_No.,Program_Name,Duration,Program_Type
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",Public Technical University,251_1,Post Basic Diploma in Neonatal Nursing Program,1 yr,Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",Public Technical University,251_2,PG Diploma in Genetic Counselling,1 yr,Post Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",Public Technical University,251_3,Master of Public Health Program,2 yrs,Post Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",Public Technical University,251_4,MBBS (Bachelor of Medicine and Bachelor of Surgery),5 yrs,Graduate
+"RAJEEV GANDHI GOVERNMENT P.G. COLLEGE, Sarguja University",State University,252_1,Master of Science  (PHYSICS),2 yrs,Post Graduate
+"RAJEEV GANDHI GOVERNMENT P.G. COLLEGE, Sarguja University",State University,252_2,Master of Arts in ENGLISH,2 yrs,Post Graduate
+"National Institute of Technology, Jamshedpur",Deemed University,253_1,Bachelor in technology,3 yrs,Graduate
+"National Institute of Technology, Jamshedpur",Deemed University,253_2,Master in technology,2 yrs,Post Graduate
+The LNM Institute of Information Technology,Deemed University,254_1,Bachelor in technology in Computer Science and Engineering,4 yrs,Graduate
+The LNM Institute of Information Technology,Deemed University,254_2,Bachelor in technology in Mechanical Engineering,4 yrs,Graduate
+The LNM Institute of Information Technology,Deemed University,254_3,Master in technology in CSE,2 yrs,Post Graduate
+The LNM Institute of Information Technology,Deemed University,254_4,Master of Science  Programme in Mathematics,2 yrs,Post Graduate
+The Northcap University,Private University,255_1,Bachelor of Law _ (BBA).LL.B (Hons.) Integrated Degree Programme,3 yrs,Graduate
+The Northcap University,Private University,255_2,Bachelor in technology in ECE with specialization in Embedded Systems and VLSI Design,4 yrs,Graduate
+The Northcap University,Private University,255_3,Bachelor in technology CSE _ Artificial Intelligence and Machine Learning,4 yrs,Graduate
+The Northcap University,Private University,255_4,Bachelor of Computer Applications in Gaming and Animation,3 yrs,Graduate
+The Northcap University,Private University,255_5,Master in technology CSE _ Cyber Security and Forensics,2 yrs,Post Graduate
+The Northcap University,Private University,255_6,Bachelor of Science  Hons Chemistry,3 yrs,Graduate
+"The Motherhood University, Roorkee",Private University,256_1,Bachelor of Science  Ag. Hons.,3 yrs,Graduate
+"The Motherhood University, Roorkee",Private University,256_2,Master in Pharmacy (Pharmacology),2 yrs,Post Graduate
+"The Motherhood University, Roorkee",Private University,256_3,Bachelor in Bussiness Administration (BBA),3 yrs,Graduate
+"The Motherhood University, Roorkee",Private University,256_4,Master in commerce,2 yrs,Post Graduate
+"The Motherhood University, Roorkee",Private University,256_5,Bachelor of Science  I.T.,3 yrs,Graduate
+Nalanda University,Central University,257_1,Master in Arts in world litterature,2 yrs,Post Graduate
+Nalanda University,Central University,257_2,Master in Arts in Hindu Studies (SanÃ„Âtana),2 yrs,Post Graduate
+Nalanda University,Central University,257_3,Master in Bussiness Administration (MBA) in Sustainable Development & Management,2 yrs,Post Graduate
+Periyar University,State University,258_1,Master of Science  in Food Processing,2 yrs,Post Graduate
+Periyar University,State University,258_2,Master of Computer Applications,3 yrs,Post Graduate
+Periyar University,State University,258_3,Master in Bussiness Administration (MBA),2 yrs,Post Graduate
+Periyar University,State University,258_4,Master of Science  (Mathematics),2 yrs,Post Graduate
+Periyar University,State University,258_5,Bachelor of Arts in English,3 yrs,Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",Public Technical University,259_1,Master of Science  nursing,2 yrs,Post Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",Public Technical University,259_2,MBBS (Bachelor of Medicine and Surgery),5 yrs,Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",Public Technical University,259_3,Ph.D. of Medical Psychiatry,3 yrs,Doctor of Philosophy
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",Public Technical University,259_4,Master of Surgery Orthopedic,2 yrs,Post Graduate
+"ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",Public Technical University,259_5,Ph.D. of Medicine Microbiology,3 yrs,Doctor of Philosophy
+Shiksha 'O' Anusandhan,Deemed University,260_1,Bachelor in technology Civil Engineering,4 yrs,Graduate
+Shiksha 'O' Anusandhan,Deemed University,260_2,Master in technology in Electrical Engineering,2 yrs,Post Graduate
+IIITM Gwalior,Deemed University,261_1,Bachelor in technology in Computer Science & Engineering,4 yrs,Graduate
+"School of Planning and Architecture, delhi",Central University,262_1,Master of Planning with specializations in Housing,2 yrs,Post Graduate
+"School of Planning and Architecture, delhi",Central University,262_2,Master in Arch. ( Urban Design ),2 yrs,Post Graduate
+"School of Planning and Architecture, delhi",Central University,262_3,Master of Planning with specializations in Environmental Planning,2 yrs,Post Graduate
+"School of Planning and Architecture, delhi",Central University,262_4,Master of Planning with specializations in Transport Planning,2 yrs,Post Graduate
+"Dr. DY Patil Vidyapeeth, Navi Mumbai",Private University,263_1,Ph.D. of Medicine Forensic Medicine,3 yrs,Doctor of Philosophy
+"Dr. DY Patil Vidyapeeth, Navi Mumbai",Private University,263_2,Ph.D. of Medicine Anatomy,3 yrs,Doctor of Philosophy
+"Dr. DY Patil Vidyapeeth, Navi Mumbai",Private University,263_3,MBBS (Bachelor of Medicine and Bachelor of Surgery),5 yrs,Graduate
+"Dr. DY Patil Vidyapeeth, Navi Mumbai",Private University,263_4,Bachelor of Science Bachelor of Science Anesthesia,3 yrs,Graduate
+"Vidyasagar University, midnapore",State University,264_1,Bachelor of Library Science (BLiBachelor of Science ),3 yrs,Graduate
+"Vidyasagar University, midnapore",State University,264_2,Master in Arts in Bengali,2 yrs,Post Graduate
+"ITM University, Gwalior",Private University,265_1,Diploma in Computer Science Engineering (CSE),3 yrs,Graduate
+"ITM University, Gwalior",Private University,265_2,Diploma in Pharmacy (D.Pharm),3 yrs,Graduate
+"ITM University, Gwalior",Private University,265_3,Master of Science  (Master of Science ) Mathematics,2 yrs,Post Graduate
+"ITM University, Gwalior",Private University,265_4,Bachelor of Science (Bachelor of Science  PCM),3 yrs,Graduate
+"Pandit Ravishankar Shukla University, Raipur",State University,266_1,Bachelor of Vocational Science In Interior Design _ B.Voc(ID),3 yrs,Graduate
+"Pandit Ravishankar Shukla University, Raipur",State University,266_2,Bachelor Of Science _ Bachelor of Science  (CS),3 yrs,Graduate
+"Pandit Ravishankar Shukla University, Raipur",State University,266_3,Bachelor in Commerce,3 yrs,Graduate
+Rashtrasant Tukadoji Maharaj Nagpur University,State University,267_1,Bachelor of Science Honours (Bachelor of Science  Hons.) Optometry,3 yrs,Graduate
+Rashtrasant Tukadoji Maharaj Nagpur University,State University,267_2,Bachelor of Science Honours (Bachelor of Science  Hons.) Physics,3 yrs,Graduate
+Rashtrasant Tukadoji Maharaj Nagpur University,State University,267_3,Bachelor of Science Honours (Bachelor of Science  Hons.) Zoology,3 yrs,Graduate
+Rashtrasant Tukadoji Maharaj Nagpur University,State University,267_4,Master of Science  (Master of Science ) Anatomy,2 yrs,Post Graduate
+Rashtrasant Tukadoji Maharaj Nagpur University,State University,267_5,Master of Science  in computer science,2 yrs,Post Graduate
+Rashtrasant Tukadoji Maharaj Nagpur University,State University,267_6,Master of Science  (Master of Science ) Clinical Psychology,2 yrs,Post Graduate
+Sikkim Manipal University,Private University,268_1,Bachelor in technology in Electronics (VLSI Design and Technology),4 yrs,Graduate
+Sikkim Manipal University,Private University,268_2,Bachelor in technology in Computer Science & Engineering (CSE),4 yrs,Graduate
+Sikkim Manipal University,Private University,268_3,Master of Computer Applications,2 yrs,Post Graduate
+Sikkim Manipal University,Private University,268_4,Master in Bussiness Administration (MBA),2 yrs,Post Graduate
+"DIT University, dehradun",Private University,269_1,Master in technology in Civil Engineering with specialization in Structural Engineering,2 yrs,Post Graduate
+"DIT University, dehradun",Private University,269_2,Ph.D. in Civil Engineering,2 yrs,Doctor of Philosophy
+"DIT University, dehradun",Private University,269_3,Bachelor of Arts in Economics,3 yrs,Graduate
+"Vinayaka MissionÃ¢â‚¬â„¢s Research Foundation, Salem",Private University,270_1,Ph.D. of Medicine Anesthesia,3 yrs,Doctor of Philosophy
+"Vinayaka MissionÃ¢â‚¬â„¢s Research Foundation, Salem",Private University,270_2,Bachelor of Science Bachelor of Science Medical Laboratory Technology,3 yrs,Graduate
+"Vinayaka MissionÃ¢â‚¬â„¢s Research Foundation, Salem",Private University,270_3,Bachelor in technology Artificial Intelligence and Machine Learning,4 yrs,Graduate
+Gandhigram Rural University,Deemed University,271_1,Master in technology in RenewableÂ Energy,2 yrs,Post Graduate
+Gandhigram Rural University,Deemed University,271_2,Bachelor in technology in Civil Engineering (Lateral Entry),4 yrs,Graduate
+Gandhigram Rural University,Deemed University,271_3,Master of Science  (Master of Science ) Botany,2 yrs,Post Graduate
+"Bidhan chandra krishi vishwavidyalaya, nadia",State University,272_1,Bachelor of Science  Agriculture,3 yrs,Graduate
+"Bidhan chandra krishi vishwavidyalaya, nadia",State University,272_2,Master of Science  Agriculture in Plant Pathology,2 yrs,Post Graduate
+"Bidhan chandra krishi vishwavidyalaya, nadia",State University,272_3,Master of Science  Ag. In Plant Breeding & Genetics,2 yrs,Post Graduate
+Assam University,Central University,273_1,Master of Science  in Biotechnology,2 yrs,Post Graduate
+Assam University,Central University,273_2,Master of Science  In Life Science,2 yrs,Post Graduate
+Assam University,Central University,273_3,Master of Arts in Political Science,2 yrs,Post Graduate
+Galgotias University,Private University,274_1,Bachelor of Science  in Hotel Management ,3 yrs,Graduate
+Galgotias University,Private University,274_2,Bachelor of Science  Fashion Design (In Association with T_Series),3 yrs,Graduate
+Galgotias University,Private University,274_3,Master in technology in Transportation Engineering,2 yrs,Post Graduate
+"Acharya N. G. Ranga Agricultural University, [ANGRAU], Guntur",Public Technical University,275_1,Master in Bussiness Administration (MBA) (Agriculture & Food Business),2 yrs,Post Graduate
+"Acharya N. G. Ranga Agricultural University, [ANGRAU], Guntur",Public Technical University,275_2,Master of Science  in Soil Science & Agricultural Chemistry,2 yrs,Post Graduate
+"Acharya N. G. Ranga Agricultural University, [ANGRAU], Guntur",Public Technical University,275_3,Master of Science  in molecular biology,2 yrs,Post Graduate
+"PEC University of Technology, chandigarh",Public Technical University,276_1,Bachelor in technology in Materials Engineering,4 yrs,Graduate
+"PEC University of Technology, chandigarh",Public Technical University,276_2,Master in technology in Industrial metallurgy,2 yrs,Post Graduate
+"PEC University of Technology, chandigarh",Public Technical University,276_3,Master in technology in Signal Processing,2 yrs,Post Graduate
+NIIT University,Private University,277_1,Bachelor in technology Data Science,4 yrs,Graduate
+NIIT University,Private University,277_2,Master in technology Educational Technology,2 yrs,Post Graduate
+NIIT University,Private University,277_3,Ph.D. in Computer Science and Engineering (CSE),3 yrs,Doctor of Philosophy
+Rajiv Gandhi University of Knowledge Technologies Ã¢â‚¬â€œ Basar,State University,278_1,Masters Programme in Computational Engineering,2 yrs,Post Graduate
+"Veer Surendra Sai University of Technology, Sambalpur",State University,279_1,Master of Science  in Physics,2 yrs,Graduate
+"Veer Surendra Sai University of Technology, Sambalpur",State University,279_2,"Master of Technology (Master in technology) in Power Electronics, Electrical Machines, and Drives",2 yrs,Post Graduate
+"Veer Surendra Sai University of Technology, Sambalpur",State University,279_3,Master of Science  in Agriculture in Crop Physiology,2 yrs,Post Graduate
+"Uttrakhand Technical University, roorkee college of engineering",Public Technical University,280_1,Bachelor in technology in Civil Engineering,4 yrs,Graduate
+"Uttrakhand Technical University, roorkee college of engineering",Public Technical University,280_2,Bachelor of Science  (Hons) (Forestry),3 yrs,Graduate
+"Uttrakhand Technical University, roorkee college of engineering",Public Technical University,280_3,Bachelor in technology in Computer Science and Engineering,4 yrs,Post Graduate
+Vikram University,State University,281_1,Master of Arts in Education,3 yrs,Post Graduate
+Vikram University,State University,281_2,Master in technology Mechanical Engineering,2 yrs,Post Graduate
+Vikram University,State University,281_3,Bachelor of Science  (Hons.) in Chemistry,3 yrs,Graduate
+"Rani Durgavati Vishwavidyalaya, Jabalpur",Public Technical University,282_1,Bachelor of Science  Physical Science,3 yrs,Graduate
+"Rani Durgavati Vishwavidyalaya, Jabalpur",Public Technical University,282_2,Master of Library Science (MLiBachelor of Science ),3 yrs,Post Graduate
+"Rani Durgavati Vishwavidyalaya, Jabalpur",Public Technical University,282_3,Master of Science  Computer Science,2 yrs,Post Graduate
+"National Institute of Technology, Agartala",Public Technical University,283_1,Master in technology in Artificial Intelligence,2 yrs,Post Graduate
+"National Institute of Technology, Agartala",Public Technical University,283_2,Master in technology in Cyber Security,2 yrs,Post Graduate
+"National Institute of Technology, Agartala",Public Technical University,283_3,Master in technology in Data Science and Engineering,2 yrs,Post Graduate
+Maharaja Ganga Singh University,State University,284_1,Bachelor of Science  Hons. Biochemistry,3 yrs,Graduate
+Maharaja Ganga Singh University,State University,284_2,Master of Science  in Nutrition,2 yrs,Post Graduate
+Maharaja Ganga Singh University,State University,284_3,Master of Legislative Laws (LLM),2 yrs,Post Graduate
+"Pt. Bhagwat Dayal Sharma University of Health Sciences, Rohtak",State University,285_1,MBBS (Bachelor of Medicine and Bachelor of Surgery),5 yrs,Graduate
+"Pt. Bhagwat Dayal Sharma University of Health Sciences, Rohtak",State University,285_2,Master of Physiotherapy (MPT),2 yrs,Post Graduate
+"Pt. Bhagwat Dayal Sharma University of Health Sciences, Rohtak",State University,285_3,Bachelor of Science  in medical lab technology,3 yrs,Graduate
+Ranchi University,State University,286_1,Bachelor in technology in Environmental Engineering,4 yrs,Graduate
+Ranchi University,State University,286_2,Ph.D. in Medical Physiology,3 yrs,Doctor of Philosophy
+Ranchi University,State University,286_3,Master of Science  chemistry,2 yrs,Post Graduate
+Central University of Tamil Nadu,Central University,287_1,Master of Science  (Agriculture Horticulture),2 yrs,Post Graduate
+Central University of Tamil Nadu,Central University,287_2,Master of Science  in Physics,2 yrs,Post Graduate
+Central University of Tamil Nadu,Central University,287_3,Master of Science  in Geography,2 yrs,Post Graduate
+"National Institute of Technology, Srinagar",Public Technical University,288_1,Bachelor in technology in Civil Engineering,4 yrs,Graduate
+"National Institute of Technology, Srinagar",Public Technical University,288_2,Bachelor in technology in Chemical Engineering ,4 yrs,Graduate
+"National Institute of Technology, Srinagar",Public Technical University,288_3,Bachelor in technology in Metallurgical and Materials Engineering,4 yrs,Graduate
+"Maharshi Markandeshwar University, Mullana",Private University,289_1,Master of Computer Applications,3 yrs,Post Graduate
+"Maharshi Markandeshwar University, Mullana",Private University,289_2,Master in Bussiness Administration (MBA),2 yrs,Post Graduate
+"Maharshi Markandeshwar University, Mullana",Private University,289_3,Bachelor of Hotel Management and Catering Technology| HOTEL MANAGEMENT,3 yrs,Graduate
+"National Institute of Technology, Meghalaya",Public Technical University,290_1,Bachelor in technology in COMPUTER SCIENCE AND ENGINEERING,4 yrs,Graduate
+"National Institute of Technology, Meghalaya",Public Technical University,290_2,Doctor of Philosophy Ph.D.,3 yrs,Doctor of Philosophy
+"National Institute of Technology, Meghalaya",Public Technical University,290_3,Bachelor in technology in Electrical Engineering,4 yrs,Graduate
+Odisha University of technology and Research,State University,291_1,Bachelor in technology in Computer Science & Engineering,4 yrs,Graduate
+Odisha University of technology and Research,State University,291_2,Master of Computer Applications,2 yrs,Post Graduate
+Odisha University of technology and Research,State University,291_3,Bachelor in technology in Mechanical Engineering,4 yrs,Graduate
+"Chhattisgarh Swami Vivekanand Technical University, SSTC, bhilai",Public Technical University,292_1,Bachelor in technology in Computer Science & Engineering,4 yrs,Post Graduate
+"Chhattisgarh Swami Vivekanand Technical University, SSTC, bhilai",Public Technical University,292_2,Bachelor of Science  . In Applied Physics ,3 yrs,Graduate
+"Chhattisgarh Swami Vivekanand Technical University, SSTC, bhilai",Public Technical University,292_3,Bachelor in technology in Information Technology Engineering ,4 yrs,Graduate
+"REVA University, Banglore",Private University,293_1,Bachelor in technology Computer Science and Information Technology (CS & IT),4 yrs,Graduate
+"REVA University, Banglore",Private University,293_2,Master in technology in Cybersecurity,2 yrs,Post Graduate
+"REVA University, Banglore",Private University,293_3,Ph.D. IN ARCHITECTURE,3 yrs,Doctor of Philosophy
+"National University of Advanced Legal Studies (NUALS), Kochi",State University,294_1,BA LLB (Bachelor of Arts + Bachelor of Laws),3 yrs,Graduate
+"Ganpat University, Mehsana",Private University,295_1,Bachelor  OF SCIENCE IN BIOTECHNOLOGY,3 yrs,Graduate
+"Ganpat University, Mehsana",Private University,295_2,Bachelor  OF SCIENCE IN INFORMATION TECHNOLOGY (CYBER SECURITY),3 yrs,Graduate
+"Ganpat University, Mehsana",Private University,295_3,Bachelor  OF TECHNOLOGY IN COMPUTER SCIENCE & ENGINEERING (CLOUD BASED APPLICATIONS),4 yrs,Graduate
+"Graphic Era Hill University, Dehradun ",Private University,296_1,Bachelor of Science  Animation & Gaming,3 yrs,Graduate
+"Graphic Era Hill University, Dehradun ",Private University,296_2,Bachelor in Design Product Design,3 yrs,Graduate
+"Graphic Era Hill University, Dehradun ",Private University,296_3,Master in Fashion Management,2 yrs,Post Graduate
+"Banasthali Vidyapith, Jaipur",Private University,297_1,Master in technology in Biotechnology,2 yrs,Post Graduate
+"Banasthali Vidyapith, Jaipur",Private University,297_2,Master of Design Studies ,2 yrs,Post Graduate
+"Banasthali Vidyapith, Jaipur",Private University,297_3,Master of Arts in Sanskrit,2 yrs,Post Graduate
+"Central University of Rajasthan, Ajmer",Central University,298_1,Ph.D. of Pholosopy,3 yrs,Doctor of Philosophy
+"Central University of Rajasthan, Ajmer",Central University,298_2,Bachelor in technology in Electronics and Communication Engineering,4 yrs,Graduate
+"Central University of Rajasthan, Ajmer",Central University,298_3,Master of Science  Mathematics,2 yrs,Post Graduate
+"AIIMS, Rishikesh",Public Technical University,299_1,MBBS (Bachelor of Medicine and Bachelor of Surgery),5 yrs,Graduate
+"AIIMS, Rishikesh",Public Technical University,299_2,Ph.D. of Medicine (MD) in microbiology,3 yrs,Doctor of Philosophy
+"AIIMS, Rishikesh",Public Technical University,299_3,Master of Surgery Orthopedics,2 yrs,Post Graduate
+"AIIMS, Bhopal",Public Technical University,300_1,Master of Surgery Obstetrics and Gynaecology,2 yrs,Post Graduate
+"AIIMS, Bhopal",Public Technical University,300_2,Ph.D. of Medicine (MD) in Radiotherapy,3 yrs,Doctor of Philosophy
+"AIIMS, Bhopal",Public Technical University,300_3,Ph.D. of Medicine in Cardiology,3 yrs,Doctor of Philosophy
+Glocal University,Private University,201_1,Master of Business Administration,2 years,Post Graduate
+Glocal University,Private University,201_2,Bachelor of Business Administration,3 years,Graduate
+Glocal University,Private University,201_3,Master of Arts,2 years,Post Graduate
+Glocal University,Private University,201_4,Bachelor of Arts,3 years,Graduate
+gujrat national law university,State University,202_1,Bachelor of Commerce and Bachelor of Legislative Law (LLB,5 years,Graduate
+gujrat national law university,State University,202_2,Bachelor of Business Administration and Bachelor of Legislative Law ,5 years,Graduate
+gujrat national law university,State University,202_3,Bachelor of Science and Bachelor of Legislative Law (LLB).,5 years,Graduate
+gujrat national law university,State University,202_4,Bachelor of Social Wealth and Bachelor of Lagislative Law,5 years,Graduate
+west bengal national university  of law science,State University,203_1,Bachelor of Scienceand Bachelor of Legislative Law (LLB,5 years,Graduate
+west bengal national university  of law science,State University,203_2,Bachelor of Arts (BA) and Bachelor of Legislative Law (LLB).,5 years,Graduate
+Marwadi University,Private University,204_1,Bachelor of Technology (Computer),4 years,Graduate
+Marwadi University,Private University,204_2,Bachelor of Science (Chemistry),3 years,Graduate
+Marwadi University,Private University,204_3,Master of Technology(Cyber Security),2 years,Post Graduate
+Rmit University,Private University,205_1,Bachelor of Technology (Civil),4 years,Graduate
+Rmit University,Private University,205_2,Bachelor of Commerce,3 years,Graduate
+Rmit University,Private University,205_3,Bachelor of Arts,3 years,Graduate
+Rmit University,Private University,205_4,Bachelor of Science(Computer),3 years,Graduate
+Dav University,Private University,206_1,Bachelor of Technology(Electrical),4 years,Graduate
+Dav University,Private University,206_2,Bachelor of Technology (Civil),4 years,Graduate
+Dav University,Private University,206_3,Bachelor of Science(Computer),3 years,Graduate
+Dav University,Private University,206_4,Master of Technology(Computer),2 years,Post Graduate
+Gokhle institute of politics and economics,Private University,208_1,Master of Science (Agriculture) ,2 years,Post Graduate
+Gokhle institute of politics and economics,Private University,208_2,Master of Science (Financial Economy),2 years,Post Graduate
+kaziranga university,Private University,211_1,Bachelor of Technology (Civil),4 years,Graduate
+kaziranga university,Private University,211_2,Master of Science (Physics),2 years,Post Graduate
+kaziranga university,Private University,211_3,Master of Business Administration,2 years,Post Graduate
+kaziranga university,Private University,211_4,Bachelor of Commerce,3 years,Graduate
+giet university,State University,212_1,Bachelor of Technology (Computer),4 years,Graduate
+giet university,State University,212_2,Bachelor of Computer Application,3 years,Graduate
+giet university,State University,212_3,Master of Business Administration,2 years,Post Graduate
+eternal  university,Private University,213_1,Bachelor of Technology (Computer),4 years,Graduate
+eternal  university,Private University,213_2,Master of Business Administration,2 years,Post Graduate
+eternal  university,Private University,213_3,Master of Commerce,2 years,Post Graduate
+gsfc university,Private University,214_1,Bachelor of Technology (Computer),4 years,Graduate
+gsfc university,Private University,214_2,Master Of Technology (Computer),2 years,Post Graduate
+gsfc university,Private University,214_3,Bachelor of Science (Data Science),3 years,Graduate
+gsfc university,Private University,214_4,Master of Business Administration,2 years,Post Graduate
+gsfc university,Private University,214_5,Bachelor of Business Administration,3 years,Graduate
+baba ghulam shah university,State University,215_1,Bachelor of Technology (Civil),4 years,Graduate
+baba ghulam shah university,State University,215_2,Bachelor of Education,2 years,Graduate
+baba ghulam shah university,State University,215_3,Bachelor of Technology (Information Technology),4 years,Graduate
+baba ghulam shah university,State University,215_4,Bachelor of Business Administration,3 years,Graduate
+era university,State University,216_1,Bachelor of Computer Application,3 years,Graduate
+era university,State University,216_2,Bachelor of Pharmacy,3 years,Graduate
+era university,State University,216_3,Master of Science (Food technolgy),2 years,Post Graduate
+maharshi university,Private University,217_1,Bachelor of Technology,4 years,Graduate
+maharshi university,Private University,217_2,Master Of Computer Application,2 years,Post Graduate
+maharshi university,Private University,217_3,Bachelor of Arts,3 years,Graduate
+maharshi university,Private University,217_4,Master of Business Administration,2 years,Post Graduate
+vignans university,Deemed University,218_1,Bachelor of Technology (Civil),4 years,Graduate
+vignans university,Deemed University,218_2,Bachelor of Technology (Computer),4 years,Graduate
+vignans university,Deemed University,218_3,Bachelor of Pharmacy,3 years,Graduate
+tripura university,State University,219_1,Master of Science,2 years,Post Graduate
+tripura university,State University,219_2,Master of Arts,2 years,Post Graduate
+tripura university,State University,219_3,Master Of Computer Application,2 years,Post Graduate
+tripura university,State University,219_4,Master of Business Administration,2 years,Post Graduate
+indrashil university,Private University,220_1,Bachelor of Technology mechanical ,4 years,Graduate
+indrashil university,Private University,220_2,Bachelor of Pharmacy,3 years,Graduate
+indrashil university,Private University,220_3,Bachelor of Science (Information Technology),3 years,Graduate
+indrashil university,Private University,220_4,Bachelor of Computer Application,3 years,Graduate
+poornima university,Private University,221_1,Bachelor of Technology (Civil),4 years,Graduate
+poornima university,Private University,221_2,Bachelor of Computer Application,3 years,Graduate
+poornima university,Private University,221_3,Master of Business Administration,2 years,Post Graduate
+poornima university,Private University,221_4,Bachelor of Architechture,3 years,Graduate
+poornima university,Private University,221_5,Bachelor of Commerce,3 years,Graduate
+nittte university,Deemed University,222_1,Bachelor of Medicine and Bachelor of Surgery,5 years,Graduate
+nittte university,Deemed University,222_2,Bachelor of Dental Surgery,5 years,Graduate
+nittte university,Deemed University,222_3,Doctor of medicine (pharmcology),2 years,Post Graduate
+university of north bengal,State University,223_1,Bachelor of Arts  and Bachelor of Legislative Law ,5 years,Graduate
+university of north bengal,State University,223_2,Master of Commerce,2 years,Post Graduate
+university of north bengal,State University,223_3,Master of Arts(History),2 years,Post Graduate
+university of north bengal,State University,223_4,Master of Business Administration,2 years,Post Graduate
+university of north bengal,State University,223_5,Master of Science mathematics,2 years,Post Graduate
+lnct university,Private University,224_1,Bachelor of Technology (A,4 years,Graduate
+lnct university,Private University,224_2,Master Of Computer Application ,2 years,Post Graduate
+lnct university,Private University,224_3,Master of Business Administration ,2 years,Post Graduate
+sushant university,Private University,225_1,Master of Business Administration (Aviation),2 years,Post Graduate
+iihmr university,Private University,226_1,Master of Business Administration (Development Manager),2 years,Post Graduate
+iihmr university,Private University,226_2,Master of Public Health,2 years,Post Graduate
+makhanlal chaturvedi national university,State University,227_1,Master of Arts,2 years,Post Graduate
+makhanlal chaturvedi national university,State University,227_2,Master Of Computer Application,2 years,Post Graduate
+makhanlal chaturvedi national university,State University,227_3,Master of Business Administration (Media Business),2 years,Post Graduate
+makhanlal chaturvedi national university,State University,227_4,Bachelor of Science electronic media,3 years,Graduate
+makhanlal chaturvedi national university,State University,227_5,Bachelor of Technology printing & packaging,4 years,Graduate
+jayoti vidyapeeti womens university,Private University,228_1,Master Of Technology,2 years,Post Graduate
+jayoti vidyapeeti womens university,Private University,228_2,Bachelor of Technology,4 years,Graduate
+jayoti vidyapeeti womens university,Private University,228_3,Bachelor of Science biotechnology,3 years,Graduate
+AURO university,Private University,229_1,Bachelor of Commerce,3 years,Graduate
+AURO university,Private University,229_2,Bachelor of Science (Computer Science),3 years,Graduate
+AURO university,Private University,229_3,Bachelor of Arts  and Bachelor of Legislative Law ,5 years,Graduate
+AURO university,Private University,229_4,Bachelor of Arts,3 years,Graduate
+national forensic science university,central university,230_1,Master of Science (forensic),3 years,Post Graduate
+national forensic science university,central university,230_2,Master of Arts criminology,3 years,Post Graduate
+sandip university,Private University,231_1,Bachelor of Business Administration and Bachelor of Legislative Law ,5 years,Graduate
+sandip university,Private University,231_2,Bachelor of Technology,4 years,Graduate
+sandip university,Private University,231_3,Bachelor of Science (microbiology),3 years,Graduate
+sandip university,Private University,231_4,Bachelor of Pharmacy,3 years,Graduate
+Hindustan institute of technology,Deemed University,232_1,Bachelor of Technology (Computer),4 years,Graduate
+Hindustan institute of technology,Deemed University,232_2,Bachelor of Technology (Information Technology),4 years,Graduate
+Hindustan institute of technology,Deemed University,232_3,Master Of Technology civil,2 years,Post Graduate
+Hindustan institute of technology,Deemed University,232_4,Bachelor of Pharmacy,3 years,Graduate
+rishihood university,Private University,233_1,Master of Business Administration,2 years,Post Graduate
+rishihood university,Private University,233_2,Bachelor of Arts m design,3 years,Graduate
+rishihood university,Private University,233_3,Bachelor of Commerce,3 years,Graduate
+rishihood university,Private University,233_4,Bachelor of Arts economics,3 years,Graduate
+rishihood university,Private University,233_5,Bachelor of Arts psycology,3 years,Graduate
+Ambedkar University delhi,State University,234_1,Bachelor of Arts honours,3 years,Graduate
+Ambedkar University delhi,State University,234_2,Master of Arts (English),2 years,Post Graduate
+Ambedkar University delhi,State University,234_3,Ph.D. (English),2years,Doctor of Philosophy
+Ambedkar University delhi,State University,234_4,Bachelor of Business Administration,3 years,Graduate
+Ambedkar University delhi,State University,234_5,Master of Business Administration,2 years,Post Graduate
+Ambedkar University delhi,State University,234_3,Ph.D. (Hindi),2years,Doctor of Philosophy
+bhartiya skill development university,Private University,235_1,Bachelors of Vocational Education,3 years,Graduate
+bhartiya skill development university,Private University,235_2,Master of Vocational Education,2 years,Post Graduate
+navrachna university,Private University,236_1,Bachelor of Computer Application,3 years,Graduate
+navrachna university,Private University,236_2,Master of Business Administration,2 years,Post Graduate
+navrachna university,Private University,236_3,Bachelor of Technology,4 years,Graduate
+navrachna university,Private University,236_4,Bachelor of Education,2 years,Graduate
+navrachna university,Private University,236_5,Master of Science chemistry,2 years,Post Graduate
+santosh university,Deemed University,237_1,Bachelor of Medicine and Bachelor of Surgery,5 years,Post Graduate
+santosh university,Deemed University,237_2,Doctor of Medicine(phycology),2 years,Post Graduate
+santosh university,Deemed University,237_3,Bachelor of Science anesthesia,3 years,Graduate
+santosh university,Deemed University,237_4,Doctor of Medicine (dermitology),2 years,Post Graduate
+"Bundelkhand University,Jhansi",State University,238_1,Bachelor of Arts  and Bachelor of Legislative Law ,5 years,Graduate
+"Bundelkhand University,Jhansi",State University,238_2,Master Of Computer Application,2 years,Post Graduate
+"Bundelkhand University,Jhansi",State University,238_3,Master of Business Administration,2 years,Post Graduate
+"Bundelkhand University,Jhansi",State University,238_4,Bachelor of Technology Electronics,4 years,Graduate
+"Bundelkhand University,Jhansi",State University,238_5,Master of Science physics,2 years,Post Graduate
+"Bundelkhand University,Jhansi",State University,238_6,Master of Arts,2 years,Post Graduate
+"Bundelkhand University,Jhansi",State University,238_7,Bachelor of Pharmacy,3 years,Graduate
+TERI Institute of advanced studies,Deemed University,239_1,Master of Arts(Sustainable development),2 years,Post Graduate
+TERI Institute of advanced studies,Deemed University,239_2,Master of Science (Economics),2 years,Post Graduate
+TERI Institute of advanced studies,Deemed University,239_3,Master of Business Administration(Infrastructure),2 years,Post Graduate
+TERI Institute of advanced studies,Deemed University,239_4,Master Of Technology urdan infra,2 years,Post Graduate
+alakh prakash goyal simla university,Private University,240_1,Bachelor of Technology (Computer Science),4 years,Graduate
+alakh prakash goyal simla university,Private University,240_2,Master of Technology (Computer Science),2 years,Post Graduate
+alakh prakash goyal simla university,Private University,240_3,Bachelor of Arts (BA) and Bachelor of Legislative Law (LLB).,5 years,Graduate
+alakh prakash goyal simla university,Private University,240_4,Master of Business Administration,2 years,Post Graduate
+alakh prakash goyal simla university,Private University,240_5,Bachelor of Pharmacy,3 years,Graduate
+National institute of technology raipur,Private University,241_1,Master Of Technology (Mechanical),2 years,Post Graduate
+National institute of technology raipur,Private University,241_2,Bachelor of Engineering (Mining),4 years,Graduate
+National institute of technology raipur,Private University,241_3,Bachelor of Engineering (Electrical),4 years,Graduate
+apex professional university,Private University,242_1,Master of Science (Information Technology),2 years,Post Graduate
+apex professional university,Private University,242_2,Master of Arts (Education),2 years,Post Graduate
+apex professional university,Private University,242_3,Master of Business Administration,2 years,Post Graduate
+apex professional university,Private University,242_4,Bachelor of Science (Forensic),3 years,Graduate
+yenopaya university,Deemed University,243_1,Master of Science (Statistics),2 years,Post Graduate
+sri guru ram rai university,Private University,244_1,Bachelor of Science (Information Technology),3 years,Graduate
+sri guru ram rai university,Private University,244_2,Bachelor of Business Administration,3 years,Graduate
+sri guru ram rai university,Private University,244_3,Bachelor of Commerce,3 years,Graduate
+sri guru ram rai university,Private University,244_4,Master of Business Administration,2 years,Post Graduate
+sri guru ram rai university,Private University,244_5,Master of Education,2 years,Post Graduate
+baba mastnath university,Private University,245_1,Bachelor of Science (Chemistry),3 years,Graduate
+baba mastnath university,Private University,245_2,Master of Science (Physics),2 years,Post Graduate
+baba mastnath university,Private University,245_3,Bachelor of Arts  and Bachelor of Legislative Law ,5 years,Graduate
+Centurian university of technology and management,Private University,246_1,Bachelor of Technology (Computer Science),4 years,Graduate
+Centurian university of technology and management,Private University,246_2,Bachelor of Technology (Civil),4 years,Graduate
+Centurian university of technology and management,Private University,246_3,Bachelor of Commerce,3 years,Graduate
+Centurian university of technology and management,Private University,246_4,Bachelor of Business Administration,3 years,Graduate
+Centurian university of technology and management,Private University,246_5,Bachelor of Technology (Agriculture),4 years,Graduate
+Centurian university of technology and management,Private University,246_6,Bachelor of Science (Animation),3 years,Graduate
+Centurian university of technology and management,Private University,246_7,Master of Business Administration (Agribussiness),2 years,Post Graduate
+National University Jodhpur,Private University,247_1,Bachelor of Business Administration and Bachelor of Legislative Law ,5 years,Graduate
+National University Jodhpur,Private University,247_2,Bachelor of Arts  and Bachelor of Legislative Law ,5 years,Graduate
+jaypee university of information & technology,Private University,248_1,Bachelor of Engineering (Computer Science),4  years ,Graduate
+jaypee university of information & technology,Private University,248_2,Master of Business Administration,2 years,Post Graduate
+jaypee university of information & technology,Private University,248_3,Master of Science (Environment Biotech),2 years,Post Graduate
+jaypee university of information & technology,Private University,248_4,Master Of Technology (Data Analytics),2 years,Post Graduate
+jaypee university of information & technology,Private University,248_5,Bachelor of Engineering (Civil) ,4 years,Graduate
+jaypee university of information & technology,Private University,248_6,Bachelor of Engineering (Electrical & Communication),4 years,Graduate
+srinivas institute of engineering and technology,Private University,249_1,Bachelor of Technology,4  years,Graduate
+srinivas institute of engineering and technology,Private University,249_2,Master Of Technology,2 years,Post Graduate
+srinivas institute of engineering and technology,Private University,249_3,Master of Business Administration,2 years,Post Graduate
+rama university ,Private University,250_1,Bachelor of Ayurvedic Medicine and Surgery,5 years,Graduate
+rama university ,Private University,250_2,Bachelor of Technology,4 years,Graduate
+rama university ,Private University,250_3,Bachelor of Arts(Journlism),3 years,Graduate
+Bharati Vidyapeeth,Deemed University,151_1,Bachelor in Technology in Computer Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_2,Bachelor in Technology in Civil Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_3,Bachelor in Technology in Computer Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_4,Bachelor in Technology in CSE ,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_5,Bachelor in Technology in Electronics Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_6,Bachelor in Technology in ECE Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_7,Bachelor in Technology in ENTC Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_8,Bachelor in Technology in Information Technology,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_9,Bachelor in Technology in MechanicalEngineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_10,Bachelor in Technology in Automobile Engineering,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_11,Bachelor in Technology in Robotics and Automation,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_12,Bachelor in Computer Applications,4,Graduate
+Bharati Vidyapeeth,Deemed University,151_13,MBBS(Bahelors in Surgery Bachelor in Medicine),5,Graduate
+Bharati Vidyapeeth,Deemed University,151_14,Master in Technology in CSE(Cyber_Seurity),4,Post  Graduate
+Bharati Vidyapeeth,Deemed University,151_15,MD(ANATOMY),2,Post  Graduate
+Sant Gadge Baba Amravati University,Amravati University,152_1,Master in Sciences in Applied Electronics,3,Post  Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,153_1,Bachelor in Technology In ICT,4,Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_1,Bachelor in Technology in ICT_CS,4,Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_2,Bachelor in Technology in MnC,4,Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_3,Master in Technology in ict,2,Post Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_4,Master in Technology in EC,2,Post Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_5,Master in Sciences Ds,2,Post Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_6,Master in Sciences It,2,Post Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_7,M.Des in Communication Design,4,Post Graduate
+Sardar Vallabhai National Institute of Technology Surat,Deemed University,154_1,Bachelor in Technology CSE,4,Graduate
+Sardar Vallabhai National Institute of Technology Surat,Deemed University,154_2,Bachelor in Technology In Electrical Engg,4,Graduate
+Sardar Vallabhai National Institute of Technology Surat,Deemed University,154_3,Master in Technology in Electrical,2,Post Graduate
+Sardar Vallabhai National Institute of Technology Surat,Deemed University,154_4,Master in Technology In CSE,2,Post Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_8,Master in Technology ,2,Post Graduate
+Dhirubhai Institue Of Information & Communication Technology,Deemed University,156_9,Ph.D. in Cse,2,Doctorate
+Patna University,State University,157_1,Bachelor in Technology,4,Graduate
+Parul University,Private University,158_1,Bachelor in Technology CSE,4,Graduate
+Parul University,Private University,158_2,Master in Technology ,2,Post Graduate
+Parul University,Private University,158_3,M.Des,2,Post Graduate
+Flame Education,Deemed University,164_1,Master in Technology,2,Post Graduate
+NIT WARANGAL,State University,167_1,Bachelor in Technology Civil Engg,4,Graduate
+NIT WARANGAL,State University,167_2,Bachelor in Technology ECE,4,Graduate
+NIT WARANGAL,State University,167_3,Bachelor in Technology CSE,4,Graduate
+NIT WARANGAL,State University,167_4,Master in Technology CSE,2,Post Graduate
+NIT WARANGAL,State University,167_5,Maste in Computer Applications,2,Post Graduate
+IISER Thiruvananthpuram,Deemed University,168_1,Master in Biotech,2,Post Graduate
+IISER Thiruvananthpuram,Deemed University,168_2,Master in Science,2,Post Graduate
+IISER Thiruvananthpuram,Deemed University,168_3,Bachelor In Sciences,3,Graduate
+PES UNIVERSITY,Deemed University,177_1,Bachelor in Computer Applications,3,Graduate
+PES UNIVERSITY,Deemed University,177_2,MBBS(Bahelors in Surgery Bachelor in Medicine),5,Graduate
+PES UNIVERSITY,Deemed University,177_3,Bachelor in Technology,4,Graduate
+PES UNIVERSITY,Deemed University,177_4,MBA,2,Post Graduate
+PES UNIVERSITY,Deemed University,177_5,Masters in Computer Applications,2,Post Graduate
+Visvesvaraya NIT Nagur,State University,184_1,Bachelor in Technology Cse,4,Graduate
+Visvesvaraya NIT Nagur,State University,184_2,Master in Technology CSE,2,Post Graduate
+Visvesvaraya NIT Nagur,State University,184_3,Master in Technology Civil,2,Post Graduate
+Visvesvaraya NIT Nagur,State University,184_4,Master in Technology ENTC,2,Post Graduate
+BML Munjal University,State University,182_1,MBA,2,Post Graduate
+BML Munjal University,State University,182_2,Bachelor in Technology CSe,4,Graduate
+BML Munjal University,State University,182_3,Master in Technology,2,Post Graduate
+Ramnarain Ruia College,University Of Mumbai,159_1,Bachelor in Science,3,Graduate
+Ramnarain Ruia College,University Of Mumbai,159_2,Master in Science in Biotechnology,2,Post Graduate
+Ramnarain Ruia College,University Of Mumbai,159_3, Master in Science in CS,2,Post Graduate
+Sri Ramchandra Institute of Research,Deemed University,185_1,Bachelor in Technology,4,Graduate
+Sri Ramchandra Institute of Research,Deemed University,185_2,MBA,2,Post Graduate
+Sri Ramchandra Institute of Research,Deemed University,185_3,Bachelor in Sciences,3,Graduate
+Sri Ramchandra Institute of Research,Deemed University,185_4,Master in Sciences,2,Post Graduate
+Sathyabhama Institue of Science And Technology,Private University,186_1,Bachelor in Technology,4,Graduate
+University of Mumbai,State University,160_1,Bachelor in Science,3,Graduate
+University of Mumbai,State University,160_2,Master in Science,2,Post Graduate
+University of Mumbai,State University,160_3,Ph.D. in Compiuter Science,2,Doctorate
+Sardar Patel Institute of Technology,Autonomous University,161_1,Bachelor in Technology,4,Graduate
+Sardar Patel Institute of Technology,Autonomous University,161_2,Master in Computer Application,2,Post Graduate
+Sardar Patel Institute of Technology,Autonomous University,161_3,Ph.D.,2,Doctorate
+Sardar Patel Institute of Technology,Autonomous University,161_4,Master in Technology,2,Post Graduate
+Indian Statistical Institute,Deemed University,23_1,Bachelors in Statistics,3 years,Graduate
+Indian Statistical Institute,Deemed University,23_2,Bachelors in Maths,3 years,Graduate
+Indian Statistical Institute,Deemed University,23_3,Masters in Computer Sceince,2 years,Post Graduate
+Indian Statistical Institute,Deemed University,23_4,Masters in Statistics,2 years,Post Graduate
+Indian Statistical Institute,Deemed University,23_5,masters in Cryptology,2 years,Post Graduate
+Tamil Nadu Agricultural University,Deemed University,33_1,Baachelor in Agriculture,3 years,Graduate
+Tamil Nadu Agricultural University,Deemed University,33_2,Masters in  Agricultural Economics ,2 years,Post Graduate
+IIT Madras,Deemed University,3_1,Bachelor in Technology ,4 years,Graduate
+IIT Madras,Deemed University,3_2,Masters in Technology ,2 years,Post Graduate
+IIT Madras,Deemed University,3_3,Masters in Business Administration,2 years,Post Graduate
+Anna University,Deemed University,22_1,Bachelor in Technology ,4 years,Graduate
+Anna University,Deemed University,22_2,Masters in Technology ,2 years,Post Graduate
+Anna University,Deemed University,22_3,Masters in Computer Application,2 years,Post Graduate
+Anna University,Deemed University,22_4,MTech AI and Data_Sceince ,2 years,Post Graduate
+Anna University,Deemed University,22_5,Masters in Business Administration,2 years,Post Graduate
+Vellore Institute of Technology,Central University,10_1,Bachelor in Technology_CSE,4 years,Graduate
+Vellore Institute of Technology,Central University,10_2,Bachelor in technology CSE (Data Science),4 years,Graduate
+Vellore Institute of Technology,Central University,10_3,Masters of Science ,2 years,Post Graduate
+Vellore Institute of Technology,Central University,10_4,Masters  Data Science ,2 years,Post Graduate
+Vellore Institute of Technology,Central University,10_5,Masters in Business Administration ,2 years,Post Graduate
+IIT Kanpur,Deemed University,1_1,Bachelor in Technology ,4 years,Graduate
+IIT Kanpur,Deemed University,1_2,Masters in Business Administration ,2 years,Post Graduate
+IIT BoMasters in Business Administrationy,Deemed University,2_1,Masters in Technology ,2 years,Post Graduate
+IIT BoMasters in Business Administrationy,Deemed University,2_2,Ph.D.,2 years,Doctor of Philosophy
+IIT BoMasters in Business Administrationy,Deemed University,2_3,Masters  Biosciences ,2 years,Post Graduate
+IIT Delhi,Deemed University,4_1,Bachelor in Technology ,4 years,Graduate
+IIT Delhi,Deemed University,4_2,Masters in Technology ,2 years,Post Graduate
+IIT Delhi,Deemed University,4_3,Masters in Business Administration ,2 years,Post Graduate
+University of Delhi,Deemed University,5_1,Masters in Business Administration_IB,2 years,Post Graduate
+University of Delhi,Deemed University,5_2,Bachelor in Technology ,4 years,Graduate
+University of Delhi,Deemed University,5_3,Masters of Science ,2 years,Post Graduate
+University of Delhi,Deemed University,5_4,Masters in Computer Application,2 years,Post Graduate
+IIT Kharagpur,Deemed University,6_1,Bachelor in Technology ,4 years,Graduate
+IIT Kharagpur,Deemed University,6_2,Masters in Technology ,2 years,Post Graduate
+IIT Kharagpur,Deemed University,6_3,Masters in Business Administration,2 years,Post Graduate
+Indian Institute of Science,Deemed University,8_1,Bachelors of Science (Bachelor ),3 years,Graduate
+Indian Institute of Science,Deemed University,8_2,Bachelors of Science (Biology) ,3 years,Graduate
+Indian Institute of Science,Deemed University,8_3,Bachelor in technology in Mathematics and Computing,4 years,Graduate
+Manipal Academy of Higher Education,Central University,9_1,Bachelor in technology CSE (Data Science) ,4 years,Graduate
+Manipal Academy of Higher Education,Central University,9_2,Masters in Computer Application,2 years,Post Graduate
+Manipal Academy of Higher Education,Central University,9_3,Masters in Data Sceince,2 years,Post Graduate
+Manipal Academy of Higher Education,Central University,9_4,Masters  FE ,2 years,Post Graduate
+IIT Hyderabad,Deemed University,29_1,Bachelor in Technology ,4 years,Graduate
+IIT Hyderabad,Deemed University,29_2,Masters in Technology ,2 years,Post Graduate
+IIT Hyderabad,Deemed University,29_3,Masters in AI ,2 years,Post Graduate
+IIT Hyderabad,Deemed University,29_4,Bachelor in AI ,4 years,Graduate
+IIIT Hyderabad,Central University,11_1,Bachelor in Computer Science ,4 years,Graduate
+IIIT Hyderabad,Central University,11_2,Masters in Computer Science ,2 years,Post Graduate
+IIIT Hyderabad,Central University,11_3,Masters   Science,2 years,Post Graduate
+Jawaharlal Nehru University,Deemed University,12_1,Masters in Computer Science ,2 years,Post Graduate
+Jawaharlal Nehru University,Deemed University,12_2,Masters in Data Sceince ,2 years,Post Graduate
+Jawaharlal Nehru University,Deemed University,12_3,Masters in Computer Application,2 years,Post Graduate
+Jawaharlal Nehru University,Deemed University,12_4,Masters in Business Administration,2 years,Post Graduate
+Narsee Monjee Institute of Management and Higher Studies,Central University,13_1,Bachelor in Technology ,4 years,Graduate
+Narsee Monjee Institute of Management and Higher Studies,Central University,13_2,Masters in Business Administration.Tech ,2 years,Post Graduate
+Amrita Vishwa Vidyapeetham,Central University,14_1,Bachelor in Technology ,4 years,Graduate
+Amrita Vishwa Vidyapeetham,Central University,14_2,Bachelor in Computer Science ,4 years,Graduate
+Amrita Vishwa Vidyapeetham,Central University,14_3,Masters in Business Administration,2 years,Post Graduate
+Amrita Vishwa Vidyapeetham,Central University,14_4,Masters in Data Sceince ,2 years,Post Graduate
+Amrita Vishwa Vidyapeetham,Central University,14_5,Masters in Computer Science ,2 years,Post Graduate
+Birla Institute of Technology and Science,Central University,15_1,Masters in Business Administration,2 years,Post Graduate
+Birla Institute of Technology and Science,Central University,15_2,Bachelor in Computer Science,3 years,Graduate
+IIT Guwahati,Deemed University,16_1,Bachelor in Computer Science ,4 years,Graduate
+IIT Guwahati,Deemed University,16_2,Masters in Computer Science ,2 years,Post Graduate
+IIT Guwahati,Deemed University,16_3,Masters in Business Administration,2 years,Post Graduate
+Savitribai Phule Pune University,Deemed University,17_1,Masters of Science ,2 years,Post Graduate
+Savitribai Phule Pune University,Deemed University,17_2,Masters in Business Administration,2 years,Post Graduate
+Savitribai Phule Pune University,Deemed University,17_3,Masters .Bio Technology,2 years,Post Graduate
+SRM Institute of Science and Technology,Central University,18_1,Bachelor in Technology ,4 years,Graduate
+SRM Institute of Science and Technology,Central University,18_2,Masters in Technology ,2 years,Post Graduate
+SRM Institute of Science and Technology,Central University,18_3,Masters in Business Administration,2 years,Post Graduate
+SRM Institute of Science and Technology,Central University,18_4,"Bachelor in medicine, Bachelor in Surgery",4 years,Post Graduate
+Tata Institute of Social Sciences,Deemed University,19_1,Bachelor’s of Arts in Social Sciences,4 years,Graduate
+Tata Institute of Social Sciences,Deemed University,19_2,Master of Arts in Education ,2 years,Post Graduate
+Lovely Professional University,Central University,20_1,Masters in Business Administration,2 years,Post Graduate
+Lovely Professional University,Central University,20_2,Bachelor in Technology ,4 years,Graduate
+Amity University,Central University,21_1,Bachelor in Technology ,4 years,Graduate
+Amity University,Central University,21_2,Masters in Business Administration,2 years,Post Graduate
+All India Institute of Medical Sciences Delhi,Deemed University,24_1,"Bachelor in medicine, Bachelor in Surgery",4 years,Post Graduate
+All India Institute of Medical Sciences Delhi,Deemed University,24_2,Masters ,2 years,Post Graduate
+All India Institute of Medical Sciences Delhi,Deemed University,24_3,Bachelor in Nursing,4 years,Graduate
+IIT Rorkee,Deemed University,25_1,Bachelor in Technology ,4 years,Graduate
+IIT Rorkee,Deemed University,25_2,Masters in Technology.CS,2 years,Post Graduate
+Banaras Hindu University,Deemed University,26_1,Ph.D.,2 years,Doctor of Philosophy
+Banaras Hindu University,Deemed University,26_2,Masters in Computer Application,2 years,Post Graduate
+Banaras Hindu University,Deemed University,26_3,Masters in Business Administration,2 years,Post Graduate
+Aligarh Muslim University,Deemed University,27_1,Bachelor in Technology ,4 years,Graduate
+Aligarh Muslim University,Deemed University,27_2,Masters in Technology ,2 years,Post Graduate
+Aligarh Muslim University,Deemed University,27_3,Bachelor in Computer Application,3 years,Graduate
+Aligarh Muslim University,Deemed University,27_4,Masters in Computer Application,2 years,Post Graduate
+Aligarh Muslim University,Deemed University,27_5,Masters in CyberSecurity,2 years,Post Graduate
+Aligarh Muslim University,Deemed University,27_6,Masters in Business Administration,2 years,Post Graduate
+University of MuMasters in Business Administrationi,Deemed University,28_1,Bachelor of Science,3 years,Graduate
+University of MuMasters in Business Administrationi,Deemed University,28_2,Masters of Science ,2 years,Post Graduate
+University of MuMasters in Business Administrationi,Deemed University,28_3,Masters in Commerce,2 years,Post Graduate
+Chnadigarh University,Central University,30_1,Bachelor in Computer Application,3 years,Graduate
+Chnadigarh University,Central University,30_2,Masters in Business Administration,2 years,Post Graduate
+Chitkara University,Central University,31_1,Bachelor ,4 years,Graduate
+Chitkara University,Central University,31_2,Masters in Business Administration,2 years,Post Graduate
+Chitkara University,Central University,31_3,Masters  in Pharma,2 years,Post Graduate
+Christ University,Central University,32_1,Bachelor in technology AI and ML,4 years,Graduate
+Christ University,Central University,32_2,Masters in Technology.CSE,2 years,Post Graduate
+Christ University,Central University,32_3,Masters in Business Administration,2 years,Post Graduate
+Gujarat Technological University,Deemed University,34_1,Masters in Computer Sceince,2 years,Post Graduate
+Gujarat Technological University,Deemed University,34_2,Masters in Business Administration,2 years,Post Graduate
+National Institute of Technology,Deemed University,35_1,Masters,2 years,Post Graduate
+National Institute of Technology,Deemed University,35_2,Bachelor in Technology ,4 years,Graduate
+Dr. A.P.J. Abdul Kalam Technical University,Deemed University,36_1,Bachelor in Technology ,4 years,Graduate
+Dr. A.P.J. Abdul Kalam Technical University,Deemed University,36_2,Masters in Computer Application,2 years,Post Graduate
+Dr. A.P.J. Abdul Kalam Technical University,Deemed University,36_3,Masters in Business Administration,2 years,Post Graduate
+Dr. A.P.J. Abdul Kalam Technical University,Deemed University,36_4,Masters in Technology ,2 years,Post Graduate
+Visvesvaraya Technological University,Deemed University,37_1,Bachelor in Technology ,4 years,Graduate
+Visvesvaraya Technological University,Deemed University,37_2,Masters in Technology ,2 years,Post Graduate
+Visvesvaraya Technological University,Deemed University,37_3,Masters in Business Administration,2 years,Post Graduate
+Panjab University,Deemed University,38_1,Bachelor in Computer Science,3 years,Graduate
+Panjab University,Deemed University,38_2,Masters in IT,2 years,Post Graduate
+Panjab University,Deemed University,38_3,Masters in Business Administration,2 years,Post Graduate
+Panjab University,Deemed University,38_4,Masters in Commerce,2 years,Post Graduate
+"National Institute of Technology, Tiruchirappalli",Deemed University,39_1,Bachelor in Technology ,4 years,Graduate
+"National Institute of Technology, Tiruchirappalli",Deemed University,39_2,Masters,2 years,Post Graduate
+Osmania University,Deemed University,40_1,Bachelor in DataScience,3 years,Graduate
+Osmania University,Deemed University,40_2,Bachelor in Business administration,3 years,Graduate
+Osmania University,Deemed University,40_3,Masters in Business Administration,2 years,Post Graduate
+Osmania University,Deemed University,40_4,Masters in Commerce,2 years,Post Graduate
+Ashoka University,Central University,41_1,Bachelor,2 years,Graduate
+IIT Gandhinagar,Deemed University,42_1,Bachelor in Technology ,4 years,Graduate
+IIT Gandhinagar,Deemed University,42_2,Masters in Technology ,2 years,Post Graduate
+Gandhi Institute of Technology and Management,Central University,43_1,Bachelor in Technology ,4 years,Graduate
+Gandhi Institute of Technology and Management,Central University,43_2,Bachelor in Technology AI and ML,4 years,Graduate
+Gandhi Institute of Technology and Management,Central University,43_3,Masters in Technology ,2 years,Post Graduate
+Gandhi Institute of Technology and Management,Central University,43_4,Masters in Technology Data Science,2 years,Post Graduate
+Gandhi Institute of Technology and Management,Central University,43_5,Masters in Business Administration,2 years,Post Graduate
+The Maharaja Sayajirao University of Baroda,Deemed University,44_1,Bachelor in Computer ScienceE,3 years,Graduate
+The Maharaja Sayajirao University of Baroda,Deemed University,44_2,Masters in Computer Application,2 years,Post Graduate
+The Maharaja Sayajirao University of Baroda,Deemed University,44_3,Masters in Business Administration,2 years,Post Graduate
+SASTRA University,Central University,45_1,Bachelor in technology_MTech_Integrated,5 years,Graduate
+Jamia Millia Islamia,Deemed University,46_1,Bachelor in Electrical ,3 years,Graduate
+Jamia Millia Islamia,Deemed University,46_2,Bachelor in Technology.MechanicalBachelor ,4 years,Graduate
+Chennai Mathematical Institute,Central University,47_1,Bachelor,3 years,Graduate
+Chennai Mathematical Institute,Central University,47_2,Masters,2 years,Post Graduate
+University of Calcutta,Deemed University,48_1,Masters in Technology ,2 years,Post Graduate
+University of Calcutta,Deemed University,48_2,Bachelor,3 years,Graduate
+University of Petroleum and Energy Studies,Central University,49_1,Bachelor in Technology ,4 years,Graduate
+University of Petroleum and Energy Studies,Central University,49_2,Masters in Business Administration,2 years,Post Graduate
+Armed Forces Medical College,State University,50_1,"Bachelor in medicine, Bachelor in Surgery",4 years,Post Graduate
+Sri Sri University,Central University,51_1,Bachelor in Yoga Science,4 years,Graduate
+Presidency University,State University,52_1,Bachelor in Technology ,4 years,Graduate
+SRM Institute of Science and Technology,Central University,53_1,Bachelor in Technology ,4 years,Graduate
+MIT WPU,Central University,7_1,Bachelor in Technology ,4 years,Graduate
+MIT WPU,Central University,7_2,Masters of Science ,2 years,Post Graduate
+MIT WPU,Central University,7_3,Masters in Business Administration.IB,2 years,Post Graduate
+MIT WPU,Central University,7_4,Masters in  Pharmacology,2 years,Post Graduate
+Shiva Nadar University,Deemed University,102_1,Global Master of Business Administration,2 yrs,Post Graduate
+Shiva Nadar University,Deemed University,102_2,Bachelor of Science (Research) in Biotechnology,3 yrs,Graduate
+Shiva Nadar University,Deemed University,102_3,Bachelor of Arts (Research) in International Relations,3 yrs,Graduate
+Shiva Nadar University,Deemed University,102_4,Master of Fine Arts,2 yrs,Post Graduate
+Shiva Nadar University,Deemed University,102_5,Master of Technology Data Science and Artificial Intelligence,2 yrs,Post Graduate
+Shiva Nadar University,Deemed University,102_6,Ph.D. Program Computer Science & Engineering ,5 yrs,Doctor of Philosophy
+Pondicherry University,Central University,103_1,Master of Business Administration Banking Technology,2 yrs,Post Graduate
+Pondicherry University,Central University,103_2,Master of Science Quantitative Finance,2 yrs,Post Graduate
+Pondicherry University,Central University,103_3,Master of Arts Political Science,5 yrs,Graduate + Post Graduate
+Pondicherry University,Central University,103_4,Master of Laws (Corporate and Securities Law),1 yr,Post Graduate
+Pondicherry University,Central University,103_5,Master of Performing Arts (Drama and Theatre Arts),2 yrs,Post Graduate
+Pondicherry University,Central University,103_6,Master of Technology Computer Science & Engineering ,2 yrs,Post Graduate
+Pondicherry University,Central University,103_7,Master of Science Applied Psychology,2 yrs,Post Graduate
+Chaudhary Charan Singh University,State University,104_1,Bachelor of Arts Political Science,3 yrs,Graduate
+Chaudhary Charan Singh University,State University,104_2,Bachelor of Laws,3 yrs,Graduate
+Chaudhary Charan Singh University,State University,104_3,Master of Science Environmental Sciences,2 yrs,Post Graduate
+Chaudhary Charan Singh University,State University,104_4,Master of Arts Economics,2 yrs,Post Graduate
+Chaudhary Charan Singh University,State University,104_5,Master of Commerce (Regular),2 yrs,Post Graduate
+Indraprastha Institute of Information Technology,State University,105_1,Bachelor of Technology Computer Science and Engineering,4 yrs,Graduate
+Indraprastha Institute of Information Technology,State University,105_2,PG Diploma in Data Science and AI,9 months,PG Diploma
+Indraprastha Institute of Information Technology,State University,105_3,Master of Technology Computational Biology,2 yrs,Post Graduate
+Indraprastha Institute of Information Technology,State University,105_4,Master of Technology in ECE with specialization in Cyber_Physical Systems,2 yrs,Post Graduate
+Indraprastha Institute of Information Technology,State University,105_5,Bachelor of Technology Computer Science and Design,4 yrs,Graduate
+Gujurat University,State University,106_1,Master of Science Computer Science Integrated,5 yrs,Graduate + Post Graduate
+Gujurat University,State University,106_2,Master of Mass Communnication and Journalism,2 yrs,Post Graduate
+Gujurat University,State University,106_3,Master of Arts in Psychology,2 yrs,Post Graduate
+Gujurat University,State University,106_4,Master of Commerce in Finance and Financial Services,2 yrs,Post Graduate
+Gujurat University,State University,106_5,Master of Science in Wildlife Biology and Conservations,2 yrs,Post Graduate
+Indian Institute of Space Science and Technology,Deemed University,107_1,Bachelor of Technology Aeronautics Engineering,4 yrs,Graduate
+Indian Institute of Space Science and Technology,Deemed University,107_2,Master of Technology Aerodynamics and Flight Mechanisms ,2 yrs,Post Graduate
+Indian Institute of Space Science and Technology,Deemed University,107_3,Bachelor of Technology Avionics,4 yrs,Graduate
+Indian Institute of Space Science and Technology,Deemed University,107_4,Dual Degree Bachelor of Technology + Master of Technology Optical Engineering,5 yrs,Graduate + Post Graduate
+Indian Institute of Space Science and Technology,Deemed University,107_5,Master of Technology Quantum Technology,2 yrs,Post Graduate
+Ahmedabad University,Private University,108_1,Bachelor of Arts (Honours),3 yrs,Graduate
+Ahmedabad University,Private University,108_2,Bachelor of Business Administration (Honours),3 yrs,Graduate
+Ahmedabad University,Private University,108_3,Bachelor of Technology Computer Science and Engineering,4 yrs,Graduate
+Ahmedabad University,Private University,108_4,Bachelor of Technology Mechanical Engineering,4 yrs,Graduate
+Ahmedabad University,Private University,108_5,Ph.D. Interdisciplinary Humanities and Sciences,2.5 yrs,Doctor of Philosophy
+Ahmedabad University,Private University,108_6,Master of Science Quantitative Economics,2 yrs,Post Graduate
+Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,Deemed University,109_1,Computer Science and Engineering,4 yrs,Graduate
+Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,Deemed University,109_2,Master of Business Administration Human Resources,2 yrs,Post Graduate
+Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,Deemed University,109_3,Master of Business Administration Finance,2 yrs,Post Graduate
+Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,Deemed University,109_4,Bachelor of Science Visual Communication,3 yrs,Graduate
+Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,Deemed University,109_5,Bachelor of Technology Biotechnology Engineering,4 yrs,Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_1,Bachelor of Arts (Honours in Economics),3 yrs,Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_2,Bachelor of Commerce Accounting and Tax Mannagement,3 yrs,Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_3,Master of Computer Application,6 yrs,Graduate + Post Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_4,Bachelor of Pharmacy,4 yrs,Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_5,Master of Business Administration Business Economics,2 yrs,Post Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_6,Master of Engineering  Mechanical Engineering,2 yrs,Post Graduate
+Devi Ahilya Vishwavidyalaya,State University,110_7,Master of Arts Clinical Psychology,2 yrs,Post Graduate
+Deen Dayal Upadhyay Gorakhpur University,State University,111_1,Master of Arts Psychology,2 yrs,Post Graduate
+Deen Dayal Upadhyay Gorakhpur University,State University,111_2,Master of Business Administration ,2 yrs,Post Graduate
+Deen Dayal Upadhyay Gorakhpur University,State University,111_3,Bachelor of Laws,3 yrs ,Graduate 
+Deen Dayal Upadhyay Gorakhpur University,State University,111_4,Bachelor of Education,2 yrs,Graduate 
+Deen Dayal Upadhyay Gorakhpur University,State University,111_5,Bachelor of Science Computer Science,3 yrs ,Graduate 
+Deen Dayal Upadhyay Gorakhpur University,State University,111_6,Bachelor of Science Zoology,3 yrs ,Graduate 
+Karunya Institute of Technology and Sciences,Deemed University,112_1,Bachelor of Technology Computer Science and Engineering,4 yrs,Graduate
+Karunya Institute of Technology and Sciences,Deemed University,112_2,Bachelor of Technology Mechanical Engineering,4 yrs,Graduate
+Karunya Institute of Technology and Sciences,Deemed University,112_3,Master of Business Administration,2 yrs,Post Graduate
+Karunya Institute of Technology and Sciences,Deemed University,112_4,Bachelor of Commerce (General),3 yrs,Graduate
+Karunya Institute of Technology and Sciences,Deemed University,112_5,Bachelor of Science (Hons) Agriculture,4 yrs,Graduate
+Nirma University,Private University,113_1,Bachelor of Commerce (Honours),3 yrs,Graduate
+Nirma University,Private University,113_2,"Bachelor of Arts, Bachelor of Laws (Honours)",5 yrs,Graduate
+Nirma University,Private University,113_3,Master of Business Administration,2 yrs,Post Graduate
+Nirma University,Private University,113_4,Master of Technology Civil Engineering,2 yrs,Post Graduate
+Nirma University,Private University,113_5,Bachelor of Technology Computer Science and Engineering,4 yrs,Graduate
+Mahatma Gandhi University,State University,114_1,Master of Science Biochemistry,2 yrs,Post Graduate
+Mahatma Gandhi University,State University,114_2,Master of Technology Computer Science and Technology,2 yrs,Post Graduate
+Mahatma Gandhi University,State University,114_3,Master of Arts Politics and International Relations,2 yrs,Post Graduate
+Mahatma Gandhi University,State University,114_4,Master of Business Administration,2 yrs,Post Graduate
+Mahatma Gandhi University,State University,114_5,Master of Science Psychology,2 yrs,Post Graduate
+Lalit Narayan Mithila University,State University,115_1,Bachelor of Technology in Bioinformatics,4 yrs,Graduate
+Lalit Narayan Mithila University,State University,115_2,Master of Business Administration,2 yrs,Post Graduate
+Lalit Narayan Mithila University,State University,115_3,Master of Arts Psychology,2 yrs,Post Graduate
+Lalit Narayan Mithila University,State University,115_4,Master of Arts Political Science,2 yrs,Post Graduate
+Lalit Narayan Mithila University,State University,115_5,Bachelor of Education,2 yrs,Graduate
+University of Burdwan,State University,118_1,Master of Philosophy Political Science,2 yrs,Post Graduate
+University of Burdwan,State University,118_2,Master of Arts History,2 yrs,Post Graduate
+University of Burdwan,State University,118_3,Master of Business Administration Human Resources,2 yrs,Post Graduate
+University of Burdwan,State University,118_4,Master of Technology  Electronics and Communication Engineering (Microwaves),2 yrs,Post Graduate
+University of Burdwan,State University,118_5,Bachelor of Science (Honours) Computer Science,3 yrs,Graduate
+University of Burdwan,State University,118_6,Bachelor of Arts/Bachelor of Science (Honours) Psychology,3 yrs,Graduate
+University of Burdwan,State University,118_7,Ph.D. Library Science and Information,5 yrs,Doctor of Philosophy
+Visva Bharati University,Central University,121_1,Bachelor of Arts in English under CBCS,3 yrs,Graduate
+Visva Bharati University,Central University,121_2,Master of Arts in Journalism and Mass Communication,2 yrs,Post Graduate
+Visva Bharati University,Central University,121_3,Master of Science Computer Science,2 yrs,Post Graduate
+Visva Bharati University,Central University,121_4,Ph.D. Genetics and Plant Breeding,3 yrs,Doctor of Philosophy
+Visva Bharati University,Central University,121_5,Master of Philosophy Economics,2 yrs,Post Graduate
+Andhra University,State University,122_1,Master of Science Biotechnology,2 yrs,Post Graduate
+Andhra University,State University,122_2,Bachelor of Technology Computer Technology and Engineering,4 yrs,Graduate
+Andhra University,State University,122_3,Bachelor of Pharmacy,4 yrs,Graduate
+Andhra University,State University,122_4,Master of Business Administration Human Resources and Management,2 yrs,Post Graduate
+Andhra University,State University,122_5,"Bachelor of Arts, Bachelor of Laws.",5 yrs,Graduate
+Indian Institute of Technology Jodhpur,Public Technical University,124_1,Master of Technology Artificial Intelligence,2 yrs,Post Graduate
+Indian Institute of Technology Jodhpur,Public Technical University,124_2,Bachelor of Technology Mechanical Engineering,4 yrs,Graduate
+Indian Institute of Technology Jodhpur,Public Technical University,124_3,Master of Science Digital Humanities,2 yrs,Post Graduate
+Indian Institute of Technology Jodhpur,Public Technical University,124_4,Bachelor of Technology Artificial Intelligene and Data Science,4 yrs,Graduate
+Indian Institute of Technology Jodhpur,Public Technical University,124_5,Master of Technology and Ph.D. in Cyber Physical Systems,3 yrs,Post Graduate + Doctor of Philosophy
+Saurashtra University,State University,125_1,Bachelor of Laws,3 yrs,Graduate
+Saurashtra University,State University,125_2,Bachelor of Arts Psychology,3 yrs,Graduate
+Saurashtra University,State University,125_3,Master of Business Administration Banking and Finance,2 yrs,Post Graduate
+Saurashtra University,State University,125_4,Bachelor of Pharmacy,4 yrs,Graduate
+Saurashtra University,State University,125_5,Bachelor of Science Computer Application,3 yrs,Graduate
+Saurashtra University,State University,125_6,Master of Journalism in Mass Commuincation  ,1 yr,Post Graduate
+Saurashtra University,State University,125_7,Master of Planning Urban and Regional Planning,2 yrs,Post Graduate
+CEPT University,Private University,126_1,Bachelor of Architecture,5 yrs,Graduate
+CEPT University,Private University,126_2,Bachelor of Urban Design,5 yrs,Graduate
+CEPT University,Private University,126_3,Bachelors in Civil Engineering(Honours),5 yrs,Graduate
+CEPT University,Private University,126_4,Masters in Urban Management,2 yrs,Post Graduate
+CEPT University,Private University,126_5,Master of Technology Structural Engineering Design,2 yrs,Post Graduate
+CEPT University,Private University,126_6,Master of Planning Urban Transport Systems,2 yrs,Post Graduate
+CEPT University,Private University,126_7,Master of Architecture Conservation and Regeneration,2 yrs,Post Graduate
+Veer Narmad South Gujurat University,Deemed University,128_1,Integrated Master of Science Biotechnology,5 yrs,Graduate + Post Graduate
+Veer Narmad South Gujurat University,Deemed University,128_2,Master of Arts Economics,3 yrs,Graduate
+Veer Narmad South Gujurat University,Deemed University,128_3,Ph.D. Journalism and Mass Communication,3 yrs,Doctor of Philosophy
+Veer Narmad South Gujurat University,Deemed University,128_4,Bachelor of Fine Arts,4 yrs,Graduate
+Veer Narmad South Gujurat University,Deemed University,128_5,Master of Business Administration,2 yrs,Post Graduate
+Veer Narmad South Gujurat University,Deemed University,128_6,Integrated Bachelor of Commerce Bachelor of Laws.,5 yrs,Graduate
+Veer Narmad South Gujurat University,Deemed University,128_7,Master of Science Computer Application,2 yrs,Post Graduate
+Hemvati Nandan Bahuguna Garhwal University,Central University,129_1,Master of Science Pharmaceutical Chemistry,2 yrs,Post Graduate
+Hemvati Nandan Bahuguna Garhwal University,Central University,129_2,Master of Business Administration Financial Management,2 yrs,Post Graduate
+Hemvati Nandan Bahuguna Garhwal University,Central University,129_3,Bachelor of Technology Computer Science and Engineering,4 yrs ,Graduate
+Hemvati Nandan Bahuguna Garhwal University,Central University,129_4,Bachelor of Technology Mechanical Engineering,4 yrs ,Graduate
+Hemvati Nandan Bahuguna Garhwal University,Central University,129_5,Master of Arts Journalism and Mass Communication,2 yrs,Post Graduate
+Hemvati Nandan Bahuguna Garhwal University,Central University,129_6,Bachelor of Arts Psychology,3 yrs,Graduate
+Dr. Rammanohar Lohia Avadh University,State University,130_1,Master of Laws,2 yrs,Post Graduate
+Dr. Rammanohar Lohia Avadh University,State University,130_2,Master of Science Electronics,2 yrs,Post Graduate
+Dr. Rammanohar Lohia Avadh University,State University,130_3,Master Education,2 yrs,Post Graduate
+Dr. Rammanohar Lohia Avadh University,State University,130_4,Bachelor of Business Administration,3 yrs,Graduate
+Dr. Rammanohar Lohia Avadh University,State University,130_5,Bachelor of Science Computer Application,3 yrs,Graduate
+National Institute of Design,Central University,54_1,Bachelor of Design (Graphic Design),4 years,Graduate
+National Institute of Design,Central University,54_2,Master of Design (Produce Design),2 years,Post Graduate
+National Institute of Design,Central University,54_3,Ph.D.,5 years,Doctor of Philosophy
+Chhatrapati Shahu Ji Maharaj University,State University,55_1,Master of Law,2 years,Post Graduate
+Chhatrapati Shahu Ji Maharaj University,State University,55_2,Master of Science (Mathematics),2 years,Post Graduate
+Chhatrapati Shahu Ji Maharaj University,State University,55_3,Master of Science (Chemistry),2 years,Post Graduate
+Chhatrapati Shahu Ji Maharaj University,State University,55_4,Master in Business Administration,2 years,Post Graduate
+Chhatrapati Shahu Ji Maharaj University,State University,55_5,Master of Computer Application,2 years,Post Graduate
+Chhatrapati Shahu Ji Maharaj University,State University,55_6,Master of Science (C.S.),2 years,Post Graduate
+Kurukshetra University,State University,56_1,Master of Science (C.S.),2 years,Post Graduate
+Kurukshetra University,State University,56_2,Master of Science (Mathematics),2 years,Post Graduate
+Kurukshetra University,State University,56_3,Master of Science (Statistics),2 years,Post Graduate
+Kurukshetra University,State University,56_4,Bachelor of Technology (C.S.E.),4 years,Graduate
+Kurukshetra University,State University,56_5,Bachelor of Technology (M.E.),4 years,Graduate
+University of Madras,State University,57_1,Master in Business Administration,2 years,Post Graduate
+University of Madras,State University,57_2,Master of Science (C.S.),2 years,Post Graduate
+University of Madras,State University,57_3,Master of Science (Nanotechnology),2 years,Post Graduate
+University of Madras,State University,57_4,Bachelor of Science (Statistics),3 years,Graduate
+University of Madras,State University,57_5,Master of Arts (Economics),2 years,Post Graduate
+Indian Institute of Technology Gandhinagar,Public Technical University,58_1,Bachelor of Technology (A.I.),4 years,Graduate
+Indian Institute of Technology Gandhinagar,Public Technical University,58_2,Bachelor of Technology ,4 years,Graduate
+Indian Institute of Technology Gandhinagar,Public Technical University,58_3,Master of Technology ,2 years,Post Graduate
+Indian Institute of Technology Gandhinagar,Public Technical University,58_4,Master of Science (Mathematics),2 years,Post Graduate
+Indian Institute of Technology Gandhinagar,Public Technical University,58_5,Master of Science (Physics),2 years,Post Graduate
+University of Calcutta,State University,59_1,Master in Business Administration,2 years,Post Graduate
+University of Calcutta,State University,59_2,Bachelor of Technology (C.S.E.),4 years,Graduate
+University of Calcutta,State University,59_3,Bachelor of Technology (Chemical),4 years,Graduate
+University of Calcutta,State University,59_4,Master of Science (Microbiology),2 years,Post Graduate
+University of Calcutta,State University,59_5,Master of Science (Statistics),2 years,Post Graduate
+University of Calcutta,State University,59_6,Master of Science (Chemistry),2 years,Post Graduate
