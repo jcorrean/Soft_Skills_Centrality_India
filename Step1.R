@@ -19,6 +19,7 @@ textos <- mutate(textos, Program = ifelse(grepl("Bachelor", Program_Name), "Bach
                                    ifelse(grepl("Master", Program_Name), "Master",
                                    ifelse(grepl("Doctor", Program_Name), "PhD",
                                    ifelse(grepl("Ph.D.", Program_Name), "PhD", "Other")))))
+table(textos$Program)
 textos <- subset(textos, Program != "Other")
 
 table(textos$Program)
