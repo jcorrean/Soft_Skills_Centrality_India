@@ -21,7 +21,8 @@ class(Skills)
 #matw1 <- as.matrix(get.adjacency(Skills))
 
 # Plot the network with node colors based on centrality
-set.seed(123456)
+set.seed(56)
+png("F2a.png", width = 15, height = 7, units = 'in', res = 300)
 plot(Skills, vertex.label.color = "black", 
      vertex.label.cex = 1.5, 
      vertex.color = "#FF671F", 
@@ -29,8 +30,10 @@ plot(Skills, vertex.label.color = "black",
      edge.width = 4, 
      edge.color = "#06038D", 
      layout = layout_components, main = "")
+dev.off()
 
-set.seed(012345)
+set.seed(56)
+png("F2b.png", width = 15, height = 7, units = 'in', res = 300)
 plot(Programs, vertex.label.color = "white", 
      vertex.label.cex = 1.2, 
      vertex.color = "#046A38", 
@@ -39,3 +42,4 @@ plot(Programs, vertex.label.color = "white",
      edge.color = "#06038D", 
      layout = layout_components, 
      main = "")
+dev.off()
