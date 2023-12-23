@@ -1,13 +1,17 @@
 Soft Skill,Program,ProgramType
-Ethical Thinking,Bachelor in Cybersecurity,Undergraduate
-Problem Solving,Bachelor in Cybersecurity,Undergraduate
-Critical Thinking,Bachelor in Cybersecurity,Undergraduate
-Leadership,Bachelor in Business Direction,Undergraduate
-Negotiation,Bachelor in Business Direction,Undergraduate
-Critical Thinking,Doctorate in Physics,Graduate
-Decision Making,Master in Finance,Graduate
-Critical Thinking,Doctorate in Engineering,Graduate
-Decision Making,Doctorate in Engineering,Graduate
-Problem Solving,Master in Data Science,Graduate
-Critical Thinking,Master in Data Science,Graduate
-Critical Thinking,Bachelor in Business Direction,Undergraduate
+S1,P1,Bachelor
+S2,P1,Bachelor
+S4,P1,Bachelor
+S3,P2,Bachelor
+S6,P2,Bachelor
+S4,P3,Postgraduate
+S3,P4,Postgraduate
+S5,P4,Postgraduate
+S6,P4,Postgraduate
+S1,P5,Postgraduate
+S2,P5,Postgraduate
+S5,P5,Postgraduate
+S3,P6,Postgraduate
+S6,P6,Postgraduate
+S3,P7,Postgraduate
+S6,P7,Postgraduate
