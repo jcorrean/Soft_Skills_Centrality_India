@@ -2,7 +2,6 @@ library(readr)
 Data_Figure2 <- read_csv("HypotheticalData.csv")
 
 library(igraph)
-# Figure Panel A
 Network <- Data_Figure2
 
 bn2 <- graph.data.frame(Network,directed=FALSE)
@@ -43,3 +42,5 @@ plot(Programs, vertex.label.color = "white",
      layout = layout_components, 
      main = "")
 dev.off()
+
+
