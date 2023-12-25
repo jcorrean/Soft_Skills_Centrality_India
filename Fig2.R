@@ -23,7 +23,7 @@ class(Skills)
 # Plot the network with node colors based on centrality
 set.seed(56)
 png("F2a.png", width = 15, height = 7, units = 'in', res = 300)
-plot(Skills, vertex.label.color = "black", 
+plot(Skills, vertex.label.color = "white", 
      vertex.label.cex = 1.5, 
      vertex.color = "#FF671F", 
      vertex.size = 25, 
