@@ -51,6 +51,8 @@ Network$pattern[Network$pattern=="flexibility"] <- "S45"
 Network$pattern[Network$pattern=="persua*"] <- "S46"
 Network$pattern[Network$pattern=="convinc*"] <- "S47"
 Network$pattern[Network$pattern=="inspir*"] <- "S48"
+Network$pattern[Network$pattern=="honesty"] <- "S49"
+Network$pattern[Network$pattern=="trust"] <- "S50"
 
 table(Network$pattern)
 network <- Network[!duplicated(Network[c(1,2)]),]
