@@ -48,6 +48,8 @@ s45 <- data.frame(kwic(Programs, pattern = "flexibility"))
 s46 <- data.frame(kwic(Programs, pattern = "persua*"))
 s47 <- data.frame(kwic(Programs, pattern = "convinc*"))
 s48 <- data.frame(kwic(Programs, pattern = "inspir*"))
+s49 <- data.frame(kwic(Programs, pattern = "honesty"))
+s50 <- data.frame(kwic(Programs, pattern = "trust"))
 
 df_list <- mget(paste0("s", 1:48))
 SS <- do.call(rbind, df_list)
