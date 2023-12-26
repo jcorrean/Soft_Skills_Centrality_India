@@ -38,7 +38,7 @@ Master <- Master[ -c(5:25) ]
 rownames(Master)
 Master$SS <- rownames(Master)
 Master <- Master[order(Master$SS), ]
-Master <- Master[269:312,]
+Master <- Master[269:314,]
 Master$Program <- "Master"
 
 Doctorate <- data.frame(Degree = igraph::degree(doctor),
@@ -49,7 +49,7 @@ Doctorate <- Doctorate[ -c(5:25) ]
 rownames(Doctorate)
 Doctorate$SS <- rownames(Doctorate)
 Doctorate <- Doctorate[order(Doctorate$SS), ]
-Doctorate <- Doctorate[28:60,]
+Doctorate <- Doctorate[28:61,]
 Doctorate$Program <- "PhD"
 
 
