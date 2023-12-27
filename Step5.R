@@ -8,15 +8,12 @@ SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "docname", all.x = TRUE
 
 library(dplyr)
 Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(pattern, doc_id))
-Master <- SoftSkills %>% filter(., Program=="Master") %>% select(., c(pattern, doc_id))
-PhD <- SoftSkills %>% filter(., Program=="PhD") %>% select(., c(pattern, doc_id))
-
-
+Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(pattern, doc_id))
 
 library(igraph)
 bachelor <- graph.data.frame(Bachelor, directed = FALSE)
-master <- graph.data.frame(Master, directed = FALSE)
-doctor <- graph.data.frame(PhD, directed = FALSE)
+postgraduate <- graph.data.frame(Postgraduate, directed = FALSE)
+
 
 Bach <- data.frame(Degree = igraph::degree(bachelor),
                    Closeness = igraph::closeness(bachelor),
@@ -30,31 +27,22 @@ Bach <- Bach[230:275,]
 Bach$Program <- "Bachelor"
 
 
-Master <- data.frame(Degree = igraph::degree(master),
-                    Closeness = igraph::closeness(master),
-                    Betweennes = igraph::betweenness(master),
-                    Eigen = igraph::eigen_centrality(master))
-Master <- Master[ -c(5:25) ]
-rownames(Master)
-Master$SS <- rownames(Master)
-Master <- Master[order(Master$SS), ]
-Master <- Master[269:314,]
-Master$Program <- "Master"
-
-Doctorate <- data.frame(Degree = igraph::degree(doctor),
-                     Closeness = igraph::closeness(doctor),
-                     Betweennes = igraph::betweenness(doctor),
-                     Eigen = igraph::eigen_centrality(doctor))
-Doctorate <- Doctorate[ -c(5:25) ]
-rownames(Doctorate)
-Doctorate$SS <- rownames(Doctorate)
-Doctorate <- Doctorate[order(Doctorate$SS), ]
-Doctorate <- Doctorate[28:61,]
-Doctorate$Program <- "PhD"
+Postgrad <- data.frame(Degree = igraph::degree(postgraduate),
+                    Closeness = igraph::closeness(postgraduate),
+                    Betweennes = igraph::betweenness(postgraduate),
+                    Eigen = igraph::eigen_centrality(postgraduate))
+Postgrad <- Postgrad[ -c(5:25) ]
+rownames(Postgrad)
+Postgrad$SS <- rownames(Postgrad)
+Postgrad <- Postgrad[order(Postgrad$SS), ]
+Postgrad <- Postgrad[296:314,]
+Postgrad$Program <- "Postgraduate"
 
 
-rm(list=setdiff(ls(), c("Bach","Master", "Doctorate")))
-Programs <- rbind(Bach, Master, Doctorate)
+
+
+rm(list=setdiff(ls(), c("Bach","Postgrad")))
+Programs <- rbind(Bach, Postgrad)
 scaled_programs <- scale(Programs[c(1:4)])
 rescaled <- data.frame(apply(scaled_programs, 2, function(x) (x - min(x)) / (max(x) - min(x))))
 rescaled$SS <- Programs$SS
@@ -177,14 +165,21 @@ ggplot(Programs, aes(x = Betweennes, y = Program, fill = Program)) +
   xlab("Betweenness Centrality") + 
   ylab("Academic Program")
 
+library(ggplot2)
+library(ggridges)
+
 ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Program, fill = Program)) +
   geom_density_ridges(
+    alpha = 0.2,
     jittered_points = TRUE, scale = .95, rel_min_height = .01,
     point_shape = "|", point_size = 3, size = 0.25,
     position = position_points_jitter(height = 0)
   ) +
+  scale_color_manual(values = c("orange", "darkgreen")) +
+  scale_fill_manual(values = c("orange", "darkgreen")) +
   scale_y_discrete(expand = c(0, 0)) +
   scale_x_continuous(expand = c(0, 0), name = "Centrality (rescaled 0-1)") +
   coord_cartesian(clip = "off") + theme_minimal()
+
 
 save.image("Results/Result5.RData")
