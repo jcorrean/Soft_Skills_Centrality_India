@@ -185,7 +185,6 @@ ggplot(Program, aes(x = cases, y = Centrality, color = Program, point_color = Pr
   ) +
   scale_y_discrete(expand = c(0, 0)) +
   scale_x_continuous(expand = c(0, 0), name = "Centrality (rescaled 0-1)") +
-  scale_fill_manual(values = c("orange", "darkgreen", "lightblue"), labels = c("bachelor", "postgraduate")) +
   coord_cartesian(clip = "off") + theme_minimal()
 
 save.image("Results/Result5.RData")
