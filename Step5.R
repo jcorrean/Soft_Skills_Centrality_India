@@ -6,6 +6,29 @@ rm(list=setdiff(ls(), c("textos","SS")))
 
 SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "docname", all.x = TRUE)
 
+table(SoftSkills$Type_of_Institute)
+library(dplyr)
+SoftSkills$Type_of_Institute <-  recode(SoftSkills$Type_of_Institute, 
+       "Amravati University" = "State University", 
+       "University of Mumbai" = "State University", 
+       "central university" = "Central University",
+       "Autonomous University" = "Institute of National Importance",
+       "Public Technical University" = "Institute of National Importance",
+       "University of Mumbai" = "State University",
+       "University Of Mumbai" = "State University")
+ 
+table(SoftSkills$Type_of_Institute)
+
+SoftSkills$InstitutionCategory <-  SoftSkills$Type_of_Institute %>% recode(., 
+                                        "Private University" = "PU", 
+                                        "State University" = "SU", 
+                                        "Central University" = "CU",
+                                        "Institute of National Importance" = "INI",
+                                        "Deemed University" = "DU")
+
+table(SoftSkills$InstitutionCategory)
+
+
 library(dplyr)
 Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(pattern, doc_id))
 Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(pattern, doc_id))
