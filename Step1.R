@@ -58,7 +58,33 @@ textos$InstitutionCategory <-  textos$Type_of_Institute %>% recode(., "Private U
 
 table(textos$InstitutionCategory)
 
-CT <- table(textos$Program_Type,textos$InstitutionCategory)
+table(textos$Program)
+
+
+CT <- table(textos$Program,textos$InstitutionCategory)
 print(CT)
+
+library(treemap)
+load("Results/Result1.RData")
+pave <- data.frame(CT)
+variable.names(pave)
+colnames(pave)[1] <- "Program"
+colnames(pave)[2] <- "Institution"
+colnames(pave)[3] <- "value"
+
+
+library(treemap)
+treemap(pave,
+        index=c("Program","Institution"),
+        vSize="value",
+        type="index"
+) 
+
+treemap(pave,
+        index=c("Institution", "Program"),
+        vSize="value",
+        type="index"
+) 
+
 
 save.image("Results/Result1.RData")
