@@ -38,4 +38,27 @@ Programs <- tokens(Textos,
                      remove_symbols = TRUE) %>%  
   tokens_remove(stopwords("english"))
 
+library(dplyr)
+textos$Type_of_Institute <-  recode(textos$Type_of_Institute, 
+                                        "Amravati University" = "State University", 
+                                        "University of Mumbai" = "State University", 
+                                        "central university" = "Central University",
+                                        "Autonomous University" = "Institute of National Importance",
+                                        "Public Technical University" = "Institute of National Importance",
+                                        "University of Mumbai" = "State University",
+                                        "University Of Mumbai" = "State University")
+
+table(textos$Type_of_Institute)
+
+textos$InstitutionCategory <-  textos$Type_of_Institute %>% recode(., "Private University" = "PU", 
+                                                                           "State University" = "SU", 
+                                                                           "Central University" = "CU",
+                                                                           "Institute of National Importance" = "INI",
+                                                                           "Deemed University" = "DU")
+
+table(textos$InstitutionCategory)
+
+CT <- table(textos$Program_Type,textos$InstitutionCategory)
+print(CT)
+
 save.image("Results/Result1.RData")
