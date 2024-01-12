@@ -64,6 +64,8 @@ table(textos$Program)
 CT <- table(textos$Program,textos$InstitutionCategory)
 print(CT)
 
+length(table(textos$Institute_Name))
+
 library(treemap)
 pave <- data.frame(CT)
 variable.names(pave)
@@ -73,17 +75,20 @@ colnames(pave)[3] <- "value"
 
 
 library(treemap)
+png("F00.png", width = 15, height = 7, units = 'in', res = 300)
 treemap(pave,
         index=c("Program","Institution"),
         vSize="value",
+        vColor = "Program",
         type="index",
         title = "",
         algorithm = "pivotSize",
         mirror.x = TRUE,
         mirror.y = FALSE,
-        palette = "Set2",
-        vColor = Program)
+        palette = "Set2")
+dev.off()
 
+png("F0.png", width = 15, height = 7, units = 'in', res = 300)
 tm <- treemap(pave,
      index=c("Program","Institution"),
      vSize="value",
@@ -95,6 +100,6 @@ tm <- treemap(pave,
      palette = "Set2",
      vColor = Program,
      fontsize.labels=c(0,10)) # Only display labels for "Institution", not "Program"
-
+dev.off()
 
 save.image("Results/Result1.RData")
