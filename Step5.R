@@ -62,7 +62,7 @@ Program <- rescaled %>%
 library(ggplot2)
 R1 <- ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
+  scale_color_manual(values=c("#FF671F", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -80,7 +80,7 @@ R1 <- ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
 
 R2 <- ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
+  scale_color_manual(values=c("#FF671F", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -98,7 +98,7 @@ R2 <- ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
 
 R3 <- ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
+  scale_color_manual(values=c("#FF671F", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
@@ -116,7 +116,7 @@ R3 <- ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
 
 R4 <- ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
-  scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
+  scale_color_manual(values=c("#FF671F", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
   theme(axis.text.x = element_text(angle=60, hjust=1),
         panel.grid.major.y = element_line(colour="grey60", linetype="dashed"),
