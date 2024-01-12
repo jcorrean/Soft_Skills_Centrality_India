@@ -1,10 +1,12 @@
 load("Results/Result1.RData")
 load("Results/Result2.RData")
+
 textos$docname <- paste0("text", 1:686)
 rm(list=setdiff(ls(), c("textos","SS")))
 
 
 SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "docname", all.x = TRUE)
+
 
 table(SoftSkills$Type_of_Institute)
 library(dplyr)
@@ -46,7 +48,7 @@ Bach <- Bach[ -c(5:25) ]
 rownames(Bach)
 Bach$SS <- rownames(Bach)
 Bach <- Bach[order(Bach$SS), ]
-Bach <- Bach[230:275,]
+Bach <- tail(Bach, 46)
 Bach$Program <- "Bachelor"
 
 
@@ -58,7 +60,7 @@ Postgrad <- Postgrad[ -c(5:25) ]
 rownames(Postgrad)
 Postgrad$SS <- rownames(Postgrad)
 Postgrad <- Postgrad[order(Postgrad$SS), ]
-Postgrad <- Postgrad[296:314,]
+Postgrad <- tail(Postgrad, 46)
 Postgrad$Program <- "Postgraduate"
 
 
@@ -78,7 +80,7 @@ Program <- rescaled %>%
 
 
 library(ggplot2)
-ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
+R1 <- ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
@@ -96,7 +98,7 @@ ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
   ylab("Eigenvector Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
+R2 <- ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
@@ -114,7 +116,7 @@ ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
   ylab("Closeness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
+R3 <- ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
@@ -132,7 +134,7 @@ ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
   ylab("Betweenness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
-ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
+R4 <- ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
   geom_point(size=5, aes(colour=Program), alpha=0.6) +
   scale_color_manual(values=c("orange", "darkgreen", "lightblue")) +  # Set colors
   theme_bw() +
@@ -151,42 +153,35 @@ ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
 
-library(ggridges)
-ggplot(Programs, aes(x = Closeness, y = Program, fill = Program)) +
-  geom_density_ridges(alpha = 0.3) +
-  scale_fill_manual(values = c("orange", "darkgreen", "lightblue")) +  # Set colors
-  theme_ridges() + 
-  theme(legend.position = "none",
-        axis.text.x=element_text(size=20, colour="black"),
-        axis.text.y=element_text(size=20, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
-  xlab("Closeness Centrality") + 
-  ylab("Academic Program")
+library(ggpubr)
+png("R1.png", width = 25, height = 10, units = 'in', res = 300)
+ggarrange(R1, R2, R3, R4, ncol = 4, nrow = 1)
+dev.off()
 
-ggplot(Programs, aes(x = Degree, y = Program, fill = Program)) +
-  geom_density_ridges(alpha = 0.3) +
-  scale_fill_manual(values = c("orange", "darkgreen", "lightblue")) +  # Set colors
-  theme_ridges() + 
-  theme(legend.position = "none",
-        axis.text.x=element_text(size=20, colour="black"),
-        axis.text.y=element_text(size=20, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
-  xlab("Degree Centrality") + 
-  ylab("Academic Program")
+save.image("Results/Result5.RData")
 
-ggplot(Programs, aes(x = Betweennes, y = Program, fill = Program)) +
-  geom_density_ridges(alpha = 0.3) +
-  scale_fill_manual(values = c("orange", "darkgreen", "lightblue")) +  # Set colors
-  theme_ridges() + 
-  theme(legend.position = "none",
-        axis.text.x=element_text(size=20, colour="black"),
-        axis.text.y=element_text(size=20, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
-  xlab("Betweenness Centrality") + 
-  ylab("Academic Program")
+load("Results/Result3.RData")
+library(bipartite)
+png("R2.png", width = 25, height = 7, units = 'in', res = 300)
+plotweb(IM3, method = "normal", 
+        col.high = "orange", 
+        bor.col.high = "orange",
+        col.low = "darkgreen", 
+        bor.col.low = "darkgreen",
+        col.interaction = "grey90",
+        bor.col.interaction = "grey90",
+        low.lablength = 0,
+        labsize = 2)
+dev.off()
+
+library(magick)
+img1 <- image_read("R1.png")
+img2 <- image_read("R2.png")
+img3 <- image_composite(img2, img1)
+image_write(img3, path = "R3.png")
+
+
+
 
 library(ggplot2)
 library(ggridges)
