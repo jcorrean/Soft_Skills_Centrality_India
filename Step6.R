@@ -61,11 +61,14 @@ SoftSkills$pattern[SoftSkills$pattern=="trust"] <- "S50"
 table(SoftSkills$pattern)
 network <- SoftSkills[!duplicated(SoftSkills[c(1,2)]),]
 
+Bachelors <- SoftSkills[SoftSkills$Program == "Bachelor", ]
+PostGraduates <- SoftSkills[SoftSkills$Program != "Bachelor", ]
 
 
 
 library(igraph)
-bn <- graph_from_data_frame(network, directed = FALSE)
+bn <- graph_from_data_frame(Bachelors, directed = FALSE)
+pg <- graph_from_data_frame(PostGraduates, directed = FALSE)
 
 bipartite.mapping(bn)
 V(bn)$type <- bipartite_mapping(bn)$type
@@ -78,9 +81,75 @@ E(bn)$width <- 1.5
 # Set edge attributes
 E(bn)$linetype <- ifelse(E(bn)$Program == "Bachelor", 1, 2)  # 1 for solid, 2 for dashed
 
-layout_nicely(bn)
-layout <- layout_as_bipartite(bn)
-layout1 <- layout_nicely(bn)
-rotated_layout <- cbind(layout1[, 2], -layout1[, 1])  # Swap x and y coordinates and negate y
-plot(bn, vertex.label = V(bn)$name, layout = rotated_layout, main = "",
-     vertex.label.color = V(bn)$labelcolor, edge.lty = E(bn)$linetype, vertex.shape = "none")
+E(bn)$color <- "lightgrey"
+
+bn.pr <- bipartite.projection(bn)
+Terms <- bn.pr$proj2
+
+centrality_scores <- degree(Terms)
+
+# Normalize the centrality scores to a range between 0 and 1
+normalized_scores <- (centrality_scores - min(centrality_scores)) / (max(centrality_scores) - min(centrality_scores))
+
+# Create a color palette with different colors
+color_palette <- colorRampPalette(c("#FF671F", "white", "#046A38"))(length(unique(normalized_scores)))
+
+# Assign colors to nodes based on their normalized centrality scores
+node_colors <- color_palette[rank(normalized_scores)]
+
+
+bipartite.mapping(pg)
+V(pg)$type <- bipartite_mapping(pg)$type
+V(pg)$color <- ifelse(V(pg)$type, "#FF671F", "#046A38")
+V(pg)$shape == "none" 
+V(pg)$labelcolor <- ifelse(V(pg)$type, "#FF671F", "#046A38")
+E(pg)$color <- "#06038D"
+E(pg)$width <- 1.5
+
+# Set edge attributes
+E(pg)$linetype <- ifelse(E(pg)$Program == "Bachelor", 1, 2)  # 1 for solid, 2 for dashed
+
+E(pg)$color <- "lightgrey"
+
+pg.pr <- bipartite.projection(pg)
+Term <- pg.pr$proj2
+
+Centrality_scores <- degree(Term)
+
+# Normalize the centrality scores to a range between 0 and 1
+Normalized_scores <- (Centrality_scores - min(Centrality_scores)) / (max(Centrality_scores) - min(Centrality_scores))
+
+# Create a color palette with different colors
+Color_palette <- colorRampPalette(c("#FF671F", "white", "#046A38"))(length(unique(Normalized_scores)))
+
+# Assign colors to nodes based on their normalized centrality scores
+Node_colors <- Color_palette[rank(Normalized_scores)]
+
+# Plot the network with node colors based on centrality
+png("A1.png", width = 7, height = 7, units = 'in', res = 300)
+set.seed(300509)
+plot(Terms, 
+     vertex.label.color = "black", 
+     vertex.label.cex = 0.7, 
+     vertex.color = node_colors, 
+     vertex.size = 13, 
+     edge.width = 0.4, 
+     edge.color = "lightgray", 
+     layout = layout_randomly, 
+     main = "Bachelor's Soft Skills Network")
+dev.off()
+
+set.seed(300509)
+png("A2.png", width = 7, height = 7, units = 'in', res = 300)
+plot(Term, 
+     vertex.label.color = "black", 
+     vertex.label.cex = 0.7, 
+     vertex.color = Node_colors, 
+     vertex.size = 13, 
+     edge.width = 0.4, 
+     edge.color = "lightgray", 
+     layout = layout_randomly, 
+     main = "Postgraduates' Soft Skills Network")
+dev.off()
+
+
