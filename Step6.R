@@ -86,13 +86,13 @@ E(bn)$color <- "lightgrey"
 bn.pr <- bipartite.projection(bn)
 Terms <- bn.pr$proj2
 
-centrality_scores <- degree(Terms)
+centrality_scores <- closeness(Terms)
 
 # Normalize the centrality scores to a range between 0 and 1
 normalized_scores <- (centrality_scores - min(centrality_scores)) / (max(centrality_scores) - min(centrality_scores))
 
 # Create a color palette with different colors
-color_palette <- colorRampPalette(c("#FF671F", "white", "#046A38"))(length(unique(normalized_scores)))
+color_palette <- colorRampPalette(c("#FF671F", "#046A38"))(length(unique(normalized_scores)))
 
 # Assign colors to nodes based on their normalized centrality scores
 node_colors <- color_palette[rank(normalized_scores)]
@@ -114,13 +114,13 @@ E(pg)$color <- "lightgrey"
 pg.pr <- bipartite.projection(pg)
 Term <- pg.pr$proj2
 
-Centrality_scores <- degree(Term)
+Centrality_scores <- closeness(Term)
 
 # Normalize the centrality scores to a range between 0 and 1
 Normalized_scores <- (Centrality_scores - min(Centrality_scores)) / (max(Centrality_scores) - min(Centrality_scores))
 
 # Create a color palette with different colors
-Color_palette <- colorRampPalette(c("#FF671F", "white", "#046A38"))(length(unique(Normalized_scores)))
+Color_palette <- colorRampPalette(c("#FF671F", "#046A38"))(length(unique(Normalized_scores)))
 
 # Assign colors to nodes based on their normalized centrality scores
 Node_colors <- Color_palette[rank(Normalized_scores)]
