@@ -152,4 +152,4 @@ plot(Term,
      main = "Postgraduates' Soft Skills Network")
 dev.off()
 
-
+save.image("Results/Result6.RData")
