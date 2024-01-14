@@ -48,7 +48,9 @@ TopPHDSkills <- head(PHDNetwork[order(-PHDNetwork$Closeness), ], 10)
 
 
 rm(list=setdiff(ls(), c("TopBachelorSkills", "TopMasterSkills", "TopPHDSkills")))
-
+rownames(TopBachelorSkills) == rownames(TopMasterSkills)
+rownames(TopBachelorSkills) == rownames(TopPHDSkills)
+rownames(TopMasterSkills) == rownames(TopPHDSkills)
 
 IM <- as_incidence_matrix(BNA, names = TRUE, sparse = TRUE, types = bipartite_mapping(BNA)$type)
 IM2 <- as.matrix(IM)
