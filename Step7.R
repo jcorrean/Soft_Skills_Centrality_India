@@ -43,26 +43,23 @@ PHDNetwork <- PHDNetwork[1:4]
 colnames(PHDNetwork)[4] <- "Eigenvector"
 TopPHDSkills <- head(PHDNetwork[order(-PHDNetwork$Closeness), ], 10)
 
-
-
-
-
-rm(list=setdiff(ls(), c("TopBachelorSkills", "TopMasterSkills", "TopPHDSkills")))
 rownames(TopBachelorSkills) == rownames(TopMasterSkills)
 rownames(TopBachelorSkills) == rownames(TopPHDSkills)
 rownames(TopMasterSkills) == rownames(TopPHDSkills)
 
-IM <- as_incidence_matrix(BNA, names = TRUE, sparse = TRUE, types = bipartite_mapping(BNA)$type)
-IM2 <- as.matrix(IM)
+IM.b <- as_incidence_matrix(bachelors, names = TRUE, sparse = TRUE, types = bipartite_mapping(bachelors)$type)
+IM2 <- as.matrix(IM.b)
 rownames(Programs)[order(Programs$Eigenvector, decreasing = TRUE)]
-# Let's pick the most important soft skills
-# as per their eigenvector centrality
-selected_columns <- c("S10", "S42", "S18", "S44", "S12", "S3",  "S20", "S4",  "S6", "S34")
+
+selected_columns <- rownames(TopBachelorSkills)
 
 
 # Subset the matrix by column names
 IM3 <- IM2[, selected_columns, drop = FALSE]
 
+
+colnames(IM3)[colnames(IM3) == "S43"] <- "Innovation"
+colnames(IM3)[colnames(IM3) == "S13"] <- "Ethics"
 colnames(IM3)[colnames(IM3) == "S10"] <- "Management"
 colnames(IM3)[colnames(IM3) == "S42"] <- "Evaluate"
 colnames(IM3)[colnames(IM3) == "S44"] <- "Decision-Making"
@@ -76,7 +73,7 @@ colnames(IM3)[colnames(IM3) == "S34"] <- "Change"
 
 
 library(bipartite)
-png("F3.png", width = 20, height = 7, units = 'in', res = 300)
+png("A3.png", width = 20, height = 7, units = 'in', res = 300)
 plotweb(IM3, method = "normal", 
         col.high = "orange", 
         bor.col.high = "orange",
@@ -85,5 +82,45 @@ plotweb(IM3, method = "normal",
         col.interaction = "grey90",
         bor.col.interaction = "grey90",
         low.lablength = 0,
-        labsize = 2)
+        labsize = 2,
+        ybig = 1)
 dev.off()
+
+IM.m <- as_incidence_matrix(masters, names = TRUE, sparse = TRUE, types = bipartite_mapping(masters)$type)
+IM2.m <- as.matrix(IM.m)
+
+selected_columns <- rownames(TopMasterSkills)
+selected_columns
+
+# Subset the matrix by column names
+IM3.m <- IM2.m[, selected_columns, drop = FALSE]
+
+
+colnames(IM3.m)[colnames(IM3.m) == "S43"] <- "Innovation"
+colnames(IM3.m)[colnames(IM3.m) == "S13"] <- "Ethics"
+colnames(IM3.m)[colnames(IM3.m) == "S10"] <- "Management"
+colnames(IM3.m)[colnames(IM3.m) == "S42"] <- "Evaluate"
+colnames(IM3.m)[colnames(IM3.m) == "S44"] <- "Decision-Making"
+colnames(IM3.m)[colnames(IM3.m) == "S20"] <- "Planning"
+colnames(IM3.m)[colnames(IM3.m) == "S18"] <- "Understanding"
+colnames(IM3.m)[colnames(IM3.m) == "S3"] <- "Communication"
+colnames(IM3.m)[colnames(IM3.m) == "S4"] <- "Creation"
+colnames(IM3.m)[colnames(IM3.m) == "S12"] <- "Control"
+colnames(IM3.m)[colnames(IM3.m) == "S6"] <- "Leadership"
+colnames(IM3.m)[colnames(IM3.m) == "S34"] <- "Change"
+
+
+library(bipartite)
+png("A4.png", width = 20, height = 7, units = 'in', res = 300)
+plotweb(IM3.m, method = "normal", 
+        col.high = "orange", 
+        bor.col.high = "orange",
+        col.low = "darkgreen", 
+        bor.col.low = "darkgreen",
+        col.interaction = "grey90",
+        bor.col.interaction = "grey90",
+        low.lablength = 0,
+        labsize = 2,
+        ybig = 1)
+dev.off()
+
