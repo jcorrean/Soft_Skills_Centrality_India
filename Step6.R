@@ -59,9 +59,12 @@ SoftSkills$pattern[SoftSkills$pattern=="honesty"] <- "S49"
 SoftSkills$pattern[SoftSkills$pattern=="trust"] <- "S50"
 
 table(SoftSkills$pattern)
+table(SoftSkills$Program)
 network <- SoftSkills[!duplicated(SoftSkills[c(1,2)]),]
 
 Bachelors <- SoftSkills[SoftSkills$Program == "Bachelor", ]
+Masters <- SoftSkills[SoftSkills$Program == "Master", ]
+Doctorates <- SoftSkills[SoftSkills$Program == "PhD", ]
 PostGraduates <- SoftSkills[SoftSkills$Program != "Bachelor", ]
 
 
