@@ -1,6 +1,7 @@
 load("Results/Result6.RData")
 rm(list=setdiff(ls(), c("Bachelors", "Masters", "Doctorates")))
 
+library(igraph)
 bachelors <- graph.data.frame(Bachelors, directed = FALSE)
 BachelorNetwork <- data.frame(Degree = igraph::degree(bachelors),
                        Closeness = igraph::closeness(bachelors),
@@ -49,7 +50,6 @@ rownames(TopMasterSkills) == rownames(TopPHDSkills)
 
 IM.b <- as_incidence_matrix(bachelors, names = TRUE, sparse = TRUE, types = bipartite_mapping(bachelors)$type)
 IM2 <- as.matrix(IM.b)
-rownames(Programs)[order(Programs$Eigenvector, decreasing = TRUE)]
 
 selected_columns <- rownames(TopBachelorSkills)
 
@@ -73,7 +73,7 @@ colnames(IM3)[colnames(IM3) == "S34"] <- "Change"
 
 
 library(bipartite)
-png("A3.png", width = 20, height = 7, units = 'in', res = 300)
+png("A3.png", width = 25, height = 7, units = 'in', res = 300)
 plotweb(IM3, method = "normal", 
         col.high = "red", 
         bor.col.high = "red",
@@ -82,8 +82,9 @@ plotweb(IM3, method = "normal",
         col.interaction = "grey90",
         bor.col.interaction = "grey90",
         low.lablength = 0,
-        labsize = 2,
-        ybig = 1)
+        labsize = 3,
+        text.rot = 90,
+        ybig = 2)
 dev.off()
 
 IM.m <- as_incidence_matrix(masters, names = TRUE, sparse = TRUE, types = bipartite_mapping(masters)$type)
@@ -108,10 +109,9 @@ colnames(IM3.m)[colnames(IM3.m) == "S4"] <- "Creation"
 colnames(IM3.m)[colnames(IM3.m) == "S12"] <- "Control"
 colnames(IM3.m)[colnames(IM3.m) == "S6"] <- "Leadership"
 colnames(IM3.m)[colnames(IM3.m) == "S34"] <- "Change"
-colnames(IM3.m)[colnames(IM3.m) == "S26"] <- "Change"
+colnames(IM3.m)[colnames(IM3.m) == "S26"] <- "Guide"
 
-library(bipartite)
-png("A4.png", width = 20, height = 7, units = 'in', res = 300)
+png("A4.png", width = 25, height = 7, units = 'in', res = 300)
 plotweb(IM3.m, method = "normal", 
         col.high = "blue", 
         bor.col.high = "blue",
@@ -120,10 +120,19 @@ plotweb(IM3.m, method = "normal",
         col.interaction = "grey90",
         bor.col.interaction = "grey90",
         low.lablength = 0,
-        labsize = 2,
-        ybig = 1)
+        labsize = 3,
+        text.rot = 90,
+        ybig = 2)
 dev.off()
 
+IM.d <- as_incidence_matrix(phd, names = TRUE, sparse = TRUE, types = bipartite_mapping(phd)$type)
+IM2.d <- as.matrix(IM.d)
+
+selected_columns <- rownames(TopPHDSkills)
+selected_columns
+
+# Subset the matrix by column names
+IM3.d <- IM2.d[, selected_columns, drop = FALSE]
 
 colnames(IM3.d)[colnames(IM3.d) == "S43"] <- "Innovation"
 colnames(IM3.d)[colnames(IM3.d) == "S13"] <- "Ethics"
@@ -137,10 +146,10 @@ colnames(IM3.d)[colnames(IM3.d) == "S4"] <- "Creation"
 colnames(IM3.d)[colnames(IM3.d) == "S12"] <- "Control"
 colnames(IM3.d)[colnames(IM3.d) == "S6"] <- "Leadership"
 colnames(IM3.d)[colnames(IM3.d) == "S34"] <- "Change"
-colnames(IM3.d)[colnames(IM3.d) == "S26"] <- "Change"
+colnames(IM3.d)[colnames(IM3.d) == "S26"] <- "Guide"
 
 
-png("A5.png", width = 20, height = 7, units = 'in', res = 300)
+png("A5.png", width = 25, height = 7, units = 'in', res = 300)
 plotweb(IM3.d, method = "normal", 
         col.high = "#FF671F", 
         bor.col.high = "#FF671F",
@@ -149,6 +158,9 @@ plotweb(IM3.d, method = "normal",
         col.interaction = "grey90",
         bor.col.interaction = "grey90",
         low.lablength = 0,
-        labsize = 2,
-        ybig = 1)
+        labsize = 3,
+        text.rot = 90,
+        ybig = 2)
 dev.off()
+
+save.image("Results/Result7.RData")
