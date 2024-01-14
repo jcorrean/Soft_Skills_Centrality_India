@@ -15,6 +15,36 @@ BachelorNetwork <- BachelorNetwork[1:4]
 colnames(BachelorNetwork)[4] <- "Eigenvector"
 TopBachelorSkills <- head(BachelorNetwork[order(-BachelorNetwork$Closeness), ], 10)
 
+masters <- graph.data.frame(Masters, directed = FALSE)
+MastersNetwork <- data.frame(Degree = igraph::degree(masters),
+                             Closeness = igraph::closeness(masters),
+                             Betweennes = igraph::betweenness(masters),
+                             Eigen = igraph::eigen_centrality(masters))
+MastersNetwork <- MastersNetwork[ -c(5:25) ]
+rownames(MastersNetwork)
+MastersNetwork$SS <- rownames(MastersNetwork)
+MastersNetwork <- MastersNetwork[order(MastersNetwork$SS), ]
+MastersNetwork <- MastersNetwork[grepl("S", MastersNetwork$SS), ]
+MastersNetwork <- MastersNetwork[1:4]
+colnames(MastersNetwork)[4] <- "Eigenvector"
+TopMasterSkills <- head(MastersNetwork[order(-MastersNetwork$Closeness), ], 10)
+
+phd <- graph.data.frame(Doctorates, directed = FALSE)
+PHDNetwork <- data.frame(Degree = igraph::degree(phd),
+                         Closeness = igraph::closeness(phd),
+                         Betweennes = igraph::betweenness(phd),
+                         Eigen = igraph::eigen_centrality(phd))
+PHDNetwork <- PHDNetwork[ -c(5:25) ]
+rownames(PHDNetwork)
+PHDNetwork$SS <- rownames(PHDNetwork)
+PHDNetwork <- PHDNetwork[order(PHDNetwork$SS), ]
+PHDNetwork <- PHDNetwork[grepl("S", PHDNetwork$SS), ]
+PHDNetwork <- PHDNetwork[1:4]
+colnames(PHDNetwork)[4] <- "Eigenvector"
+TopPHDSkills <- head(PHDNetwork[order(-PHDNetwork$Closeness), ], 10)
+
+
+
 
 
 library(bipartite)
