@@ -75,8 +75,8 @@ colnames(IM3)[colnames(IM3) == "S34"] <- "Change"
 library(bipartite)
 png("A3.png", width = 20, height = 7, units = 'in', res = 300)
 plotweb(IM3, method = "normal", 
-        col.high = "orange", 
-        bor.col.high = "orange",
+        col.high = "red", 
+        bor.col.high = "red",
         col.low = "darkgreen", 
         bor.col.low = "darkgreen",
         col.interaction = "grey90",
@@ -108,13 +108,13 @@ colnames(IM3.m)[colnames(IM3.m) == "S4"] <- "Creation"
 colnames(IM3.m)[colnames(IM3.m) == "S12"] <- "Control"
 colnames(IM3.m)[colnames(IM3.m) == "S6"] <- "Leadership"
 colnames(IM3.m)[colnames(IM3.m) == "S34"] <- "Change"
-
+colnames(IM3.m)[colnames(IM3.m) == "S26"] <- "Change"
 
 library(bipartite)
 png("A4.png", width = 20, height = 7, units = 'in', res = 300)
 plotweb(IM3.m, method = "normal", 
-        col.high = "orange", 
-        bor.col.high = "orange",
+        col.high = "blue", 
+        bor.col.high = "blue",
         col.low = "darkgreen", 
         bor.col.low = "darkgreen",
         col.interaction = "grey90",
@@ -124,3 +124,31 @@ plotweb(IM3.m, method = "normal",
         ybig = 1)
 dev.off()
 
+
+colnames(IM3.d)[colnames(IM3.d) == "S43"] <- "Innovation"
+colnames(IM3.d)[colnames(IM3.d) == "S13"] <- "Ethics"
+colnames(IM3.d)[colnames(IM3.d) == "S10"] <- "Management"
+colnames(IM3.d)[colnames(IM3.d) == "S42"] <- "Evaluate"
+colnames(IM3.d)[colnames(IM3.d) == "S44"] <- "Decision-Making"
+colnames(IM3.d)[colnames(IM3.d) == "S20"] <- "Planning"
+colnames(IM3.d)[colnames(IM3.d) == "S18"] <- "Understanding"
+colnames(IM3.d)[colnames(IM3.d) == "S3"] <- "Communication"
+colnames(IM3.d)[colnames(IM3.d) == "S4"] <- "Creation"
+colnames(IM3.d)[colnames(IM3.d) == "S12"] <- "Control"
+colnames(IM3.d)[colnames(IM3.d) == "S6"] <- "Leadership"
+colnames(IM3.d)[colnames(IM3.d) == "S34"] <- "Change"
+colnames(IM3.d)[colnames(IM3.d) == "S26"] <- "Change"
+
+
+png("A5.png", width = 20, height = 7, units = 'in', res = 300)
+plotweb(IM3.d, method = "normal", 
+        col.high = "#FF671F", 
+        bor.col.high = "#FF671F",
+        col.low = "darkgreen", 
+        bor.col.low = "darkgreen",
+        col.interaction = "grey90",
+        bor.col.interaction = "grey90",
+        low.lablength = 0,
+        labsize = 2,
+        ybig = 1)
+dev.off()
