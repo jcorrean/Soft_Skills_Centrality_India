@@ -80,11 +80,8 @@ pairs.panels(PHDNetwork[1:4],
 dev.off()
 
 library(irr)
+irr::icc(t(SkillsCentralities[1:4]), model = "twoway", type = "agreement", unit = "average")
 
-irr::icc(SkillsCentralities[1:4], model = "twoway", type = "agreement", unit = "average")
-irr::robinson(SkillsCentralities[1:4])
-irr::relInterIntra(SkillsCentralities[1:4], nrater=4,raterLabels=c('degree','closeness', 'betweenness', 'eigenvector'))
-irr::icc(BachelorNetwork[1:4], model = "twoway", type = "consistency", unit = "average")
 irr::icc(t(BachelorNetwork[1:4]), model = "twoway", type = "consistency", unit = "average")
-irr::icc(MastersNetwork[1:4], model = "twoway", type = "consistency", unit = "average")
-irr::icc(PHDNetwork[1:4], model = "twoway", type = "consistency", unit = "average")
+irr::icc(t(MastersNetwork[1:4]), model = "twoway", type = "consistency", unit = "average")
+irr::icc(t(PHDNetwork[1:4]), model = "twoway", type = "consistency", unit = "average")
