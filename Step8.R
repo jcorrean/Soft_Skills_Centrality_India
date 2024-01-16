@@ -80,11 +80,11 @@ pairs.panels(PHDNetwork[1:4],
 dev.off()
 
 library(irr)
-agree(SkillsCentralities[1:4], tolerance=0)
-bhapkar(SkillsCentralities[1:4])
-iota(SkillsCentralities[1:4], scaledata = "quantitative", standardize = TRUE)
-irr::icc(SkillsCentralities[1:4], model = "twoway", type = "agreement", unit = "average")
 
+irr::icc(SkillsCentralities[1:4], model = "twoway", type = "agreement", unit = "average")
+irr::robinson(SkillsCentralities[1:4])
+irr::relInterIntra(SkillsCentralities[1:4], nrater=4,raterLabels=c('degree','closeness', 'betweenness', 'eigenvector'))
 irr::icc(BachelorNetwork[1:4], model = "twoway", type = "consistency", unit = "average")
+irr::icc(t(BachelorNetwork[1:4]), model = "twoway", type = "consistency", unit = "average")
 irr::icc(MastersNetwork[1:4], model = "twoway", type = "consistency", unit = "average")
 irr::icc(PHDNetwork[1:4], model = "twoway", type = "consistency", unit = "average")
