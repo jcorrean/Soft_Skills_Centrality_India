@@ -34,10 +34,10 @@ ggplot(data=PHDNetwork, aes(x=sqrt(Closeness), group=Level, fill=Level)) +
 
 
 library(psych)
-png("F2.png", width = 15, height = 7, units = 'in', res = 300)
-pairs.panels(SkillsCentralities[1:4], 
+png("A6.png", width = 25, height = 10, units = 'in', res = 300)
+pairs.panels(BachelorNetwork[1:4], 
              method = "spearman", 
-             hist.col = "orange",
+             hist.col = "red",
              density = TRUE,  
              ellipses = TRUE,
              pch = 15,
@@ -46,47 +46,37 @@ pairs.panels(SkillsCentralities[1:4],
              cex.labels = 1.5,
              lwd = 2,
              rug = TRUE,
-             stars = TRUE
-)
+             stars = TRUE)
+dev.off()
+
+png("A7.png", width = 25, height = 10, units = 'in', res = 300)
+pairs.panels(MastersNetwork[1:4], 
+             method = "spearman", 
+             hist.col = "blue",
+             density = TRUE,  
+             ellipses = TRUE,
+             pch = 15,
+             cex = 1,
+             cex.axis = 1.8,
+             cex.labels = 1.5,
+             lwd = 2,
+             rug = TRUE,
+             stars = TRUE)
+dev.off()
+
+png("A8.png", width = 25, height = 10, units = 'in', res = 300)
+pairs.panels(PHDNetwork[1:4], 
+             method = "spearman", 
+             hist.col = "#FF671F",
+             density = TRUE,  
+             ellipses = TRUE,
+             pch = 15,
+             cex = 1,
+             cex.axis = 1.8,
+             cex.labels = 1.5,
+             lwd = 2,
+             rug = TRUE,
+             stars = TRUE)
 dev.off()
 
 
-
-pairs.panels(BachelorNetwork[1:4], 
-             method = "spearman", 
-             hist.col = "orange",
-             density = TRUE,  
-             ellipses = TRUE,
-             pch = 15,
-             cex = 1,
-             cex.axis = 1.8,
-             cex.labels = 1.5,
-             lwd = 2,
-             rug = TRUE,
-             stars = TRUE)
-
-pairs.panels(MastersNetwork[1:4], 
-             method = "spearman", 
-             hist.col = "orange",
-             density = TRUE,  
-             ellipses = TRUE,
-             pch = 15,
-             cex = 1,
-             cex.axis = 1.8,
-             cex.labels = 1.5,
-             lwd = 2,
-             rug = TRUE,
-             stars = TRUE)
-
-pairs.panels(PHDNetwork[1:4], 
-             method = "spearman", 
-             hist.col = "orange",
-             density = TRUE,  
-             ellipses = TRUE,
-             pch = 15,
-             cex = 1,
-             cex.axis = 1.8,
-             cex.labels = 1.5,
-             lwd = 2,
-             rug = TRUE,
-             stars = TRUE)
