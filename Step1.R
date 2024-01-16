@@ -67,16 +67,16 @@ print(CT)
 length(table(textos$Institute_Name))
 
 library(treemap)
-pave <- data.frame(CT)
-variable.names(pave)
-colnames(pave)[1] <- "Program"
-colnames(pave)[2] <- "Institution"
-colnames(pave)[3] <- "value"
+SampledPrograms <- data.frame(CT)
+variable.names(SampledPrograms)
+colnames(SampledPrograms)[1] <- "Program"
+colnames(SampledPrograms)[2] <- "Institution"
+colnames(SampledPrograms)[3] <- "value"
 
 
 library(treemap)
 png("F00.png", width = 15, height = 7, units = 'in', res = 300)
-treemap(pave,
+treemap(SampledPrograms,
         index=c("Program","Institution"),
         vSize="value",
         vColor = "Program",
@@ -89,7 +89,7 @@ treemap(pave,
 dev.off()
 
 png("F0.png", width = 15, height = 7, units = 'in', res = 300)
-tm <- treemap(pave,
+tm <- treemap(SampledPrograms,
      index=c("Program","Institution"),
      vSize="value",
      type="index",
