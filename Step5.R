@@ -70,10 +70,12 @@ R1 <- ggplot(Programs, aes(x=reorder(SS, Eigen.vector), y=Eigen.vector)) +
         panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
   coord_flip() +
   theme(legend.position="top",
-        axis.text.x=element_text(size=15, colour="black"),
-        axis.text.y=element_text(size=15, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+        axis.text.x=element_text(size=25, colour="black"),
+        axis.text.y=element_text(size=25, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=30),
+        axis.title.y=element_text(face="italic", colour="black", size=30),
+        legend.text=element_text(size=20),
+        legend.title = element_text(size = 20)) +
   xlab("Soft Skills") +
   ylab("Eigenvector Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
@@ -88,10 +90,12 @@ R2 <- ggplot(Programs, aes(x=reorder(SS, Closeness), y=Closeness)) +
         panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
   coord_flip() +
   theme(legend.position="top",
-        axis.text.x=element_text(size=15, colour="black"),
-        axis.text.y=element_text(size=15, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+        axis.text.x=element_text(size=25, colour="black"),
+        axis.text.y=element_text(size=25, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=30),
+        axis.title.y=element_text(face="italic", colour="black", size=30),
+        legend.text=element_text(size=20),
+        legend.title = element_text(size = 20)) +
   xlab("Soft Skills") +
   ylab("Closeness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
@@ -106,10 +110,12 @@ R3 <- ggplot(Programs, aes(x=reorder(SS, Betweennes), y=Betweennes)) +
         panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
   coord_flip() +
   theme(legend.position="top",
-        axis.text.x=element_text(size=15, colour="black"),
-        axis.text.y=element_text(size=15, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+        axis.text.x=element_text(size=25, colour="black"),
+        axis.text.y=element_text(size=25, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=30),
+        axis.title.y=element_text(face="italic", colour="black", size=30),
+        legend.text=element_text(size=20),
+        legend.title = element_text(size = 20)) +
   xlab("Soft Skills") +
   ylab("Betweenness Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
@@ -124,17 +130,19 @@ R4 <- ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
         panel.grid.major.x = element_line(colour="grey60", linetype="dashed")) +
   coord_flip() +
   theme(legend.position="top",
-        axis.text.x=element_text(size=15, colour="black"),
-        axis.text.y=element_text(size=15, colour="black"),
-        axis.title.x=element_text(face="italic", colour="black", size=20),
-        axis.title.y=element_text(face="italic", colour="black", size=20)) +
+        axis.text.x=element_text(size=25, colour="black"),
+        axis.text.y=element_text(size=25, colour="black"),
+        axis.title.x=element_text(face="italic", colour="black", size=30),
+        axis.title.y=element_text(face="italic", colour="black", size=30),
+        legend.text=element_text(size=20),
+        legend.title = element_text(size = 20)) +
   xlab("Soft Skills") +
   ylab("Degree Centrality") +
   theme(legend.position=c(0.95,0.1), legend.justification=c(0.95,0.1))
 
 
 library(ggpubr)
-png("R1.png", width = 25, height = 10, units = 'in', res = 300)
+png("R1.png", width = 30, height = 20, units = 'in', res = 300)
 ggarrange(R1, R2, R3, R4, ncol = 4, nrow = 1)
 dev.off()
 
