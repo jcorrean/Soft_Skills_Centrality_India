@@ -142,7 +142,7 @@ R4 <- ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
 
 
 library(ggpubr)
-png("R1.png", width = 30, height = 20, units = 'in', res = 300)
+png("R1.png", width = 30, height = 17, units = 'in', res = 300)
 ggarrange(R1, R2, R3, R4, ncol = 4, nrow = 1)
 dev.off()
 
