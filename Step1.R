@@ -30,6 +30,7 @@ library(quanteda)
 Textos <- corpus(textos$text)
 docvars(Textos, "Program") <- textos$Program
 docvars(Textos, "doc_id") <- textos$doc_id
+Texts <- data.frame(summary(Textos, n = length(Textos)))
 
 Programs <- tokens(Textos, 
                      remove_numbers = TRUE, 

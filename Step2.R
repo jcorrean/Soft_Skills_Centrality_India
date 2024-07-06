@@ -150,11 +150,16 @@ s13 <- data.frame(kwic(Programs, pattern = c(phrase("deci*"),
                                              phrase("making decisions"),
                                              phrase("judging"),
                                              phrase("selecting"),
+                                             phrase("choose"),
+                                             phrase("choos*"),
+                                             phrase("choice"),
                                              phrase("selection"),
                                              phrase("determin*"))))
 
 
 df_list <- mget(paste0("s", 1:13))
 SS <- do.call(rbind, df_list)
+patrones <- data.frame(table(SS$pattern))
+SS <- merge(SS, Texts, by.x = "docname", by.y = "Text")
 rm(list=setdiff(ls(), "SS"))
 save.image("Results/Result2.RData")
