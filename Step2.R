@@ -17,8 +17,9 @@ s2 <- data.frame(kwic(Programs, pattern = c(phrase("problem solving"),
                                             phrase("addressing issues"),
                                             phrase("deal with issues"))))
 s3 <- data.frame(kwic(Programs, pattern = c(phrase("communication"),
-                                            pgrase("communicat*"),
+                                            phrase("communicat*"),
                                             phrase("talk*"),
+                                            phrase("read*"),
                                             phrase("speak*"),
                                             phrase("listen*"),
                                             phrase("argu*"),
@@ -54,12 +55,17 @@ s6 <- data.frame(kwic(Programs, pattern = c(phrase("leadership"),
                                             phrase("inspir*"),
                                             phrase("motivat"),
                                             phrase("control*"),
+                                            phrase("change"),
+                                            phrase("appreciate"),
                                             phrase("manag*"))))
 s7 <- data.frame(kwic(Programs, pattern = c(phrase("entrepreneurship"),
                                             phrase("entrepreneur"),
                                             phrase("nudg*"),
+                                            phrase("claim"),
+                                            phrase("assert"),
                                             phrase("manifest"),
-                                            phrase("")
+                                            phrase("shar*"),
+                                            phrase("coordinat*"),
                                             phrase("undertake"),
                                             phrase("coopera*"),
                                             phrase("adaptability"),
@@ -67,10 +73,9 @@ s7 <- data.frame(kwic(Programs, pattern = c(phrase("entrepreneurship"),
                                             phrase("curiousness"),
                                             phrase("long-term"),
                                             phrase("goal-oriented"),
-                                            phrase("innovate"),
+                                            phrase("innovat*"),
                                             phrase("persuad*"),
                                             phrase("founding"),
-                                            phrase("push"),
                                             phrase("willingness"),
                                             phrase("decisiveness"),
                                             phrase("toleran*"),
@@ -92,7 +97,9 @@ s9 <- data.frame(kwic(Programs, pattern = c(phrase("negotiation"),
                                             phrase("sell"),
                                             phrase("sales"),
                                             phrase("buy"),
+                                            phrase("buying"),
                                             phrase("purchase"),
+                                            phrase("acquire"),
                                             phrase("consume"),
                                             phrase("contract"))))
 s10 <- data.frame(kwic(Programs, pattern = c(phrase("ethical thinking"),
@@ -100,42 +107,54 @@ s10 <- data.frame(kwic(Programs, pattern = c(phrase("ethical thinking"),
                                              phrase("moral"),
                                              phrase("morality"),
                                              phrase("honesty"),
+                                             phrase("respect"),
                                              phrase("integrity"),
                                              phrase("ethicality"),
-                                             prhase("honor"),
+                                             phrase("honor"),
                                              phrase("responsible"),
                                              phrase("justice"),
                                              phrase("rectitude"))))
-s11 <- data.frame(kwic(Programs, pattern = "conflict"))
+s11 <- data.frame(kwic(Programs, pattern = c(phrase("teamwork"),
+                                             phrase("team worker"),
+                                             phrase("team player"),
+                                             phrase("work with others"),
+                                             phrase("working with others"),
+                                             phrase("team building"),
+                                             phrase("team development"),
+                                             phrase("meeting"),
+                                             phrase("interact"),
+                                             phrase("reunion"),
+                                             phrase("assembly"),
+                                             phrase("raising funds"))))
+s12 <- data.frame(kwic(Programs, pattern = c(phrase("analytical thinking"),
+                                             phrase("analyzing"),
+                                             phrase("analysis"),
+                                             phrase("parse"),
+                                             phrase("parser"),
+                                             phrase("analyzer"),
+                                             phrase("watch"),
+                                             phrase("review"),
+                                             phrase("evaluat*"),
+                                             phrase("identify"),
+                                             phrase("observ*"),
+                                             phrase("notice"),
+                                             phrase("perceiv*"),
+                                             phrase("break down"),
+                                             phrase("describe"),
+                                             phrase("bring closer"),
+                                             phrase("strengthen"),
+                                             phrase("search"))))
+s13 <- data.frame(kwic(Programs, pattern = c(phrase("deci*"),
+                                             phrase("decision making"),
+                                             phrase("decide"),
+                                             phrase("making decisions"),
+                                             phrase("judging"),
+                                             phrase("selecting"),
+                                             phrase("selection"),
+                                             phrase("determin*"))))
 
-s18 <- data.frame(kwic(Programs, pattern = "understand"))
-s19 <- data.frame(kwic(Programs, pattern = "teamwork"))
-s20 <- data.frame(kwic(Programs, pattern = "planning"))
-s21 <- data.frame(kwic(Programs, pattern = "generate"))
-s22 <- data.frame(kwic(Programs, pattern = "empathy"))
-s23 <- data.frame(kwic(Programs, pattern = "share"))
-s24 <- data.frame(kwic(Programs, pattern = "analyze"))
-s25 <- data.frame(kwic(Programs, pattern = "acknowledge"))
-s26 <- data.frame(kwic(Programs, pattern = "guide"))
-s27 <- data.frame(kwic(Programs, pattern = "respect"))
-s28 <- data.frame(kwic(Programs, pattern = "motivat*"))
-s29 <- data.frame(kwic(Programs, pattern = "cooperat*"))
-s30 <- data.frame(kwic(Programs, pattern = "strengthen"))
-s31 <- data.frame(kwic(Programs, pattern = "thrust"))
-s32 <- data.frame(kwic(Programs, pattern = phrase("bring closer")))
-s33 <- data.frame(kwic(Programs, pattern = "bridge"))
-s34 <- data.frame(kwic(Programs, pattern = "change"))
-s35 <- data.frame(kwic(Programs, pattern = "appreciate"))
-s36 <- data.frame(kwic(Programs, pattern = "foment"))
-s37 <- data.frame(kwic(Programs, pattern = "interact"))
-s38 <- data.frame(kwic(Programs, pattern = "identify"))
-s39 <- data.frame(kwic(Programs, pattern = "compete"))
-s42 <- data.frame(kwic(Programs, pattern = "evaluat*"))
 
-s44 <- data.frame(kwic(Programs, pattern = "deci*"))
-
-
-df_list <- mget(paste0("s", 1:50))
+df_list <- mget(paste0("s", 1:13))
 SS <- do.call(rbind, df_list)
 rm(list=setdiff(ls(), "SS"))
 save.image("Results/Result2.RData")
