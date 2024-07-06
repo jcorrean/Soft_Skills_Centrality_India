@@ -1,5 +1,5 @@
 load("Results/Result2.RData")
-Network <- SS[c(1,7)]
+Network <- SS[c(13,8,12)]
 rm(list=setdiff(ls(), "Network"))
 Network$pattern <- tolower(Network$pattern)
 
@@ -54,24 +54,24 @@ Network$pattern[Network$pattern=="inspir*"] <- "S48"
 Network$pattern[Network$pattern=="honesty"] <- "S49"
 Network$pattern[Network$pattern=="trust"] <- "S50"
 
-table(Network$pattern)
+table(Network$Competence)
 network <- Network[!duplicated(Network[c(1,2)]),]
-
+table(network$pattern)
 
 library(igraph)
 bn2 <- graph.data.frame(network,directed=FALSE)
 bipartite.mapping(bn2)
 V(bn2)$type <- bipartite_mapping(bn2)$type
-V(bn2)$color <- ifelse(V(bn2)$type, "red", "green")
 V(bn2)$shape <- ifelse(V(bn2)$type, "circle", "square")
-V(bn2)$label.cex <- ifelse(V(bn2)$type, 0.5, 1)
+V(bn2)$label <- ""
+#V(bn2)$label.cex <- ifelse(V(bn2)$type, 0.5, 1)
 V(bn2)$size <- sqrt(igraph::degree(bn2))
 E(bn2)$color <- "lightgrey"
 
 bn2.pr <- bipartite.projection(bn2)
 Terms <- bn2.pr$proj2
 
-centrality_scores <- igraph::eigen_centrality(Terms)
+centrality_scores <- igraph::eigen_centrality(bn2)
 centrality_scores <- centrality_scores$vector
 # Create a color palette with different colors
 color_palette <- colorRampPalette(c("orange", "white", "darkgreen"))(length(unique(centrality_scores)))
@@ -81,6 +81,14 @@ node_colors <- color_palette[rank(centrality_scores)]
 
 # Plot the network with node colors based on centrality
 set.seed(56)
-plot(Terms, vertex.label.color = "black", vertex.label.cex = 0.8, vertex.color = node_colors, vertex.size = 15, edge.width = 0.5, edge.color = "lightgray", layout = layout_with_drl, main = "")
+
+png("f1.png", width = 7, height = 7, units = 'in', res = 300)
+plot(bn2, vertex.color = "white", 
+     vertex.size = sqrt(igraph::degree(bn2)), 
+     edge.width = 0.5, 
+     edge.color = "#d2bdf9", 
+     layout = layout_components, 
+     main = "")
+dev.off()
 
 save.image("Results/Result3.RData")
