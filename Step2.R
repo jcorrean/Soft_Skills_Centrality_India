@@ -6,6 +6,7 @@ s1 <- data.frame(kwic(Programs, pattern = c(phrase("critical thinking"),
                                             phrase("understand*"),
                                             phrase("think"), 
                                             phrase("reasoning"))))
+s1$Competence <- "Critical Thinking"
 s2 <- data.frame(kwic(Programs, pattern = c(phrase("problem solving"),
                                             phrase("solution of problem"),
                                             phrase("resolving conflict"),
@@ -16,6 +17,7 @@ s2 <- data.frame(kwic(Programs, pattern = c(phrase("problem solving"),
                                             phrase("building"),
                                             phrase("addressing issues"),
                                             phrase("deal with issues"))))
+s2$Competence <- "Problem Solving"
 s3 <- data.frame(kwic(Programs, pattern = c(phrase("communication"),
                                             phrase("communicat*"),
                                             phrase("talk*"),
@@ -24,13 +26,15 @@ s3 <- data.frame(kwic(Programs, pattern = c(phrase("communication"),
                                             phrase("listen*"),
                                             phrase("argu*"),
                                             phrase("writ*"))))
-s4 <- data.frame(kwic(Programs, pattern = c(phrase("create"),
-                                            phrase("creativity"),
+s3$Competence <- "Communication"
+s4 <- data.frame(kwic(Programs, pattern = c(phrase("creativity"),
+                                            phrase("create"),
                                             phrase("generate"),
                                             phrase("produce"),
                                             phrase("creation"),
                                             phrase("conceive"),
                                             phrase("propose"))))
+s4$Competence <- "Creativity"
 s5 <- data.frame(kwic(Programs, pattern = c(phrase("self-awareness"),
                                             phrase("patience"),
                                             phrase("persistence"),
@@ -45,6 +49,7 @@ s5 <- data.frame(kwic(Programs, pattern = c(phrase("self-awareness"),
                                             phrase("acknowledge"),
                                             phrase("commit"),
                                             phrase("commitment"))))
+s5$Competence <- "Self-Awareness"
 s6 <- data.frame(kwic(Programs, pattern = c(phrase("leadership"),
                                             phrase("lead"),
                                             phrase("command"),
@@ -58,6 +63,7 @@ s6 <- data.frame(kwic(Programs, pattern = c(phrase("leadership"),
                                             phrase("change"),
                                             phrase("appreciate"),
                                             phrase("manag*"))))
+s6$Competence <- "Leadership"
 s7 <- data.frame(kwic(Programs, pattern = c(phrase("entrepreneurship"),
                                             phrase("entrepreneur"),
                                             phrase("nudg*"),
@@ -80,19 +86,22 @@ s7 <- data.frame(kwic(Programs, pattern = c(phrase("entrepreneurship"),
                                             phrase("decisiveness"),
                                             phrase("toleran*"),
                                             phrase("curiosity"))))
-s8 <- data.frame(kwic(Programs, pattern = c(phrase("control"),
+s7$Competence <- "Entrepreneurship"
+s8 <- data.frame(kwic(Programs, pattern = c(phrase("strategic thinking"),
                                              phrase("controling"),
                                              phrase("plan"),
                                              phrase("planning"),
                                              phrase("strategy"),
                                              phrase("strategic"),
-                                             phrase("strategic thinking"),
+                                             phrase("control"),
                                              phrase("design"),
                                              phrase("designing"),
                                              phrase("balance"))))
+s8$Competence <- "Strategic Thinking"
 s9 <- data.frame(kwic(Programs, pattern = c(phrase("negotiation"),
                                             phrase("selling"),
                                             phrase("procure"),
+                                            phrase("promoting"),
                                             phrase("procurement"),
                                             phrase("sell"),
                                             phrase("sales"),
@@ -102,6 +111,7 @@ s9 <- data.frame(kwic(Programs, pattern = c(phrase("negotiation"),
                                             phrase("acquire"),
                                             phrase("consume"),
                                             phrase("contract"))))
+s9$Competence <- "Negotiation"
 s10 <- data.frame(kwic(Programs, pattern = c(phrase("ethical thinking"),
                                              phrase("ethics"),
                                              phrase("moral"),
@@ -114,6 +124,7 @@ s10 <- data.frame(kwic(Programs, pattern = c(phrase("ethical thinking"),
                                              phrase("responsible"),
                                              phrase("justice"),
                                              phrase("rectitude"))))
+s10$Competence <- "Ethical Thinking"
 s11 <- data.frame(kwic(Programs, pattern = c(phrase("teamwork"),
                                              phrase("team worker"),
                                              phrase("team player"),
@@ -126,6 +137,7 @@ s11 <- data.frame(kwic(Programs, pattern = c(phrase("teamwork"),
                                              phrase("reunion"),
                                              phrase("assembly"),
                                              phrase("raising funds"))))
+s11$Competence <- "Teamwork"
 s12 <- data.frame(kwic(Programs, pattern = c(phrase("analytical thinking"),
                                              phrase("analyzing"),
                                              phrase("analysis"),
@@ -144,8 +156,9 @@ s12 <- data.frame(kwic(Programs, pattern = c(phrase("analytical thinking"),
                                              phrase("bring closer"),
                                              phrase("strengthen"),
                                              phrase("search"))))
-s13 <- data.frame(kwic(Programs, pattern = c(phrase("deci*"),
-                                             phrase("decision making"),
+s12$Competence <- "Analytical Thinking"
+s13 <- data.frame(kwic(Programs, pattern = c(phrase("decision making"),
+                                             phrase("deci*"),
                                              phrase("decide"),
                                              phrase("making decisions"),
                                              phrase("judging"),
@@ -155,11 +168,13 @@ s13 <- data.frame(kwic(Programs, pattern = c(phrase("deci*"),
                                              phrase("choice"),
                                              phrase("selection"),
                                              phrase("determin*"))))
+s13$Competence <- "Decision Making"
 
 
 df_list <- mget(paste0("s", 1:13))
 SS <- do.call(rbind, df_list)
 patrones <- data.frame(table(SS$pattern))
+Patrones <- data.frame(table(SS$Competence))
 SS <- merge(SS, Texts, by.x = "docname", by.y = "Text")
 rm(list=setdiff(ls(), "SS"))
 save.image("Results/Result2.RData")
