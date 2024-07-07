@@ -2,6 +2,8 @@ load("Results/Result2.RData")
 Network <- SS[c(14,8,9,13)]
 rm(list=setdiff(ls(), "Network"))
 table(Network$Competence)
+network <- Network[!duplicated(Network[c(1,2)]),]
+table(network$Competence)
 
 library(igraph)
 bn2 <- graph_from_data_frame(network,directed=FALSE)
