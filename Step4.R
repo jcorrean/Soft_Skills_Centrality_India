@@ -7,7 +7,8 @@ plot(Terms, vertex.label.color = "black", vertex.label.cex = 0.8, vertex.color =
 
 dev.off()
 
-BNA <- graph.data.frame(Network, directed = FALSE)
+BNA <- graph_from_data_frame(Network, directed = FALSE)
+ecount(BNA)
 Programs <- data.frame(Degree = igraph::degree(BNA),
                    Closeness = igraph::closeness(BNA),
                    Betweennes = igraph::betweenness(BNA),
