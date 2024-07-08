@@ -14,7 +14,7 @@ V(bn2)$shape <- ifelse(V(bn2)$type, "circle", "square")
 V(bn2)$label <- ""
 
 
-png("f1.png", width = 7, height = 7, units = 'in', res = 300)
+png("f1.png", width = 2000, height = 2000, units = 'px', res = 300)
 plot(bn2, vertex.color = ifelse(V(bn2)$type, "#FF671F", "#046A38"),
      vertex.size = ifelse(V(bn2)$type, 4, 3), 
      edge.width = 0.2, 
