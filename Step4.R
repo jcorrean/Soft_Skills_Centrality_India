@@ -54,7 +54,7 @@ pairs.panels(Programs[1:4],
 )
 dev.off()
 
-IM <- as_biadjacency_matrix(BNA, names = TRUE, sparse = TRUE, types = bipartite_mapping(BNA)$type)
+IM <- as_biadjacency_matrix(All, names = TRUE, sparse = TRUE, types = bipartite_mapping(All)$type)
 IM2 <- as.matrix(IM)
 
 
