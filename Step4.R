@@ -12,12 +12,16 @@ ggplot(data=BACH, aes(x=reorder(Var1, +Freq), y=Freq)) +
 masters <- network %>% filter(., Program == "Master")
 MS <- data.frame(table(masters$Competence))
 ggplot(data=MS, aes(x=reorder(Var1, +Freq), y=Freq)) +
-  geom_bar(stat="identity", fill="steelblue") + coord_flip() + xlab("Skill") + ylab("Degree")
+  geom_bar(stat="identity", fill="steelblue") + 
+  coord_flip() + xlab("Skill") + ylab("Degree") +
+  ggtitle("Masters")
 
 phds <- network %>% filter(., Program == "PhD")
 DR <- data.frame(table(phds$Competence))
 ggplot(data=DR, aes(x=reorder(Var1, +Freq), y=Freq)) +
-  geom_bar(stat="identity", fill="steelblue") + coord_flip() + xlab("Skill") + ylab("Degree")
+  geom_bar(stat="identity", fill="steelblue") + 
+  coord_flip() + xlab("Skill") + ylab("Degree") +
+  ggtitle("Doctors")
 
 
 All <- graph_from_data_frame(network, directed = FALSE)
@@ -47,10 +51,14 @@ Programs <- data.frame(Degree = igraph::degree(All),
 Programs <- Programs[ -c(5:25) ]
 rownames(Programs)
 Programs$SS <- rownames(Programs)
-
-
-Programs <- data.frame(tail(Programs, n = 13))
 colnames(Programs)[4] <- "Eigenvector"
+Skills <- data.frame(tail(Programs, n = 13))
+Programs <- data.frame(head(Programs, n = 535))
+colnames(Programs)[5] <- "doc_id"
+pepa <- Programs %>%
+  mutate(Program_from_SS = ifelse(match(doc_id, SS$doc_id) != 0,
+                                  SS$Program[match(doc_id, SS$doc_id)],
+                                  NA_character_))
 
 
 library(psych)
