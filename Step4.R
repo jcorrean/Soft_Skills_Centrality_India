@@ -46,7 +46,7 @@ edge_density(D, loops = FALSE)
 
 Programs <- data.frame(Degree = igraph::degree(All),
                    Closeness = igraph::closeness(All),
-                   Betweennes = igraph::betweenness(All),
+                   Betweenness = igraph::betweenness(All),
                    Eigen = igraph::eigen_centrality(All))
 Programs <- Programs[ -c(5:25) ]
 rownames(Programs)
@@ -56,10 +56,11 @@ Skills <- data.frame(tail(Programs, n = 13))
 Programs <- data.frame(head(Programs, n = 535))
 colnames(Programs)[5] <- "doc_id"
 pepa <- Programs %>%
-  mutate(Program_from_SS = ifelse(match(doc_id, SS$doc_id) != 0,
+  mutate(Program = ifelse(match(doc_id, SS$doc_id) != 0,
                                   SS$Program[match(doc_id, SS$doc_id)],
                                   NA_character_))
-
+ggplot(pepa, aes(x = Betweennes, fill = Program, colour = Program)) + 
+  geom_histogram(alpha = 0.5, position = "identity")
 
 library(psych)
 png("F2.png", width = 15, height = 7, units = 'in', res = 300)
