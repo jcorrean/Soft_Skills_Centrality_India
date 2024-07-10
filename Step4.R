@@ -59,8 +59,8 @@ pepa <- Programs %>%
   mutate(Program = ifelse(match(doc_id, SS$doc_id) != 0,
                                   SS$Program[match(doc_id, SS$doc_id)],
                                   NA_character_))
-ggplot(pepa, aes(x = Betweennes, fill = Program, colour = Program)) + 
-  geom_histogram(alpha = 0.5, position = "identity")
+ggplot(pepa, aes(x = Eigenvector, fill = Program, colour = Program)) + 
+  geom_histogram(alpha = 0.5, position = "identity") + theme_bw()
 
 library(psych)
 png("F2.png", width = 15, height = 7, units = 'in', res = 300)
