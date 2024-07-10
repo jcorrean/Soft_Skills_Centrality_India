@@ -26,10 +26,10 @@ vcount(D)
 ecount(D)
 edge_density(D, loops = FALSE)
 
-Programs <- data.frame(Degree = igraph::degree(BNA),
-                   Closeness = igraph::closeness(BNA),
-                   Betweennes = igraph::betweenness(BNA),
-                   Eigen = igraph::eigen_centrality(BNA))
+Programs <- data.frame(Degree = igraph::degree(All),
+                   Closeness = igraph::closeness(All),
+                   Betweennes = igraph::betweenness(All),
+                   Eigen = igraph::eigen_centrality(All))
 Programs <- Programs[ -c(5:25) ]
 rownames(Programs)
 Programs$SS <- rownames(Programs)
