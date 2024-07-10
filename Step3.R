@@ -1,4 +1,5 @@
 load("Results/Result2.RData")
+rm(list=setdiff(ls(), "SS"))
 Network <- SS[c(14,8,9,13)]
 rm(list=setdiff(ls(), "Network"))
 table(Network$Competence)
