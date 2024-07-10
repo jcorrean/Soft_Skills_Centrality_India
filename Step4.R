@@ -33,6 +33,7 @@ Programs <- data.frame(Degree = igraph::degree(All),
 Programs <- Programs[ -c(5:25) ]
 rownames(Programs)
 Programs$SS <- rownames(Programs)
+
 Programs <- data.frame(tail(Programs, n = 13))
 colnames(Programs)[4] <- "Eigenvector"
 
