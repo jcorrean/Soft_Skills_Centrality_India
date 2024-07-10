@@ -1,9 +1,23 @@
+load("Results/Result2.RData")
+rm(list=setdiff(ls(), "SS"))
 load("Results/Result3.RData")
 library(igraph)
 library(tidyverse)
 bachelors <- network %>% filter(., Program == "Bachelor")
+BACH <- data.frame(table(bachelors$Competence))
+ggplot(data=BACH, aes(x=reorder(Var1, +Freq), y=Freq)) +
+  geom_bar(stat="identity", fill="steelblue") + 
+  coord_flip() + xlab("Skill") + ylab("Degree") + 
+  ggtitle("Bachelors")
 masters <- network %>% filter(., Program == "Master")
+MS <- data.frame(table(masters$Competence))
+ggplot(data=MS, aes(x=reorder(Var1, +Freq), y=Freq)) +
+  geom_bar(stat="identity", fill="steelblue") + coord_flip() + xlab("Skill") + ylab("Degree")
+
 phds <- network %>% filter(., Program == "PhD")
+DR <- data.frame(table(phds$Competence))
+ggplot(data=DR, aes(x=reorder(Var1, +Freq), y=Freq)) +
+  geom_bar(stat="identity", fill="steelblue") + coord_flip() + xlab("Skill") + ylab("Degree")
 
 
 All <- graph_from_data_frame(network, directed = FALSE)
@@ -33,6 +47,7 @@ Programs <- data.frame(Degree = igraph::degree(All),
 Programs <- Programs[ -c(5:25) ]
 rownames(Programs)
 Programs$SS <- rownames(Programs)
+
 
 Programs <- data.frame(tail(Programs, n = 13))
 colnames(Programs)[4] <- "Eigenvector"
