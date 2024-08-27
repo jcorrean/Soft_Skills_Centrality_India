@@ -12,7 +12,7 @@ V(bn2)$shape <- ifelse(V(bn2)$type, "square", "circle")
 V(bn2)$label.cex <- ifelse(V(bn2)$type, 0.5, 1)
 V(bn2)$size <- sqrt(igraph::degree(bn2))
 E(bn2)$color <- "lightgrey"
-
+ 
 bn2.pr <- bipartite.projection(bn2)
 Programs <- bn2.pr$proj2
 Skills <- bn2.pr$proj1
