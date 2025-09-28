@@ -14,7 +14,7 @@ India <- network(SkillsPrograms2,
 India
 sna::gden(India)
 get.vertex.attribute(India, "vertex.names")
-
+attributes <- data.frame(get.vertex.attribute(India, "vertex.names"))
 load("Results/Result7.RData")
 rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d")))
 # These are matrices. They need to be coerced to "network" objects with the 
