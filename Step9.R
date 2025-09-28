@@ -1,9 +1,28 @@
+load("Results/Result2.RData")
+rm(list=setdiff(ls(), c("SS")))
+SkillsPrograms <- SS[c(8,1,13)]
+library(dplyr)
+SkillsPrograms2 <- SkillsPrograms %>%
+  distinct(Competence, docname, Program.x, .keep_all = FALSE)
+library(network)
+India <- network(SkillsPrograms2, 
+                    directed = FALSE, 
+                    hyper = FALSE, 
+                    loops = FALSE, 
+                    multiple = FALSE, 
+                    bipartite = TRUE)
+India
+sna::gden(India)
+get.vertex.attribute(India, "vertex.names")
+
 load("Results/Result7.RData")
 rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d")))
 # These are matrices. They need to be coerced to "network" objects with the 
 # library network.
 # In the work we wrote with Silvana, I didn't coerced these matrices
 # because I worked with the edgelist as input. 
+
+
 library(network)
 bachelor <- network(t(IM3), 
                     directed = FALSE, 
