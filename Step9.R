@@ -16,10 +16,24 @@ bachelor <- network(t(IM3),
 bachelor
 get.vertex.attribute(bachelor, "vertex.names")
 set.vertex.attribute(bachelor, "schooling", "bachelor")
-bachelor <- data.frame(schooling = "bachelor", tag = rownames(IM3))
+bachelors <- data.frame(schooling = "bachelor", tag = rownames(IM3))
 masters <- data.frame(schooling = "master's", tag = rownames(IM3.m))
-doctoral <- data.frame(schooling = "doctor" , tag = rownames(IM3.d))
+doctorates <- data.frame(schooling = "doctor" , tag = rownames(IM3.d))
+Included <- do.call(rbind, list(bachelors, masters, doctorates))
+library(dplyr)
+Included <- Included %>%
+  # 1. Define the custom order for 'schooling'
+  mutate(
+    schooling = factor(
+      schooling,
+      levels = c("bachelor", "master's", "doctorate"), # This sets the required order
+      ordered = TRUE
+    )
+  ) %>%
+  # 2. Sort: first by tag (increasing), then by schooling (using the custom factor order)
+  arrange(tag)
 
+Included <- Included %>% arrange(tag)
 
 NetworkAttributes <- data.frame(schooling =c())
 sna::gden(bachelor)
