@@ -22,42 +22,24 @@ master <- data.frame(text = rownames(IM3.m), program = "master")
 doctor <- data.frame(text = rownames(IM3.d), program = "doctor")
 programs <- list(bachelor, master, doctor)
 Programs <- do.call(rbind, programs)
+NetworkAttributes <- merge(attributes, Programs, by.x = "attribute", by.y = "text", all.x = TRUE)
+NetworkAttributes$program[1:13] <- "Soft Skill"
+colnames(NetworkAttributes)[2] <- "attributes"
+get.vertex.attribute(India, "vertex.names")
+set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
+India
+
 # These are matrices. They need to be coerced to "network" objects with the 
 # library network.
 # In the work we wrote with Silvana, I didn't coerced these matrices
 # because I worked with the edgelist as input. 
 
 
-library(network)
-bachelor <- network(t(IM3), 
+Bachelor <- network(t(IM3), 
                     directed = FALSE, 
                     hyper = FALSE, 
                     loops = FALSE, 
                     multiple = FALSE, 
                     bipartite = TRUE)
-# Here, I used the transpose of IM3 to set soft skills
-# as the first partition of my bipartite network
-bachelor
-get.vertex.attribute(bachelor, "vertex.names")
-set.vertex.attribute(bachelor, "schooling", "bachelor")
-bachelors <- data.frame(schooling = "bachelor", tag = rownames(IM3))
-masters <- data.frame(schooling = "master's", tag = rownames(IM3.m))
-doctorates <- data.frame(schooling = "doctor" , tag = rownames(IM3.d))
-Included <- do.call(rbind, list(bachelors, masters, doctorates))
-library(dplyr)
-Included <- Included %>%
-  # 1. Define the custom order for 'schooling'
-  mutate(
-    schooling = factor(
-      schooling,
-      levels = c("bachelor", "master's", "doctorate"), # This sets the required order
-      ordered = TRUE
-    )
-  ) %>%
-  # 2. Sort: first by tag (increasing), then by schooling (using the custom factor order)
-  arrange(tag)
-
-Included <- Included %>% arrange(tag)
-
-NetworkAttributes <- data.frame(schooling =c())
-sna::gden(bachelor)
+Bachelor
+sna::gden(Bachelor)
