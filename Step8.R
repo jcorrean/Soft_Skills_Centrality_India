@@ -13,6 +13,7 @@ SkillsCentralities <- do.call("rbind", Programs)
 write.csv(SkillsCentralities, file = "SkillsCentralities.csv")
 
 library(ggplot2)
+remotes::install_git("https://codeberg.org/hrbrmstr/hrbrthemes.git")
 library(hrbrthemes)
 library(dplyr)
 library(tidyr)
@@ -21,15 +22,15 @@ library(viridis)
 
 ggplot(data=BachelorNetwork, aes(x=sqrt(Closeness), group=Level, fill=Level)) +
   geom_density(adjust=1.5, alpha = 0.2) +
-  theme_ipsum()
+  theme_bw()
 
 ggplot(data=MastersNetwork, aes(x=sqrt(Closeness), group=Level, fill=Level)) +
   geom_density(adjust=1.5, alpha = 0.2) +
-  theme_ipsum()
+  theme_bw()
 
 ggplot(data=PHDNetwork, aes(x=sqrt(Closeness), group=Level, fill=Level)) +
   geom_density(adjust=1.5, alpha = 0.2) +
-  theme_ipsum()
+  theme_bw()
 
 
 
