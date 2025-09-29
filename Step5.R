@@ -1,7 +1,7 @@
 load("Results/Result1.RData")
 load("Results/Result2.RData")
 
-textos$docname <- paste0("text", 1:686)
+textos$docname <- paste0("text", 1:685)
 rm(list=setdiff(ls(), c("textos","SS")))
 
 
@@ -12,12 +12,12 @@ table(SoftSkills$InstitutionCategory)
 
 
 library(dplyr)
-Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(pattern, doc_id))
-Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(pattern, doc_id))
+Bachelor <- SoftSkills %>% filter(., Program=="Bachelor") %>% select(., c(Competence, doc_id))
+Postgraduate <- SoftSkills %>% filter(., Program!="Bachelor") %>% select(., c(Competence, doc_id))
 
 library(igraph)
-bachelor <- graph.data.frame(Bachelor, directed = FALSE)
-postgraduate <- graph.data.frame(Postgraduate, directed = FALSE)
+bachelor <- graph_from_data_frame(Bachelor, directed = FALSE)
+postgraduate <- graph_from_data_frame(Postgraduate, directed = FALSE)
 
 
 Bach <- data.frame(Degree = igraph::degree(bachelor),
@@ -28,7 +28,7 @@ Bach <- Bach[ -c(5:25) ]
 rownames(Bach)
 Bach$SS <- rownames(Bach)
 Bach <- Bach[order(Bach$SS), ]
-Bach <- tail(Bach, 46)
+Bach <- tail(Bach, 13)
 Bach$Program <- "Bachelor"
 
 
@@ -40,7 +40,7 @@ Postgrad <- Postgrad[ -c(5:25) ]
 rownames(Postgrad)
 Postgrad$SS <- rownames(Postgrad)
 Postgrad <- Postgrad[order(Postgrad$SS), ]
-Postgrad <- tail(Postgrad, 46)
+Postgrad <- tail(Postgrad, 13)
 Postgrad$Program <- "Postgraduate"
 
 
@@ -142,7 +142,7 @@ R4 <- ggplot(Programs, aes(x=reorder(SS, Degree), y=Degree)) +
 
 
 library(ggpubr)
-png("R1.png", width = 30, height = 17, units = 'in', res = 300)
+png("F4.png", width = 30, height = 17, units = 'in', res = 300)
 ggarrange(R1, R2, R3, R4, ncol = 4, nrow = 1)
 dev.off()
 
