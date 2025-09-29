@@ -14,12 +14,14 @@ India <- network(SkillsPrograms2,
 India
 sna::gden(India)
 get.vertex.attribute(India, "vertex.names")
-attributes <- data.frame(get.vertex.attribute(India, "vertex.names"))
+attributes <- data.frame(attribute = get.vertex.attribute(India, "vertex.names"))
 load("Results/Result7.RData")
 rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d", "attributes", "India", "SkillsPrograms2")))
-rownames(IM3)
-rownames(IM3.m)
-rownames(IM3.d)
+bachelor <- data.frame(text = rownames(IM3), program = "bachelor")
+master <- data.frame(text = rownames(IM3.m), program = "master")
+doctor <- data.frame(text = rownames(IM3.d), program = "doctor")
+programs <- list(bachelor, master, doctor)
+Programs <- do.call(rbind, programs)
 # These are matrices. They need to be coerced to "network" objects with the 
 # library network.
 # In the work we wrote with Silvana, I didn't coerced these matrices
