@@ -43,3 +43,17 @@ Bachelor <- network(t(IM3),
                     bipartite = TRUE)
 Bachelor
 sna::gden(Bachelor)
+Master <- network(t(IM3.m), 
+                  directed = FALSE, 
+                  hyper = FALSE, 
+                  loops = FALSE, 
+                  multiple = FALSE, 
+                  bipartite = TRUE)
+sna::gden(Master)
+Doctor <- network(t(IM3.d), 
+                  directed = FALSE, 
+                  hyper = FALSE, 
+                  loops = FALSE, 
+                  multiple = FALSE, 
+                  bipartite = TRUE)
+sna::gden(Doctor)
