@@ -16,7 +16,10 @@ sna::gden(India)
 get.vertex.attribute(India, "vertex.names")
 attributes <- data.frame(get.vertex.attribute(India, "vertex.names"))
 load("Results/Result7.RData")
-rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d")))
+rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d", "attributes", "India", "SkillsPrograms2")))
+rownames(IM3)
+rownames(IM3.m)
+rownames(IM3.d)
 # These are matrices. They need to be coerced to "network" objects with the 
 # library network.
 # In the work we wrote with Silvana, I didn't coerced these matrices
