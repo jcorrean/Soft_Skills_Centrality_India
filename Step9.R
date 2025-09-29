@@ -1,4 +1,5 @@
 load("Results/Result2.RData")
+load("Results/Result4.RData")
 rm(list=setdiff(ls(), c("SS")))
 SkillsPrograms <- SS[c(8,1,13)]
 library(dplyr)
@@ -28,7 +29,7 @@ colnames(NetworkAttributes)[2] <- "attributes"
 get.vertex.attribute(India, "vertex.names")
 set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
 India
-
+get.vertex.attribute(India, "Attribute")
 # These are matrices. They need to be coerced to "network" objects with the 
 # library network.
 # In the work we wrote with Silvana, I didn't coerced these matrices
