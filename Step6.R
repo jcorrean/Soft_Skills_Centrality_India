@@ -1,6 +1,6 @@
 load("Results/Result1.RData")
 load("Results/Result2.RData")
-textos$docname <- paste0("text", 1:686)
+textos$docname <- paste0("text", 1:685)
 rm(list=setdiff(ls(), c("textos","SS")))
 SoftSkills <- merge(SS, textos, by.x = "docname", by.y = "docname", all.x = TRUE)
 rm(list=setdiff(ls(), c("SoftSkills")))
