@@ -72,19 +72,37 @@ plotweb(t(IM3),
 )
 dev.off()
 
+IM.m <- as_biadjacency_matrix(masters, names = TRUE, sparse = TRUE, types = bipartite_mapping(masters)$type)
+IM2.m <- as.matrix(IM.m)
+
+IM3.m <- IM2.m
+rownames(IM3.m)[1:13] <- c("Communication", "Ethical-Thinking", "Strategic-Thinking", "Teamwork", "Entrepreneurship", "Leadership", "Critical-Thinking", "Analytical-Thinking", "Negotiation", "Problem-Solving", "Creativity", "Decision-Making", "Self-Awareness")
+rownames(IM3.m)
+custom_order.m <- c("Communication", "Leadership", "Teamwork", "Critical-Thinking", "Entrepreneurship", "Strategic-Thinking", "Ethical-Thinking", "Analytical-Thinking", "Decision-Making", "Problem-Solving", "Negotiation", "Self-Awareness", "Creativity")
+IM3.m <- IM3.m[match(custom_order.m, rownames(IM3.m)), ]
+
 
 png("A4.png", width = 25, height = 7, units = 'in', res = 300)
-plotweb(IM3.m, method = "normal", 
-        col.high = "blue", 
-        bor.col.high = "blue",
-        col.low = "darkgreen", 
-        bor.col.low = "darkgreen",
-        col.interaction = "grey90",
-        bor.col.interaction = "grey90",
-        low.lablength = 0,
-        labsize = 3,
-        text.rot = 90,
-        ybig = 2)
+plotweb(t(IM3.m), 
+        sorting = "normal", 
+        higher_color  = "blue2", 
+        higher_border  = "blue2",
+        link_color = "gray90",
+        link_alpha = 0.7,
+        lower_color = "darkgreen", 
+        lower_border  = "darkgreen",
+        font = 1,
+        lower_labels = FALSE,
+        srt = 90,
+        text_size = 1,
+        #        col.interaction = "grey90",
+        #        bor.col.interaction = "grey90",
+        #        low.lablength = 0,
+        #        labsize = 3,
+        #        text.rot = 90,
+        #        ybig = 2
+)
+
 dev.off()
 
 
