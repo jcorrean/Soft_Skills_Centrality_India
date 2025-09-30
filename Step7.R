@@ -1,5 +1,11 @@
-load("Results/Result6.RData")
-rm(list=setdiff(ls(), c("Bachelors", "Masters", "Doctorates")))
+load("Results/Result2.RData")
+rm(list=setdiff(ls(), c("SS")))
+
+library(dplyr)
+Bachelors <- SS %>% filter(., Program.x=="Bachelor") %>% select(., c(Competence, docname))
+Masters <- SS %>% filter(., Program.x=="Master") %>% select(., c(Competence, docname))
+Doctorates <- SS %>% filter(., Program.x=="PhD") %>% select(., c(Competence, docname))
+
 
 library(igraph)
 bachelors <- graph.data.frame(Bachelors, directed = FALSE)
@@ -10,11 +16,8 @@ BachelorNetwork <- data.frame(Degree = igraph::degree(bachelors),
 BachelorNetwork <- BachelorNetwork[ -c(5:25) ]
 rownames(BachelorNetwork)
 BachelorNetwork$SS <- rownames(BachelorNetwork)
-BachelorNetwork <- BachelorNetwork[order(BachelorNetwork$SS), ]
-BachelorNetwork <- BachelorNetwork[grepl("S", BachelorNetwork$SS), ]
-BachelorNetwork <- BachelorNetwork[1:4]
 colnames(BachelorNetwork)[4] <- "Eigenvector"
-TopBachelorSkills <- head(BachelorNetwork[order(-BachelorNetwork$Closeness), ], 10)
+
 
 masters <- graph.data.frame(Masters, directed = FALSE)
 MastersNetwork <- data.frame(Degree = igraph::degree(masters),
@@ -24,11 +27,7 @@ MastersNetwork <- data.frame(Degree = igraph::degree(masters),
 MastersNetwork <- MastersNetwork[ -c(5:25) ]
 rownames(MastersNetwork)
 MastersNetwork$SS <- rownames(MastersNetwork)
-MastersNetwork <- MastersNetwork[order(MastersNetwork$SS), ]
-MastersNetwork <- MastersNetwork[grepl("S", MastersNetwork$SS), ]
-MastersNetwork <- MastersNetwork[1:4]
 colnames(MastersNetwork)[4] <- "Eigenvector"
-TopMasterSkills <- head(MastersNetwork[order(-MastersNetwork$Closeness), ], 10)
 
 phd <- graph.data.frame(Doctorates, directed = FALSE)
 PHDNetwork <- data.frame(Degree = igraph::degree(phd),
@@ -38,15 +37,8 @@ PHDNetwork <- data.frame(Degree = igraph::degree(phd),
 PHDNetwork <- PHDNetwork[ -c(5:25) ]
 rownames(PHDNetwork)
 PHDNetwork$SS <- rownames(PHDNetwork)
-PHDNetwork <- PHDNetwork[order(PHDNetwork$SS), ]
-PHDNetwork <- PHDNetwork[grepl("S", PHDNetwork$SS), ]
-PHDNetwork <- PHDNetwork[1:4]
 colnames(PHDNetwork)[4] <- "Eigenvector"
-TopPHDSkills <- head(PHDNetwork[order(-PHDNetwork$Closeness), ], 10)
 
-rownames(TopBachelorSkills) == rownames(TopMasterSkills)
-rownames(TopBachelorSkills) == rownames(TopPHDSkills)
-rownames(TopMasterSkills) == rownames(TopPHDSkills)
 
 IM.b <- as_incidence_matrix(bachelors, names = TRUE, sparse = TRUE, types = bipartite_mapping(bachelors)$type)
 IM2 <- as.matrix(IM.b)
