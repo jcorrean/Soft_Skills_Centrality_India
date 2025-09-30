@@ -46,7 +46,7 @@ IM2 <- as.matrix(IM.b)
 IM3 <- IM2
 rownames(IM3)[1:13] <- c("Communication", "Ethical-Thinking", "Strategic-Thinking", "Teamwork", "Entrepreneurship", "Leadership", "Critical-Thinking", "Analytical-Thinking", "Negotiation", "Problem-Solving", "Creativity", "Decision-Making", "Self-Awareness")
 rownames(IM3)
-custom_order <- c("Leadership", "Strategic-Thinking", "Communication", "Analytical-Thinking", "Entrepreneurship", "Critical-Thinking", "Decision-Making", "Ethical-Thinking", "Problem-Solving", "Creativity", "Self-Awareness", "Negotiation", "Teamwork")
+custom_order <- c("Leadership", "Strategic-Thinking", "Communication", "Analytical-Thinking", "Critical-Thinking", "Decision-Making", "Problem-Solving", "Entrepreneurship" , "Creativity", "Ethical-Thinking", "Negotiation", "Self-Awareness", "Teamwork")
 IM3 <- IM3[match(custom_order, rownames(IM3)), ]
 
 library(bipartite)
