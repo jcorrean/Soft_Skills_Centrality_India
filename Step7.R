@@ -105,19 +105,48 @@ plotweb(t(IM3.m),
 
 dev.off()
 
+IM.d <- as_biadjacency_matrix(phd, names = TRUE, sparse = TRUE, types = bipartite_mapping(phd)$type)
+IM2.d <- as.matrix(IM.d)
+
+IM3.d <- IM2.d
+rownames(IM3.d)[1:13] <- c("Communication", "Ethical-Thinking", "Strategic-Thinking", "Teamwork", "Entrepreneurship", "Leadership", "Critical-Thinking", "Analytical-Thinking", "Negotiation", "Problem-Solving", "Creativity", "Decision-Making", "Self-Awareness")
+rownames(IM3.d)
+custom_order.d <- c("Leadership", 
+                    "Communication", 
+                    "Strategic-Thinking", 
+                    "Negotiation", 
+                    "Teamwork", 
+                    "Ethical-Thinking",
+                    "Critical-Thinking",
+                    "Creativity",
+                    "Entrepreneurship", 
+                    "Problem-Solving", 
+                    "Self-Awareness",
+                    "Analytical-Thinking", 
+                    "Decision-Making" 
+)
+IM3.d <- IM3.d[match(custom_order.d, rownames(IM3.d)), ]
 
 png("A5.png", width = 25, height = 7, units = 'in', res = 300)
-plotweb(IM3.d, method = "normal", 
-        col.high = "#FF671F", 
-        bor.col.high = "#FF671F",
-        col.low = "darkgreen", 
-        bor.col.low = "darkgreen",
-        col.interaction = "grey90",
-        bor.col.interaction = "grey90",
-        low.lablength = 0,
-        labsize = 3,
-        text.rot = 90,
-        ybig = 2)
+plotweb(t(IM3.d), 
+        sorting = "normal", 
+        higher_color  = "orange2", 
+        higher_border  = "orange2",
+        link_color = "gray90",
+        link_alpha = 0.7,
+        lower_color = "darkgreen", 
+        lower_border  = "darkgreen",
+        font = 1,
+        lower_labels = FALSE,
+        srt = 90,
+        text_size = 1,
+        #        col.interaction = "grey90",
+        #        bor.col.interaction = "grey90",
+        #        low.lablength = 0,
+        #        labsize = 3,
+        #        text.rot = 90,
+        #        ybig = 2
+)
 dev.off()
 
 save.image("Results/Result7.RData")
