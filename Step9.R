@@ -14,6 +14,8 @@ India <- network(SkillsPrograms2,
                     bipartite = TRUE)
 India
 sna::gden(India)
+sna::geodist(India)
+sna::degree(India)
 get.vertex.attribute(India, "vertex.names")
 attributes <- data.frame(attribute = get.vertex.attribute(India, "vertex.names"))
 load("Results/Result7.RData")
