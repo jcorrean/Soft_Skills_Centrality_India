@@ -11,7 +11,7 @@ network::network.vertex.names(India)
 #[7] "Critical Thinking"   "Leadership"          "Decision Making"    
 #[10] "Problem Solving"     "Creativity"          "Negotiation"        
 #[13] "Self-Awareness" 
-Model1 <- ergm(India ~ edges + b1sociality(1:13), 
+Model1 <- ergm(India ~ edges + b1sociality(c(8,3,1)), 
                control = control.ergm(MCMC.samplesize = 10000,
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
@@ -19,11 +19,11 @@ summary(Model1) # AIC = 7664
 GOF <- gof(Model1)
 plot(GOF)
 
-Model1A <- ergm(India ~ edges + b1sociality(c(1, 8)) +
-                  b2factor(), 
+Model1A <- ergm(India ~ edges + b1sociality(c(8, 3, 1)) +
+                  b2factor('Attribute', levels = c("bachelor", "master")), 
                control = control.ergm(MCMC.samplesize = 10000,
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
-summary(Model1) # AIC = 7664
+summary(Model1A) # AIC = 7664
 GOF <- gof(Model1)
 plot(GOF)
