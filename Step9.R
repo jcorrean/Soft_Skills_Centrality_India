@@ -20,13 +20,13 @@ network::get.vertex.attribute(India, "vertex.names")
 attributes <- data.frame(attribute = network::get.vertex.attribute(India, "vertex.names"))
 load("Results/Result7.RData")
 rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d", "attributes", "India", "SkillsPrograms2")))
-bachelor <- data.frame(text = rownames(IM3), program = "bachelor")
-master <- data.frame(text = rownames(IM3.m), program = "master")
-doctor <- data.frame(text = rownames(IM3.d), program = "doctor")
+bachelor <- data.frame(text = colnames(IM3), program = "bachelor")
+master <- data.frame(text = colnames(IM3.m), program = "master")
+doctor <- data.frame(text = colnames(IM3.d), program = "doctor")
 programs <- list(bachelor, master, doctor)
 Programs <- do.call(rbind, programs)
 NetworkAttributes <- merge(attributes, Programs, by.x = "attribute", by.y = "text", all.x = TRUE)
-NetworkAttributes$program[1:13] <- "Soft Skill"
+NetworkAttributes$program[1:13] <- NetworkAttributes$attribute[1:13]
 colnames(NetworkAttributes)[2] <- "attributes"
 network::get.vertex.attribute(India, "vertex.names")
 network::set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
