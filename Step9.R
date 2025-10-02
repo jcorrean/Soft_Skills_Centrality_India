@@ -16,8 +16,8 @@ India
 sna::gden(India)
 sna::geodist(India)
 sna::degree(India)
-get.vertex.attribute(India, "vertex.names")
-attributes <- data.frame(attribute = get.vertex.attribute(India, "vertex.names"))
+network::get.vertex.attribute(India, "vertex.names")
+attributes <- data.frame(attribute = network::get.vertex.attribute(India, "vertex.names"))
 load("Results/Result7.RData")
 rm(list=setdiff(ls(), c("IM3", "IM3.m", "IM3.d", "attributes", "India", "SkillsPrograms2")))
 bachelor <- data.frame(text = rownames(IM3), program = "bachelor")
@@ -28,17 +28,17 @@ Programs <- do.call(rbind, programs)
 NetworkAttributes <- merge(attributes, Programs, by.x = "attribute", by.y = "text", all.x = TRUE)
 NetworkAttributes$program[1:13] <- "Soft Skill"
 colnames(NetworkAttributes)[2] <- "attributes"
-get.vertex.attribute(India, "vertex.names")
-set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
+network::get.vertex.attribute(India, "vertex.names")
+network::set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
 India
-get.vertex.attribute(India, "Attribute")
+network::get.vertex.attribute(India, "Attribute")
 # These are matrices. They need to be coerced to "network" objects with the 
 # library network.
 # In the work we wrote with Silvana, I didn't coerced these matrices
 # because I worked with the edgelist as input. 
 
 
-Bachelor <- network(t(IM3), 
+Bachelor <- network(IM3, 
                     directed = FALSE, 
                     hyper = FALSE, 
                     loops = FALSE, 
@@ -49,18 +49,21 @@ sna::gden(Bachelor)
 sna::degree(Bachelor)
 length(sna::degree(Bachelor))
 
-Master <- nebachelorMaster <- network(t(IM3.m), 
+Master <- nebachelorMaster <- network(IM3.m, 
                   directed = FALSE, 
                   hyper = FALSE, 
                   loops = FALSE, 
                   multiple = FALSE, 
                   bipartite = TRUE)
+Master
 sna::gden(Master)
-Doctor <- network(t(IM3.d), 
+
+Doctor <- network(IM3.d, 
                   directed = FALSE, 
                   hyper = FALSE, 
                   loops = FALSE, 
                   multiple = FALSE, 
                   bipartite = TRUE)
+Doctor
 sna::gden(Doctor)
 
