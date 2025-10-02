@@ -32,10 +32,6 @@ network::get.vertex.attribute(India, "vertex.names")
 network::set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
 India
 network::get.vertex.attribute(India, "Attribute")
-# These are matrices. They need to be coerced to "network" objects with the 
-# library network.
-# In the work we wrote with Silvana, I didn't coerced these matrices
-# because I worked with the edgelist as input. 
 
 
 Bachelor <- network(IM3, 
@@ -67,3 +63,4 @@ Doctor <- network(IM3.d,
 Doctor
 sna::gden(Doctor)
 
+save.image("Results/Result9.RData")
