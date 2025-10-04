@@ -5,7 +5,7 @@ library(network)
 library(coda)
 set.seed(9173)
 network::network.vertex.names(India)
-network::network.vertex.names(India)
+network::get.vertex.attribute(India, "Attribute")
 #[1] "Communication"       "Ethical Thinking"    "Strategic Thinking" 
 #[4] "Teamwork"            "Entrepreneurship"    "Analytical Thinking"
 #[7] "Critical Thinking"   "Leadership"          "Decision Making"    
@@ -25,5 +25,16 @@ Model1A <- ergm(India ~ edges + b1sociality(c(8, 3, 1, 6)) +
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
 summary(Model1A) # AIC = 7664
-GOF <- gof(Model1)
+GOF1A <- gof(Model1A)
 plot(GOF)
+
+
+Model2 <- ergm(India ~ edges + 
+                 b1sociality(c(8, 3, 1, 6)) +  # Skill popularity
+                 nodematch("Attribute", diff = TRUE),  # Program homophily
+               control = control.ergm(MCMC.samplesize = 10000,
+                                      MCMC.burnin = 5000,
+                                      MCMLE.maxit = 10))
+summary(Model2)
+GOF2 <- gof(Model2)
+plot(GOF2)
