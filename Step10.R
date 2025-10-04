@@ -28,6 +28,9 @@ summary(Model1A) # AIC = 7664
 GOF1A <- gof(Model1A)
 plot(GOF)
 
+program_levels <- c(rep(NA, 13), network::get.vertex.attribute(India, "Attribute")[14:548])
+set.vertex.attribute(India, "ProgramLevel", program_levels)
+India
 
 Model2 <- ergm(India ~ edges + 
                  b1sociality(c(8, 3, 1, 6)) +  # Skill popularity
