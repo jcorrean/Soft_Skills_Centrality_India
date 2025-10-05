@@ -45,3 +45,15 @@ Model2 <- ergm(India ~ edges +
 summary(Model2)
 GOF2 <- gof(Model2)
 plot(GOF2)
+
+Model2A <- ergm(India ~ edges +
+                b1sociality(c(8, 3, 1, 6)) +  
+                b2nodematch("ProgramLevel", levels=c("bachelor", "master"), diff = FALSE) +
+                b2factor('Attribute', levels = c("bachelor", "master")),
+               control = control.ergm(MCMC.samplesize = 10000,
+                                      MCMC.burnin = 5000,
+                                      MCMLE.maxit = 10))
+
+summary(Model2A)
+GOF2A <- gof(Model2A)
+plot(GOF2A)
