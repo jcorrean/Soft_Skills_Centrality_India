@@ -20,8 +20,8 @@ Model1 <- ergm(India ~ edges + b1sociality(c(8,3,1,6)),
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
 summary(Model1) # AIC = 7664
-GOF <- gof(Model1)
-plot(GOF)
+GOF1 <- gof(Model1)
+plot(GOF1)
 
 Model1A <- ergm(India ~ edges + b1sociality(c(8, 3, 1, 6)) +
                   b2factor('Attribute', levels = c("bachelor", "master")), 
