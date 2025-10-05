@@ -13,6 +13,8 @@ India <- network(SkillsPrograms2,
                     multiple = FALSE, 
                     bipartite = TRUE)
 India
+network::get.vertex.attribute(India, "vertex.names")
+network::set.vertex.attribute(India, "Attribute", NetworkAttributes$attributes)
 sna::gden(India)
 sna::geodist(India)
 sna::degree(India)

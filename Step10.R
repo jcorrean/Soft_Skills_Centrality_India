@@ -37,7 +37,7 @@ India
 
 Model2 <- ergm(India ~ edges +
                  b1sociality(c(8, 3, 1, 6)) +  # Skill popularity
-                 b2nodematch(levels=c("bachelor", "master")),  # Program homophily
+                 b2nodematch("ProgramLevel", levels=c("bachelor", "master"), diff = FALSE),  # Program homophily
                control = control.ergm(MCMC.samplesize = 10000,
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
