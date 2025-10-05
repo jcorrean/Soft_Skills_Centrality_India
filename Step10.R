@@ -54,6 +54,8 @@ Model2A <- ergm(India ~ edges +
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
 
+# This model was fit using MCMC.  To examine model diagnostics and check for
+# degeneracy, use the mcmc.diagnostics() function.
 summary(Model2A)
 GOF2A <- gof(Model2A)
 plot(GOF2A)
