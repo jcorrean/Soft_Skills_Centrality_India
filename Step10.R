@@ -11,6 +11,10 @@ network::get.vertex.attribute(India, "Attribute")
 #[7] "Critical Thinking"   "Leadership"          "Decision Making"    
 #[10] "Problem Solving"     "Creativity"          "Negotiation"        
 #[13] "Self-Awareness" 
+program_levels <- c(rep("Skill", 13), network::get.vertex.attribute(India, "Attribute")[14:548])
+set.vertex.attribute(India, "ProgramLevel", program_levels)
+get.vertex.attribute(India, "ProgramLevel")
+
 Model1 <- ergm(India ~ edges + b1sociality(c(8,3,1,6)), 
                control = control.ergm(MCMC.samplesize = 10000,
                                       MCMC.burnin = 5000,
@@ -28,15 +32,12 @@ summary(Model1A) # AIC = 7664
 GOF1A <- gof(Model1A)
 plot(GOF)
 
-program_levels <- c(rep("Skill", 13), network::get.vertex.attribute(India, "Attribute")[14:548])
-set.vertex.attribute(India, "ProgramLevel", program_levels)
-get.vertex.attribute(India, "ProgramLevel", program_levels)
 India
 
 
 Model2 <- ergm(India ~ edges +
                  b1sociality(c(8, 3, 1, 6)) +  # Skill popularity
-                 nodematch("ProgramLevel", diff = TRUE),  # Program homophily
+                 b2nodematch(levels=c("bachelor", "master")),  # Program homophily
                control = control.ergm(MCMC.samplesize = 10000,
                                       MCMC.burnin = 5000,
                                       MCMLE.maxit = 10))
