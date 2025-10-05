@@ -30,7 +30,7 @@ Model1A <- ergm(India ~ edges + b1sociality(c(8, 3, 1, 6)) +
                                       MCMLE.maxit = 10))
 summary(Model1A) # AIC = 7664
 GOF1A <- gof(Model1A)
-plot(GOF)
+plot(GOF1A)
 
 India
 
