@@ -54,3 +54,5 @@ Model2A <- ergm(India ~ edges +
 summary(Model2A)
 GOF2A <- gof(Model2A)
 plot(GOF2A)
+
+save.image("Results/Result10.RData")
