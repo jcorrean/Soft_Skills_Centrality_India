@@ -19,10 +19,10 @@ GOF1 <- gof(Model1)
 plot(GOF1)
 
 Model1A <- ergm(India ~ edges + b1sociality(c(8, 3, 1, 6)) +
-                  b2factor('Attribute', levels = c("bachelor", "master")), 
-               control = control.ergm(MCMC.samplesize = 10000,
-                                      MCMC.burnin = 5000,
-                                      MCMLE.maxit = 10))
+                  b2factor('Attribute', levels = c("bachelor", "master")),
+                control = control.ergm(MCMC.samplesize = 10000,
+                                       MCMC.burnin = 5000,
+                                       MCMLE.maxit = 10))
 summary(Model1A) # AIC = 
 GOF1A <- gof(Model1A)
 plot(GOF1A)
